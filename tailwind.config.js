@@ -15,7 +15,7 @@ export default {
         },
       },
       backgroundImage: {
-        'hero-pattern': "url('/profilephoto.jpg')",
+        'hero-pattern': "url('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg')",
       },
       spacing: {
         '18': '4.5rem',
