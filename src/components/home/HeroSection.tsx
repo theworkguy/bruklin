@@ -3,10 +3,10 @@ import { FaYoutube, FaSpotify, FaApple, FaAmazon } from 'react-icons/fa';
 
 const HeroSection: React.FC = () => {
   const socialLinks = [
-    { icon: FaYoutube, url: 'https://www.youtube.com/@bruklin', label: 'YouTube', color: 'hover:text-red-500' },
-    { icon: FaSpotify, url: 'https://open.spotify.com/artist/bruklin', label: 'Spotify', color: 'hover:text-green-500' },
-    { icon: FaApple, url: 'https://music.apple.com/artist/bruklin', label: 'Apple Music', color: 'hover:text-gray-300' },
-    { icon: FaAmazon, url: 'https://music.amazon.com/artists/bruklin', label: 'Amazon Music', color: 'hover:text-orange-500' },
+    { icon: FaYoutube, url: 'https://www.youtube.com/@BruklinOfficial', label: 'YouTube', color: 'hover:text-red-500' },
+    { icon: FaSpotify, url: 'https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO', label: 'Spotify', color: 'hover:text-green-500' },
+    { icon: FaApple, url: 'https://music.apple.com/us/artist/bruklin/1756535936', label: 'Apple Music', color: 'hover:text-gray-300' },
+    { icon: FaAmazon, url: 'https://music.amazon.com/artists/B0DPLCQGNH/bruklin' },
   ];
 
   return (
