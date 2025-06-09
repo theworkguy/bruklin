@@ -5,13 +5,13 @@ import MusicPlayer from '../MusicPlayer';
 const EPKSection: React.FC = () => {
   const tracks = [
     { title: "Under Your Skin", url: "https://bruklin.us/wp-content/uploads/2025/05/Under-Your-Skin-KS-MIX-mastered.mp3" },
-    { title: "Good Girl Bad Dreams", url: "https://bruklin.us/music/good-girl-bad-dreams.mp3" },
-    { title: "Good Cry (Acoustic)", url: "https://bruklin.us/music/good-cry-acoustic.mp3" },
-    { title: "Good Cry", url: "https://bruklin.us/music/good-cry.mp3" },
-    { title: "Daydreaming", url: "https://bruklin.us/music/daydreaming.mp3" },
-    { title: "No Contact", url: "https://bruklin.us/music/no-contact.mp3" },
-    { title: "Stay Friends", url: "https://bruklin.us/music/stay-friends.mp3" },
-    { title: "Magic Show", url: "https://bruklin.us/music/magic-show.mp3" },
+    { title: "Good Girl Bad Dreams", url: "https://od.lk/s/OTdfOTQwODg4Mzdf/Good-Girl-Bad-Dreams.mp3" },
+    { title: "Good Cry (Acoustic)", url: "https://od.lk/s/OTdfOTQwODg4MzFf/goodcrya.mp3" },
+    { title: "Good Cry", url: "https://od.lk/s/OTdfOTQwODg4MzJf/goodcry.mp3" },
+    { title: "Daydreaming", url: "https://od.lk/s/OTdfOTQwODg4MzZf/daydreaming.mp3" },
+    { title: "Magic Show", url: "https://od.lk/s/OTdfOTQwODg4MzNf/magicshow.mp3" },
+    { title: "No Contact", url: "https://od.lk/s/OTdfOTQwODg4MzRf/nocontact.mp3" },
+    { title: "Stay Friends", url: "https://od.lk/s/OTdfOTQwODg4MzVf/stayfriends.mp3" },
   ];
 
   return (
