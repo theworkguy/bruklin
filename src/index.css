@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply text-base leading-relaxed font-sans antialiased bg-black;
+    touch-action: manipulation;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-[1.2] font-semibold;
+  }
+}
+
+.title-glow {
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.5),
+               0 0 60px rgba(59, 130, 246, 0.3);
+}
+
+.profile-glow {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+}
+
+.bg-music-overlay {
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tilt {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-tilt {
+  animation: tilt 10s infinite ease-in-out;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.4s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-delay-1,
+  .animate-fade-in-delay-2,
+  .animate-tilt {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
