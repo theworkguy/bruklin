@@ -3,14 +3,14 @@ import { Play } from 'lucide-react';
 
 const VideoSection: React.FC = () => {
   const videos = [
-    { title: "Under Your Skin", youtubeUrl: "https://www.youtube.com/watch?v=1a2b3c4d5e6f", thumbnail: "https://img.youtube.com/vi/1a2b3c4d5e6f/maxresdefault.jpg" },
-    { title: "Good Girl Bad Dreams", youtubeUrl: "https://www.youtube.com/watch?v=2b3c4d5e6f7g", thumbnail: "https://img.youtube.com/vi/2b3c4d5e6f7g/maxresdefault.jpg" },
-    { title: "Good Cry (Acoustic)", youtubeUrl: "https://www.youtube.com/watch?v=3c4d5e6f7g8h", thumbnail: "https://img.youtube.com/vi/3c4d5e6f7g8h/maxresdefault.jpg" },
-    { title: "Good Cry", youtubeUrl: "https://www.youtube.com/watch?v=4d5e6f7g8h9i", thumbnail: "https://img.youtube.com/vi/4d5e6f7g8h9i/maxresdefault.jpg" },
-    { title: "Daydreaming", youtubeUrl: "https://www.youtube.com/watch?v=5e6f7g8h9i0j", thumbnail: "https://img.youtube.com/vi/5e6f7g8h9i0j/maxresdefault.jpg" },
-    { title: "No Contact", youtubeUrl: "https://www.youtube.com/watch?v=6f7g8h9i0j1a", thumbnail: "https://img.youtube.com/vi/6f7g8h9i0j1a/maxresdefault.jpg" },
-    { title: "Magic Show", youtubeUrl: "https://www.youtube.com/watch?v=7g8h9i0j1a2b", thumbnail: "https://img.youtube.com/vi/7g8h9i0j1a2b/maxresdefault.jpg" },
-    { title: "Stay Friends", youtubeUrl: "https://www.youtube.com/watch?v=8h9i0j1a2b3c", thumbnail: "https://img.youtube.com/vi/8h9i0j1a2b3c/maxresdefault.jpg" },
+    { title: "Under Your Skin", youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw", thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/maxresdefault.jpg" },
+    { title: "Good Girl Bad Dreams", youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/maxresdefault.jpg" },
+    { title: "Good Cry (Acoustic)", youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/maxresdefault.jpg" },
+    { title: "Good Cry", youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/maxresdefault.jpg" },
+    { title: "Daydreaming", youtubeUrl: "https://www.youtube.com/watch?v=-Ss_hxlRUM4", thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/maxresdefault.jpg" },
+    { title: "No Contact", youtubeUrl: "https://www.youtube.com/watch?v=9TZJqvSS994", thumbnail: "https://img.youtube.com/vi/9TZJqvSS994/maxresdefault.jpg" },
+    { title: "Magic Show", youtubeUrl: "https://www.youtube.com/watch?v=FMmNnxsuets", thumbnail: "https://img.youtube.com/vi/FMmNnxsuets/maxresdefault.jpg" },
+    { title: "Stay Friends", youtubeUrl: "https://www.youtube.com/watch?v=AC3r8rQfPX8", thumbnail: "https://img.youtube.com/vi/AC3r8rQfPX8/maxresdefault.jpg" },
   ];
 
   return (
