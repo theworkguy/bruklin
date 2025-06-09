@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 const VideoSection: React.FC = () => {
   const videos = [
     { title: "Under Your Skin", youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw", thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg" },
-    { title: "Good Girl Bad Dreams", youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", thumbnail: "" },
+    { title: "Good Girl Bad Dreams", youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg" },
     { title: "Good Cry (Acoustic)", youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg" },
     { title: "Good Cry", youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg" },
     { title: "Daydreaming", youtubeUrl: "https://www.youtube.com/watch?v=-Ss_hxlRUM4", thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg" },
@@ -37,7 +37,7 @@ const VideoSection: React.FC = () => {
             >
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src={`https://images.pexels.com/photos/${2000000 + index}/pexels-photo-${2000000 + index}.jpeg?auto=compress&cs=tinysrgb&w=400&h=225&fit=crop`}
+                  src={video.thumbnail}
                   alt={video.title}
                   className="w-full h-full object-cover transition-transform duration-300
                            group-hover:scale-110"
