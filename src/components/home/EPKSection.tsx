@@ -4,7 +4,7 @@ import MusicPlayer from '../MusicPlayer';
 
 const EPKSection: React.FC = () => {
   const tracks = [
-    { title: "Under Your Skin", url: "https://bruklin.us/music/under-your-skin.mp3" },
+    { title: "Under Your Skin", url: "https://bruklin.us/wp-content/uploads/2025/05/Under-Your-Skin-KS-MIX-mastered.mp3" },
     { title: "Good Girl Bad Dreams", url: "https://bruklin.us/music/good-girl-bad-dreams.mp3" },
     { title: "Good Cry (Acoustic)", url: "https://bruklin.us/music/good-cry-acoustic.mp3" },
     { title: "Good Cry", url: "https://bruklin.us/music/good-cry.mp3" },
