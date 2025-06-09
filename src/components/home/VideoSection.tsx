@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 const VideoSection: React.FC = () => {
   const videos = [
     { title: "Under Your Skin", youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw", thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg" },
-    { title: "Good Girl Bad Dreams", youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg" },
+    { title: "Good Girl Bad Dreams", youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", thumbnail: "" },
     { title: "Good Cry (Acoustic)", youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg" },
     { title: "Good Cry", youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg" },
     { title: "Daydreaming", youtubeUrl: "https://www.youtube.com/watch?v=-Ss_hxlRUM4", thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg" },
