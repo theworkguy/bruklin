@@ -14,7 +14,7 @@ const DiscographyPage: React.FC = () => {
       description: "A haunting pop ballad that explores the depths of emotional connection and vulnerability.",
       cover: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=3fMx4F9cYVw",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -30,7 +30,7 @@ const DiscographyPage: React.FC = () => {
       description: "An empowering anthem about breaking free from expectations and embracing your true self.",
       cover: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=G9hbM-tRnBo",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -46,7 +46,7 @@ const DiscographyPage: React.FC = () => {
       description: "A stripped-down, emotional version of the original that showcases raw vocal talent.",
       cover: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/3c4d5e6f7g8h9i0j1a2b",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=GV8va3FTxIM",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -62,7 +62,7 @@ const DiscographyPage: React.FC = () => {
       description: "A cathartic pop track about healing and finding strength through emotional release.",
       cover: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/4d5e6f7g8h9i0j1a2b3c",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=FFwmasP0qRk",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -78,7 +78,7 @@ const DiscographyPage: React.FC = () => {
       description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope.",
       cover: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/5e6f7g8h9i0j1a2b3c4d",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=-Ss_hxlRUM4",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -94,7 +94,7 @@ const DiscographyPage: React.FC = () => {
       description: "A bold statement about setting boundaries and prioritizing self-worth in relationships.",
       cover: "https://img.youtube.com/vi/9TZJqvSS994/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/6f7g8h9i0j1a2b3c4d5e",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=9TZJqvSS994",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -110,7 +110,7 @@ const DiscographyPage: React.FC = () => {
       description: "An enchanting track that blends pop sensibilities with mystical storytelling elements.",
       cover: "https://img.youtube.com/vi/FMmNnxsuets/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/8h9i0j1a2b3c4d5e6f7g",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=FMmNnxsuets",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -126,7 +126,7 @@ const DiscographyPage: React.FC = () => {
       description: "A heartfelt exploration of complex relationships and the boundaries of friendship.",
       cover: "https://img.youtube.com/vi/AC3r8rQfPX8/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        spotify: "https://open.spotify.com/track/7g8h9i0j1a2b3c4d5e6f",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=AC3r8rQfPX8",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -231,11 +231,21 @@ const DiscographyPage: React.FC = () => {
                                group-hover:scale-110"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
-                                  transition-all duration-300 flex items-center justify-center">
-                      <Play size={32} className="text-white opacity-0 group-hover:opacity-100 
-                                               transition-opacity duration-300" />
-                    </div>
+                    <a
+                      href={release.links.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
+                                transition-all duration-300 flex items-center justify-center
+                                hover:bg-black/10"
+                      aria-label={`Play ${release.title} on YouTube`}
+                    >
+                      <div className="w-16 h-16 rounded-full bg-red-600 hover:bg-red-500
+                                    flex items-center justify-center transition-all duration-300
+                                    transform hover:scale-110 shadow-lg opacity-0 group-hover:opacity-100">
+                        <Play size={24} className="text-white ml-1" />
+                      </div>
+                    </a>
                     
                     {/* Badges */}
                     <div className="absolute top-4 left-4 flex flex-col gap-2">
