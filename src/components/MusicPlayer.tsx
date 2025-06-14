@@ -185,9 +185,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           <span className="text-sm font-medium">{tracks[0]?.title}</span>
         </button>
 
-        {/* Show All Tracks or Blurred Preview */}
-        {showAllTracks ? (
-          // Show all remaining tracks when expanded
+        {/* Show All Tracks When Expanded */}
+        {showAllTracks && (
           tracks.slice(1).map((track, index) => (
             <button
               key={index + 1}
@@ -201,28 +200,6 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
               <span className="text-sm font-medium">{track.title}</span>
             </button>
           ))
-        ) : (
-          // Show blurred preview of remaining tracks
-          <>
-            {tracks.slice(1, 4).map((track, index) => (
-              <div
-                key={index + 1}
-                className="w-full text-left p-3 rounded-lg bg-white/5 text-white/30 cursor-not-allowed"
-              >
-                <span className="text-sm font-medium blur-sm select-none">
-                  {track.title}
-                </span>
-              </div>
-            ))}
-            
-            {tracks.length > 4 && (
-              <div className="w-full text-left p-3 rounded-lg bg-white/5 text-white/30 cursor-not-allowed">
-                <span className="text-sm font-medium select-none">
-                  +{tracks.length - 4} more tracks...
-                </span>
-              </div>
-            )}
-          </>
         )}
 
         {/* View All Button */}
