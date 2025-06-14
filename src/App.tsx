@@ -11,6 +11,7 @@ import PhotosPage from './pages/PhotosPage';
 import ContactPage from './pages/ContactPage';
 import UnderYourSkinArticle from './pages/articles/UnderYourSkinArticle';
 import GoodGirlBadDreamsArticle from './pages/articles/GoodGirlBadDreamsArticle';
+import LatestSongPage from './pages/LatestSongPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <main className="flex-1 pt-[60px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/latest-song" element={<LatestSongPage />} />
             <Route path="/my-journey" element={<MyJourneyPage />} />
             <Route path="/discography" element={<DiscographyPage />} />
             <Route path="/videos" element={<VideosPage />} />
