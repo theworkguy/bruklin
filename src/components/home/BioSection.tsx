@@ -44,7 +44,7 @@ const BioSection: React.FC = () => {
             Her music carries a raw, undeniable energy that pulls in fans from all over the world. 
             Teaming up with top producers like{' '}
             <span className="text-blue-400 font-semibold">Oak Felder</span> and{' '}
-            <span className="text-cyan-400 font-semibold">Tommy Brown</span>, 
+            <span className="text-cyan-400 font-semibold">Sebastian Cole</span>, 
             Bruklin's got the talent and hustle to stand out—she\'s not just here to play, 
             she's rewriting the rules.
           </p>

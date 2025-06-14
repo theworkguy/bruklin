@@ -131,7 +131,7 @@ const GoodGirlBadDreamsArticle: React.FC = () => {
               </p>
 
               <p className="text-white/90 leading-relaxed mb-6">
-                Working with my production team, we wanted to create something that sounded as rebellious as the 
+                Working with my production team including Oak Felder and Sebastian Cole, we wanted to create something that sounded as rebellious as the
                 lyrics felt. The beat is driving and confident, with unexpected elements that mirror the song's 
                 message about breaking free from conventions. The bridge features a distorted vocal effect that 
                 represents breaking through the noise of other people's expectations.

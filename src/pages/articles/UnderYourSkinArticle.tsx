@@ -131,7 +131,8 @@ const UnderYourSkinArticle: React.FC = () => {
 
               <p className="text-white/90 leading-relaxed mb-6">
                 Working with my producers Oak Felder and Tommy Brown was incredible. They understood the emotional weight 
-                of the song and helped me create a soundscape that matched the intensity of the lyrics. We spent hours 
+                Working with my producers Oak Felder and Sebastian Cole was incredible. They understood the emotional weight 
+                of the song and helped me create a soundscape that matched the intensity of the lyrics. We spent hours
                 perfecting every detail, from the subtle strings in the bridge to the way my voice breaks slightly on 
                 the final chorus.
               </p>

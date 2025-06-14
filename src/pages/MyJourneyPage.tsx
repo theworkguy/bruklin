@@ -39,8 +39,8 @@ const MyJourneyPage: React.FC = () => {
     {
       year: '2023',
       title: 'Professional Breakthrough',
-      description: 'Connected with Grammy-winning producers Oak Felder and Tommy Brown, taking my sound to the next level with professional production.',
-      details: 'This was a dream come true. Working with producers who have shaped the sound of pop music taught me so much about songwriting, production, and the music industry. Oak and Tommy believed in my vision and helped me refine my sound while keeping my authentic voice.',
+      description: 'Connected with Grammy-winning producers Oak Felder and Sebastian Cole, taking my sound to the next level with professional production.',
+      details: 'This was a dream come true. Working with producers who have shaped the sound of pop music taught me so much about songwriting, production, and the music industry. Oak and Sebastian believed in my vision and helped me refine my sound while keeping my authentic voice.',
       icon: Award,
       color: 'from-red-500 to-orange-400',
       stats: 'Grammy-winning team',

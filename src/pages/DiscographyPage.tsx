@@ -27,7 +27,7 @@ const DiscographyPage: React.FC = () => {
       isHit: false,
       color: 'from-blue-600 to-cyan-500',
       mood: 'Emotional',
-      producers: ['Oak Felder', 'Tommy Brown'],
+      producers: ['Oak Felder', 'Sebastian Cole'],
       lyrics: 'Vulnerable and introspective'
     },
     {
@@ -48,7 +48,7 @@ const DiscographyPage: React.FC = () => {
       isHit: false,
       color: 'from-purple-600 to-pink-500',
       mood: 'Empowering',
-      producers: ['Oak Felder', 'Tommy Brown'],
+      producers: ['Oak Felder', 'Sebastian Cole'],
       lyrics: 'Bold and rebellious'
     },
     {
@@ -89,7 +89,7 @@ const DiscographyPage: React.FC = () => {
       isHit: true,
       color: 'from-emerald-600 to-teal-500',
       mood: 'Cathartic',
-      producers: ['Oak Felder', 'Tommy Brown'],
+      producers: ['Oak Felder', 'Sebastian Cole'],
       lyrics: 'Healing and hopeful'
     },
     {
@@ -109,7 +109,7 @@ const DiscographyPage: React.FC = () => {
       isHit: true,
       color: 'from-violet-600 to-purple-500',
       mood: 'Dreamy',
-      producers: ['Oak Felder', 'Tommy Brown'],
+      producers: ['Oak Felder', 'Sebastian Cole'],
       lyrics: 'Whimsical and hopeful'
     },
     {
@@ -129,7 +129,7 @@ const DiscographyPage: React.FC = () => {
       isHit: false,
       color: 'from-red-600 to-rose-500',
       mood: 'Empowering',
-      producers: ['Oak Felder', 'Tommy Brown'],
+      producers: ['Oak Felder', 'Sebastian Cole'],
       lyrics: 'Strong and assertive'
     },
     {
@@ -149,7 +149,7 @@ const DiscographyPage: React.FC = () => {
       isHit: true,
       color: 'from-indigo-600 to-blue-500',
       mood: 'Mystical',
-      producers: ['Oak Felder', 'Tommy Brown'],
+      producers: ['Oak Felder', 'Sebastian Cole'],
       lyrics: 'Magical and enchanting'
     },
     {
@@ -169,7 +169,7 @@ const DiscographyPage: React.FC = () => {
       isHit: true,
       color: 'from-pink-600 to-rose-500',
       mood: 'Heartfelt',
-      producers: ['Oak Felder', 'Tommy Brown'],
+      producers: ['Oak Felder', 'Sebastian Cole'],
       lyrics: 'Complex and emotional'
     }
   ];
