@@ -107,10 +107,11 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
       />
 
       {/* Now Playing Display */}
-      <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 mb-6 border border-white/10">
+      <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl p-6 mb-6 border border-white/10
+                    hover:border-white/20 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
         <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 
-                        flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 
+                        flex items-center justify-center shadow-lg">
             <Music size={20} className="text-white" />
           </div>
           <div className="flex-1">
@@ -138,12 +139,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
                        [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 
                        [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full 
                        [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-blue-500 
-                       [&::-webkit-slider-thumb]:to-purple-500 [&::-webkit-slider-thumb]:cursor-pointer
+                       [&::-webkit-slider-thumb]:to-cyan-400 [&::-webkit-slider-thumb]:cursor-pointer
                        [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:border-2
                        [&::-webkit-slider-thumb]:border-white"
             />
             <div 
-              className="absolute top-0 left-0 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg pointer-events-none"
+              className="absolute top-0 left-0 h-2 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg pointer-events-none"
               style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
             />
           </div>
@@ -159,7 +160,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
             onClick={previousTrack}
             className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20
                      flex items-center justify-center transition-all duration-200
-                     hover:scale-110 active:scale-95"
+                     hover:scale-110 active:scale-95 border border-white/10 hover:border-white/20"
           >
             <SkipBack size={20} className="text-white" />
           </button>
@@ -167,11 +168,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           <button
             onClick={togglePlay}
             disabled={isLoading}
-            className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600
-                     hover:from-blue-700 hover:to-purple-700
+            className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500
+                     hover:from-blue-700 hover:to-cyan-600
                      flex items-center justify-center transition-all duration-200
                      transform hover:scale-110 active:scale-95 shadow-lg
-                     disabled:opacity-50 disabled:cursor-not-allowed"
+                     disabled:opacity-50 disabled:cursor-not-allowed
+                     hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]"
           >
             {isLoading ? (
               <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -186,7 +188,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
             onClick={nextTrack}
             className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20
                      flex items-center justify-center transition-all duration-200
-                     hover:scale-110 active:scale-95"
+                     hover:scale-110 active:scale-95 border border-white/10 hover:border-white/20"
           >
             <SkipForward size={20} className="text-white" />
           </button>
@@ -194,8 +196,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
       </div>
 
       {/* Volume Control */}
-      <div className="flex items-center gap-3 mb-6 bg-white/5 rounded-lg p-3">
-        <Volume2 size={18} className="text-white/70" />
+      <div className="flex items-center gap-3 mb-6 bg-gradient-to-r from-white/5 to-white/10 rounded-lg p-3 border border-white/10">
+        <Volume2 size={18} className="text-blue-400" />
         <div className="flex-1 relative">
           <input
             type="range"
@@ -207,15 +209,17 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
             className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer
                      [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 
                      [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full 
-                     [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:cursor-pointer
-                     [&::-webkit-slider-thumb]:shadow-md"
+                     [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-blue-500
+                     [&::-webkit-slider-thumb]:to-cyan-400 [&::-webkit-slider-thumb]:cursor-pointer
+                     [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:border
+                     [&::-webkit-slider-thumb]:border-white/20"
           />
           <div 
-            className="absolute top-0 left-0 h-2 bg-white/60 rounded-lg pointer-events-none"
+            className="absolute top-0 left-0 h-2 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-lg pointer-events-none"
             style={{ width: `${volume * 100}%` }}
           />
         </div>
-        <span className="text-white/60 text-sm w-8">{Math.round(volume * 100)}</span>
+        <span className="text-blue-400 text-sm w-8 font-medium">{Math.round(volume * 100)}</span>
       </div>
 
       {/* Track List */}
@@ -223,20 +227,20 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         {/* Current Track - Always Visible */}
         <div className={`p-4 rounded-lg transition-all duration-200 border
                        ${0 === currentTrack 
-                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50' 
+                         ? 'bg-gradient-to-r from-blue-600/30 to-cyan-600/30 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]' 
                          : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
                        }`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center
-                             ${0 === currentTrack ? 'bg-blue-500' : 'bg-white/20'}`}>
+                             ${0 === currentTrack ? 'bg-gradient-to-r from-blue-500 to-cyan-400' : 'bg-white/20'}`}>
                 <span className="text-white text-sm font-medium">1</span>
               </div>
               <span className="text-white font-medium">{tracks[0]?.title}</span>
             </div>
             <button
               onClick={() => handleTrackSelect(0)}
-              className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+              className="text-blue-400 hover:text-cyan-400 transition-colors duration-200 p-2 rounded-full hover:bg-white/10"
             >
               <Play size={16} />
             </button>
@@ -250,7 +254,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
               key={index + 1}
               className={`p-4 rounded-lg transition-all duration-200 border cursor-pointer
                          ${index + 1 === currentTrack 
-                           ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50' 
+                           ? 'bg-gradient-to-r from-blue-600/30 to-cyan-600/30 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]' 
                            : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
                          }`}
               onClick={() => handleTrackSelect(index + 1)}
@@ -258,12 +262,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center
-                                 ${index + 1 === currentTrack ? 'bg-blue-500' : 'bg-white/20'}`}>
+                                 ${index + 1 === currentTrack ? 'bg-gradient-to-r from-blue-500 to-cyan-400' : 'bg-white/20'}`}>
                     <span className="text-white text-sm font-medium">{index + 2}</span>
                   </div>
                   <span className="text-white font-medium">{track.title}</span>
                 </div>
-                <Play size={16} className="text-white/60" />
+                <Play size={16} className="text-white/60 hover:text-blue-400 transition-colors duration-200" />
               </div>
             </div>
           ))
@@ -273,10 +277,10 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         {tracks.length > 1 && (
           <button
             onClick={() => setShowAllTracks(!showAllTracks)}
-            className="w-full mt-4 p-4 rounded-xl bg-gradient-to-r from-blue-600/20 to-purple-600/20
+            className="w-full mt-4 p-4 rounded-xl bg-gradient-to-r from-blue-600/20 to-cyan-600/20
                      border border-white/10 hover:border-white/20 text-white
                      flex items-center justify-center gap-3 transition-all duration-300
-                     hover:bg-gradient-to-r hover:from-blue-600/30 hover:to-purple-600/30
+                     hover:bg-gradient-to-r hover:from-blue-600/30 hover:to-cyan-600/30
                      hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transform hover:scale-[1.02]"
           >
             <Eye size={18} />
