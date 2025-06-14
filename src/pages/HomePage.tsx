@@ -1,11 +1,11 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import HeroSection from '../components/home/HeroSection';
-import StatsSection from '../components/home/StatsSection';
 import TracklistSection from '../components/home/TracklistSection';
 import VideoSection from '../components/home/VideoSection';
 import BioSection from '../components/home/BioSection';
 import SocialMediaSection from '../components/home/SocialMediaSection';
+import StatsSection from '../components/home/StatsSection';
 import ContactFormSection from '../components/home/ContactFormSection';
 
 const HomePage: React.FC = () => {
@@ -27,11 +27,11 @@ const HomePage: React.FC = () => {
       />
       <div className="w-full">
         <HeroSection />
-        <StatsSection />
         <TracklistSection />
         <VideoSection />
         <BioSection />
         <SocialMediaSection />
+        <StatsSection />
         <ContactFormSection />
       </div>
     </>
