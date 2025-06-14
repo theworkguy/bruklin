@@ -8,7 +8,6 @@ const navLinks = [
   { name: 'My Journey', path: '/my-journey' },
   { name: 'Discography', path: '/discography' },
   { name: 'Videos', path: '/videos' },
-  { name: 'Press', path: '/press' },
   { name: 'Blog', path: '/blog' },
   { name: 'Press Kit.PDF', url: 'https://bruklin.us/wp-content/uploads/2025/05/Electronic-Press-Kit-2025.pdf' },
   { name: 'Photos', path: '/photos' },

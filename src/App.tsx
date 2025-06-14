@@ -6,7 +6,6 @@ import HomePage from './pages/HomePage';
 import MyJourneyPage from './pages/MyJourneyPage';
 import DiscographyPage from './pages/DiscographyPage';
 import VideosPage from './pages/VideosPage';
-import PressPage from './pages/PressPage';
 import BlogPage from './pages/BlogPage';
 import PhotosPage from './pages/PhotosPage';
 import ContactPage from './pages/ContactPage';
@@ -29,7 +28,6 @@ function App() {
             <Route path="/my-journey" element={<MyJourneyPage />} />
             <Route path="/discography" element={<DiscographyPage />} />
             <Route path="/videos" element={<VideosPage />} />
-            <Route path="/press" element={<PressPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/photos" element={<PhotosPage />} />
             <Route path="/contact" element={<ContactPage />} />

@@ -47,14 +47,6 @@
     </video:video>
   </url>
 
-  <!-- Press Page -->
-  <url>
-    <loc>https://bruklin.us/press</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Blog Page -->
   <url>
     <loc>https://bruklin.us/blog</loc>
