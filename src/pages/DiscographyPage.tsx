@@ -12,11 +12,11 @@ const DiscographyPage: React.FC = () => {
       duration: "3:00",
       streams: "186,041",
       description: "A haunting pop ballad that explores the depths of emotional connection and vulnerability.",
-      cover: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400",
+      cover: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
+        youtube: "https://www.youtube.com/watch?v=3fMx4F9cYVw",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
       isLatest: true
@@ -28,11 +28,11 @@ const DiscographyPage: React.FC = () => {
       duration: "2:36",
       streams: "433,747",
       description: "An empowering anthem about breaking free from expectations and embracing your true self.",
-      cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
+      cover: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
+        youtube: "https://www.youtube.com/watch?v=G9hbM-tRnBo",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
       isLatest: false
@@ -44,43 +44,27 @@ const DiscographyPage: React.FC = () => {
       duration: "2:32",
       streams: "47,835",
       description: "A stripped-down, emotional version of the original that showcases raw vocal talent.",
-      cover: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400",
+      cover: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
+        youtube: "https://www.youtube.com/watch?v=GV8va3FTxIM",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
       isLatest: false
     },
     {
-      title: "STAY FRIENDS",
+      title: "Good Cry",
       type: "Single",
       year: "2024",
-      duration: "2:40",
-      streams: "1,938,575",
-      description: "A heartfelt exploration of complex relationships and the boundaries of friendship.",
-      cover: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=400",
+      duration: "2:18",
+      streams: "1,001,080",
+      description: "A cathartic pop track about healing and finding strength through emotional release.",
+      cover: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
-        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
-      },
-      isHit: true
-    },
-    {
-      title: "Magic Show",
-      type: "Single",
-      year: "2024",
-      duration: "2:40",
-      streams: "1,826,258",
-      description: "An enchanting track that blends pop sensibilities with mystical storytelling elements.",
-      cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
-      links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
-        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
+        youtube: "https://www.youtube.com/watch?v=FFwmasP0qRk",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
       isHit: true
@@ -92,27 +76,11 @@ const DiscographyPage: React.FC = () => {
       duration: "2:33",
       streams: "1,470,185",
       description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope.",
-      cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
+      cover: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
-        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
-      },
-      isHit: true
-    },
-    {
-      title: "Good Cry",
-      type: "Single",
-      year: "2024",
-      duration: "2:18",
-      streams: "1,001,080",
-      description: "A cathartic pop track about healing and finding strength through emotional release.",
-      cover: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=400",
-      links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
-        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
+        youtube: "https://www.youtube.com/watch?v=-Ss_hxlRUM4",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
       isHit: true
@@ -124,14 +92,46 @@ const DiscographyPage: React.FC = () => {
       duration: "2:51",
       streams: "878,484",
       description: "A bold statement about setting boundaries and prioritizing self-worth in relationships.",
-      cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
+      cover: "https://img.youtube.com/vi/9TZJqvSS994/0.jpg",
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial",
+        youtube: "https://www.youtube.com/watch?v=9TZJqvSS994",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
       isHit: false
+    },
+    {
+      title: "Magic Show",
+      type: "Single",
+      year: "2024",
+      duration: "2:40",
+      streams: "1,826,258",
+      description: "An enchanting track that blends pop sensibilities with mystical storytelling elements.",
+      cover: "https://img.youtube.com/vi/FMmNnxsuets/0.jpg",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/watch?v=FMmNnxsuets",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isHit: true
+    },
+    {
+      title: "STAY FRIENDS",
+      type: "Single",
+      year: "2024",
+      duration: "2:40",
+      streams: "1,938,575",
+      description: "A heartfelt exploration of complex relationships and the boundaries of friendship.",
+      cover: "https://img.youtube.com/vi/AC3r8rQfPX8/0.jpg",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/watch?v=AC3r8rQfPX8",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isHit: true
     }
   ];
 
