@@ -26,6 +26,25 @@ const Header: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLogoClick = () => {
+    // Close menu if open
+    setIsMenuOpen(false);
+    // Scroll to top immediately
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    // Force page refresh if already on home page
+    if (location.pathname === '/') {
+      window.location.reload();
+    }
+  };
+
+  const handleNavClick = () => {
+    // Close menu
+    setIsMenuOpen(false);
+    // Scroll to top immediately
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 0);
+  };
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (
@@ -60,12 +79,18 @@ const Header: React.FC = () => {
   // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
+    // Scroll to top when route changes
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location]);
 
   return (
     <header className="fixed top-0 left-0 w-full h-[60px] bg-gradient-to-r from-black/80 via-black/60 to-black/80 backdrop-blur-md z-50 flex items-center px-4 shadow-lg">
       <div className="w-full max-w-7xl mx-auto flex justify-center items-center">
-        <Link to="/" className="text-white font-extrabold text-2xl tracking-tight">
+        <Link 
+          to="/" 
+          onClick={handleLogoClick}
+          className="text-white font-extrabold text-2xl tracking-tight"
+        >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">
             Bruklin
           </span>
@@ -129,6 +154,7 @@ const Header: React.FC = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={handleNavClick}
                         className="text-white text-lg font-semibold tracking-wide 
                                  hover:text-blue-400 transition-colors duration-300
                                  w-full py-2 block"
@@ -138,6 +164,7 @@ const Header: React.FC = () => {
                     ) : (
                       <Link
                         to={link.path!}
+                        onClick={handleNavClick}
                         className={`text-white text-lg font-semibold tracking-wide 
                                    hover:text-blue-400 transition-colors duration-300
                                    w-full py-2 block ${
