@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, SkipBack, SkipForward, Volume2 } from 'lucide-react';
+import { Play, Pause, SkipBack, SkipForward, Volume2, Eye } from 'lucide-react';
 
 interface Track {
   title: string;
@@ -16,6 +16,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(0.7);
+  const [showAllTracks, setShowAllTracks] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -82,6 +83,14 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
     audio.currentTime = newTime;
     setCurrentTime(newTime);
   };
+
+  const blurTitle = (title: string) => {
+    return title.split('').map((char, index) => 
+      char === ' ' ? ' ' : '●'
+    ).join('');
+  };
+
+  const displayedTracks = showAllTracks ? tracks : tracks.slice(0, 2);
 
   return (
     <div className="w-full">
@@ -154,7 +163,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
       </div>
 
       {/* Volume Control */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 mb-8">
         <Volume2 size={20} className="text-white/70" />
         <input
           type="range"
@@ -170,9 +179,9 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         />
       </div>
 
-      {/* Track List */}
-      <div className="mt-8 space-y-2">
-        {tracks.map((track, index) => (
+      {/* Track List Preview */}
+      <div className="space-y-2">
+        {displayedTracks.map((track, index) => (
           <button
             key={index}
             onClick={() => setCurrentTrack(index)}
@@ -182,9 +191,51 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
                          : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
                        }`}
           >
-            <span className="text-sm font-medium">{track.title}</span>
+            <span className="text-sm font-medium">
+              {showAllTracks || index < 2 ? track.title : blurTitle(track.title)}
+            </span>
           </button>
         ))}
+
+        {/* Blurred tracks preview (when not showing all) */}
+        {!showAllTracks && tracks.length > 2 && (
+          <>
+            {tracks.slice(2, 4).map((track, index) => (
+              <div
+                key={index + 2}
+                className="w-full text-left p-3 rounded-lg bg-white/5 text-white/40 cursor-not-allowed"
+              >
+                <span className="text-sm font-medium blur-sm">
+                  {track.title}
+                </span>
+              </div>
+            ))}
+            
+            {tracks.length > 4 && (
+              <div className="w-full text-left p-3 rounded-lg bg-white/5 text-white/40 cursor-not-allowed">
+                <span className="text-sm font-medium">
+                  +{tracks.length - 4} more tracks...
+                </span>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* View All / Show Less Button */}
+        {tracks.length > 2 && (
+          <button
+            onClick={() => setShowAllTracks(!showAllTracks)}
+            className="w-full mt-4 p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20
+                     border border-white/10 hover:border-white/20 text-white
+                     flex items-center justify-center gap-2 transition-all duration-300
+                     hover:bg-gradient-to-r hover:from-blue-600/30 hover:to-purple-600/30"
+          >
+            <Eye size={16} />
+            <span className="font-medium">
+              {showAllTracks ? 'Show Less' : `View All ${tracks.length} Tracks`}
+            </span>
+          </button>
+        )}
       </div>
     </div>
   );
