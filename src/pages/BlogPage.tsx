@@ -315,15 +315,6 @@ const BlogPage: React.FC = () => {
                             <span>{post.comments}</span>
                           </div>
                         </div>
-
-                        <Link
-                          to={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').replace("the-story-behind-'under-your-skin'", "under-your-skin").replace("breaking-free-the-making-of-'good-girl-bad-dreams'", "good-girl-bad-dreams")}`}
-                          className="flex items-center gap-2 text-purple-400 hover:text-purple-300
-                                   font-medium transition-colors duration-300"
-                        >
-                          Read Story
-                          <ArrowRight size={16} />
-                        </Link>
                       </div>
                     </div>
                   </article>
@@ -405,14 +396,6 @@ const BlogPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <Link
-                        to={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').replace("the-story-behind-'under-your-skin'", "under-your-skin").replace("breaking-free-the-making-of-'good-girl-bad-dreams'", "good-girl-bad-dreams").replace("stripped-down-the-acoustic-version-of-'good-cry'", "good-cry-acoustic").replace("finding-strength-in-vulnerability-'good-cry'-origins", "good-cry").replace("lost-in-wonder-the-dreamy-world-of-'daydreaming'", "daydreaming").replace("setting-boundaries-the-bold-message-of-'no-contact'", "no-contact").replace("creating-magic-the-enchanting-story-of-'magic-show'", "magic-show").replace("complex-hearts-the-emotional-depth-of-'stay-friends'", "stay-friends")}`}
-                        className="flex items-center gap-1 text-purple-400 hover:text-purple-300
-                                 font-medium transition-colors duration-300 text-sm"
-                      >
-                        Read
-                        <ArrowRight size={14} />
-                      </Link>
                     </div>
                   </div>
                 </article>
