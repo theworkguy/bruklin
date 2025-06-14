@@ -125,7 +125,7 @@ const VideoSection: React.FC = () => {
               <div className="text-white/60 text-sm">Music Videos</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">16.8K+</div>
+              <div className="text-2xl font-bold text-purple-400">17.3M+</div>
               <div className="text-white/60 text-sm">Subscribers</div>
             </div>
           </div>
@@ -336,7 +336,7 @@ const VideoSection: React.FC = () => {
               </a>
               <div className="flex items-center gap-2 text-white/70">
                 <Users size={16} />
-                <span className="text-sm">Join 16.8K+ subscribers</span>
+                <span className="text-sm">Join 17.3M+ subscribers</span>
               </div>
             </div>
           </div>
