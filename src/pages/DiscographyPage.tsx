@@ -1,6 +1,6 @@
 import React from 'react';
-import { Play, ExternalLink, Calendar } from 'lucide-react';
-import { FaSpotify, FaApple, FaYoutube } from 'react-icons/fa';
+import { Play, ExternalLink, Calendar, TrendingUp, Music } from 'lucide-react';
+import { FaSpotify, FaApple, FaYoutube, FaAmazon } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 
 const DiscographyPage: React.FC = () => {
@@ -16,8 +16,10 @@ const DiscographyPage: React.FC = () => {
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isLatest: true
     },
     {
       title: "Good Girl Bad Dreams",
@@ -30,8 +32,10 @@ const DiscographyPage: React.FC = () => {
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isLatest: false
     },
     {
       title: "Good Cry (Acoustic)",
@@ -44,64 +48,10 @@ const DiscographyPage: React.FC = () => {
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
-    },
-    {
-      title: "Good Cry",
-      type: "Single",
-      year: "2024",
-      duration: "2:18",
-      streams: "1,001,080",
-      description: "A cathartic pop track about healing and finding strength through emotional release.",
-      cover: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=400",
-      links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
-        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
-    },
-    {
-      title: "Daydreaming",
-      type: "Single",
-      year: "2024",
-      duration: "2:33",
-      streams: "1,470,185",
-      description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope.",
-      cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
-      links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
-        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
-    },
-    {
-      title: "No Contact",
-      type: "Single",
-      year: "2024",
-      duration: "2:51",
-      streams: "878,484",
-      description: "A bold statement about setting boundaries and prioritizing self-worth in relationships.",
-      cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
-      links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
-        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
-    },
-    {
-      title: "Magic Show",
-      type: "Single",
-      year: "2024",
-      duration: "2:40",
-      streams: "1,826,258",
-      description: "An enchanting track that blends pop sensibilities with mystical storytelling elements.",
-      cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
-      links: {
-        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
-        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isLatest: false
     },
     {
       title: "STAY FRIENDS",
@@ -114,17 +64,98 @@ const DiscographyPage: React.FC = () => {
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
-        youtube: "https://www.youtube.com/@BruklinOfficial"
-      }
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isHit: true
+    },
+    {
+      title: "Magic Show",
+      type: "Single",
+      year: "2024",
+      duration: "2:40",
+      streams: "1,826,258",
+      description: "An enchanting track that blends pop sensibilities with mystical storytelling elements.",
+      cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isHit: true
+    },
+    {
+      title: "Daydreaming",
+      type: "Single",
+      year: "2024",
+      duration: "2:33",
+      streams: "1,470,185",
+      description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope.",
+      cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isHit: true
+    },
+    {
+      title: "Good Cry",
+      type: "Single",
+      year: "2024",
+      duration: "2:18",
+      streams: "1,001,080",
+      description: "A cathartic pop track about healing and finding strength through emotional release.",
+      cover: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=400",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isHit: true
+    },
+    {
+      title: "No Contact",
+      type: "Single",
+      year: "2024",
+      duration: "2:51",
+      streams: "878,484",
+      description: "A bold statement about setting boundaries and prioritizing self-worth in relationships.",
+      cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isHit: false
     }
   ];
+
+  // Calculate total streams
+  const totalStreams = releases.reduce((sum, release) => {
+    const streamCount = parseInt(release.streams.replace(/,/g, ''));
+    return sum + streamCount;
+  }, 0);
+
+  const formatTotalStreams = (total: number) => {
+    if (total >= 1000000) {
+      return `${(total / 1000000).toFixed(1)}M`;
+    }
+    return `${Math.round(total / 1000)}K`;
+  };
+
+  const hitSingles = releases.filter(release => release.isHit).length;
 
   return (
     <>
       <SEOHead
         title="Discography - Complete Music Collection by Bruklin"
         description="Explore Bruklin's complete discography including hit singles 'Under Your Skin', 'Good Girl Bad Dreams', and more. 7.8M+ Spotify streams and 17.3M+ YouTube views."
-        keywords="Bruklin discography, Under Your Skin, Good Girl Bad Dreams, Good Cry, Daydreaming, No Contact, pop music, Spotify, Apple Music"
+        keywords="Bruklin discography, Under Your Skin, Good Girl Bad Dreams, Good Cry, Daydreaming, No Contact, Magic Show, STAY FRIENDS, pop music, Spotify, Apple Music"
         url="/discography"
         type="website"
         musicData={{
@@ -149,26 +180,39 @@ const DiscographyPage: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
             <div className="bg-gradient-to-br from-green-600/20 to-blue-600/20 
-                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-              <h3 className="text-3xl font-bold text-green-400 mb-2">7.8M+</h3>
-              <p className="text-white/80">Spotify Streams</p>
+                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
+                          hover:border-white/20 transition-all duration-300
+                          hover:shadow-[0_0_30px_rgba(34,197,94,0.3)]">
+              <h3 className="text-2xl font-bold text-green-400 mb-2">{formatTotalStreams(totalStreams)}+</h3>
+              <p className="text-white/80 text-sm">Total Streams</p>
             </div>
             <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 
-                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-              <h3 className="text-3xl font-bold text-red-400 mb-2">17.3M+</h3>
-              <p className="text-white/80">YouTube Views</p>
+                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
+                          hover:border-white/20 transition-all duration-300
+                          hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]">
+              <h3 className="text-2xl font-bold text-red-400 mb-2">17.3M+</h3>
+              <p className="text-white/80 text-sm">YouTube Views</p>
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 
-                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-              <h3 className="text-3xl font-bold text-purple-400 mb-2">8</h3>
-              <p className="text-white/80">Released Tracks</p>
+                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
+                          hover:border-white/20 transition-all duration-300
+                          hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]">
+              <h3 className="text-2xl font-bold text-purple-400 mb-2">{releases.length}</h3>
+              <p className="text-white/80 text-sm">Released Tracks</p>
+            </div>
+            <div className="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 
+                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
+                          hover:border-white/20 transition-all duration-300
+                          hover:shadow-[0_0_30px_rgba(251,191,36,0.3)]">
+              <h3 className="text-2xl font-bold text-yellow-400 mb-2">{hitSingles}</h3>
+              <p className="text-white/80 text-sm">Hit Singles</p>
             </div>
           </div>
 
           {/* Releases Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="space-y-8">
             {releases.map((release, index) => (
               <div
                 key={index}
@@ -177,13 +221,13 @@ const DiscographyPage: React.FC = () => {
                          transition-all duration-300 group
                          hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]"
               >
-                <div className="md:flex">
+                <div className="lg:flex">
                   {/* Album Cover */}
-                  <div className="md:w-48 md:h-48 relative overflow-hidden">
+                  <div className="lg:w-64 lg:h-64 relative overflow-hidden">
                     <img
                       src={release.cover}
                       alt={`${release.title} by Bruklin`}
-                      className="w-full h-48 md:h-full object-cover transition-transform duration-300
+                      className="w-full h-48 lg:h-full object-cover transition-transform duration-300
                                group-hover:scale-110"
                       loading="lazy"
                     />
@@ -192,41 +236,60 @@ const DiscographyPage: React.FC = () => {
                       <Play size={32} className="text-white opacity-0 group-hover:opacity-100 
                                                transition-opacity duration-300" />
                     </div>
+                    
+                    {/* Badges */}
+                    <div className="absolute top-4 left-4 flex flex-col gap-2">
+                      {release.isLatest && (
+                        <span className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white 
+                                       text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                          Latest
+                        </span>
+                      )}
+                      {release.isHit && (
+                        <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black 
+                                       text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                          Hit
+                        </span>
+                      )}
+                    </div>
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 p-6">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Calendar size={16} className="text-white/60" />
-                      <span className="text-white/60 text-sm">{release.year}</span>
+                  <div className="flex-1 p-6 lg:p-8">
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <div className="flex items-center gap-2 text-white/60 text-sm">
+                        <Calendar size={16} />
+                        <span>{release.year}</span>
+                      </div>
                       <span className="text-white/40">•</span>
                       <span className="text-white/60 text-sm">{release.type}</span>
                       <span className="text-white/40">•</span>
                       <span className="text-white/60 text-sm">{release.duration}</span>
+                      <span className="text-white/40">•</span>
+                      <div className="flex items-center gap-1">
+                        <TrendingUp size={14} className="text-green-400" />
+                        <span className="text-green-400 text-sm font-medium">{release.streams} streams</span>
+                      </div>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-purple-400
                                  transition-colors duration-300">
                       {release.title}
                     </h3>
 
-                    <div className="text-green-400 font-semibold text-sm mb-3">
-                      {release.streams} streams
-                    </div>
-
-                    <p className="text-white/70 mb-6 leading-relaxed">
+                    <p className="text-white/70 mb-6 leading-relaxed text-lg">
                       {release.description}
                     </p>
 
                     {/* Platform Links */}
-                    <div className="flex gap-3">
+                    <div className="flex flex-wrap gap-3">
                       <a
                         href={release.links.spotify}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 rounded-full
                                  bg-green-600 hover:bg-green-700 transition-all duration-300
-                                 transform hover:scale-105"
+                                 transform hover:scale-105 shadow-lg"
                         aria-label={`Listen to ${release.title} on Spotify`}
                       >
                         <FaSpotify size={16} className="text-white" />
@@ -239,7 +302,7 @@ const DiscographyPage: React.FC = () => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 rounded-full
                                  bg-gray-800 hover:bg-gray-700 transition-all duration-300
-                                 transform hover:scale-105"
+                                 transform hover:scale-105 shadow-lg"
                         aria-label={`Listen to ${release.title} on Apple Music`}
                       >
                         <FaApple size={16} className="text-white" />
@@ -252,11 +315,24 @@ const DiscographyPage: React.FC = () => {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 rounded-full
                                  bg-red-600 hover:bg-red-700 transition-all duration-300
-                                 transform hover:scale-105"
+                                 transform hover:scale-105 shadow-lg"
                         aria-label={`Watch ${release.title} on YouTube`}
                       >
                         <FaYoutube size={16} className="text-white" />
                         <span className="text-white text-sm font-medium">YouTube</span>
+                      </a>
+
+                      <a
+                        href={release.links.amazon}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 rounded-full
+                                 bg-blue-600 hover:bg-blue-700 transition-all duration-300
+                                 transform hover:scale-105 shadow-lg"
+                        aria-label={`Listen to ${release.title} on Amazon Music`}
+                      >
+                        <FaAmazon size={16} className="text-white" />
+                        <span className="text-white text-sm font-medium">Amazon</span>
                       </a>
                     </div>
                   </div>
@@ -269,21 +345,37 @@ const DiscographyPage: React.FC = () => {
           <div className="text-center mt-20">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 
                           backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-4">More Music Coming Soon</h2>
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Music size={32} className="text-purple-400" />
+                <h2 className="text-3xl font-bold text-white">More Music Coming Soon</h2>
+              </div>
               <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
                 Stay tuned for new releases and exclusive content. Follow me on your favorite platform to never miss a beat.
               </p>
-              <a
-                href="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 
-                         text-white font-semibold py-3 px-6 rounded-xl 
-                         transition-all duration-300 transform hover:scale-105"
-              >
-                <FaSpotify size={20} />
-                Follow on Spotify
-              </a>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 
+                           text-white font-semibold py-3 px-6 rounded-xl 
+                           transition-all duration-300 transform hover:scale-105"
+                >
+                  <FaSpotify size={20} />
+                  Follow on Spotify
+                </a>
+                <a
+                  href="https://www.youtube.com/@BruklinOfficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 
+                           text-white font-semibold py-3 px-6 rounded-xl 
+                           transition-all duration-300 transform hover:scale-105"
+                >
+                  <FaYoutube size={20} />
+                  Subscribe on YouTube
+                </a>
+              </div>
             </div>
           </div>
         </div>
