@@ -15,31 +15,31 @@ const EPKSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4
                        bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
             Electronic Press Kit (EPK)
           </h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Check out Bruklin's electronic press kit—available for download as a digital PDF.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* EPK Visual */}
           <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 
-                        backdrop-blur-sm rounded-2xl p-8 border border-white/10
+                        backdrop-blur-sm rounded-2xl p-6 border border-white/10
                         hover:border-white/20 transition-all duration-300
-                        hover:shadow-[0_0_50px_rgba(59,130,246,0.3)]">
-            <div className="flex items-center justify-center mb-6">
-              <FileText size={80} className="text-blue-400" />
+                        hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+            <div className="flex items-center justify-center mb-4">
+              <FileText size={60} className="text-blue-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white text-center mb-4">
+            <h3 className="text-xl font-bold text-white text-center mb-3">
               Electronic Press Kit - Bruklin
             </h3>
-            <p className="text-white/70 text-center mb-6">
+            <p className="text-white/70 text-center mb-4 text-sm">
               Complete press materials, bio, photos, and music samples
             </p>
             <a
@@ -48,21 +48,21 @@ const EPKSection: React.FC = () => {
               rel="noopener noreferrer"
               className="w-full bg-gradient-to-r from-blue-600 to-cyan-500
                        hover:from-blue-700 hover:to-cyan-600
-                       text-white font-semibold py-4 px-6 rounded-xl
-                       flex items-center justify-center gap-3
+                       text-white font-semibold py-3 px-4 rounded-xl
+                       flex items-center justify-center gap-2
                        transition-all duration-300 transform hover:scale-105
-                       shadow-lg hover:shadow-xl"
+                       shadow-lg hover:shadow-xl text-sm"
             >
-              <Download size={20} />
+              <Download size={18} />
               Download EPK PDF
             </a>
           </div>
 
           {/* Music Player */}
-          <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 
+          <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 
                         border border-white/10 hover:border-white/20 
                         transition-all duration-300">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">
+            <h3 className="text-xl font-bold text-white mb-4 text-center">
               Listen to the Music
             </h3>
             <MusicPlayer tracks={tracks} />
