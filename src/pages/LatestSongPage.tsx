@@ -11,7 +11,7 @@ const LatestSongPage: React.FC = () => {
   const tracks = [
     {
       title: "Under Your Skin",
-      url: "https://audio-previews.elements.envatousercontent.com/files/281404817/preview.mp3" // Preview audio URL
+      url: "/Under Your Skin KS MIX (mastered).mp3" // Local MP3 file
     }
   ];
 
