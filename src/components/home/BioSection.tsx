@@ -38,8 +38,8 @@ const BioSection: React.FC = () => {
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed text-center
                        font-light tracking-wide mb-8">
             At just 17, Bruklin is dominating the pop scene with a sound that's racked up{' '}
-            <span className="text-red-400 font-semibold">14 million YouTube views</span> and{' '}
-            <span className="text-green-400 font-semibold">6 million Spotify streams</span>... 
+            <span className="text-red-400 font-semibold">17.3 million YouTube views</span> and{' '}
+            <span className="text-green-400 font-semibold">7.8 million Spotify streams</span>... 
             Her music carries a raw, undeniable energy that pulls in fans from all over the world. 
             Teaming up with top producers like{' '}
             <span className="text-blue-400 font-semibold">Oak Felder</span> and{' '}
