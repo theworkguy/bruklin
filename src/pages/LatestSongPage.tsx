@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import Profile from '../components/Profile';
-import MusicPlayer from '../components/MusicPlayer';
+import SimpleMusicPlayer from '../components/SimpleMusicPlayer';
+import LinkSection from '../components/LinkSection';
 
 const LatestSongPage: React.FC = () => {
   // Define tracks for the music player
@@ -43,10 +44,11 @@ const LatestSongPage: React.FC = () => {
             imageUrl="/profilephoto.jpg"
           />
           
-          {/* Music Player Section */}
+          {/* Content Section */}
           <div className="w-full max-w-[700px] mx-auto px-6 pb-24">
+            {/* Song Title Header */}
             <div className="relative bg-black
-                          backdrop-blur-sm rounded-2xl px-4 py-4 mb-8
+                          backdrop-blur-sm rounded-2xl px-4 py-4 mb-6
                           border-t border-white/10 shadow-[0_10px_50px_rgba(0,191,255,0.2)]
                           overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-blue-600/20 
@@ -65,8 +67,11 @@ const LatestSongPage: React.FC = () => {
                             bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
             </div>
             
-            {/* Music Player */}
-            <MusicPlayer tracks={tracks} />
+            {/* Simple Music Player */}
+            <SimpleMusicPlayer tracks={tracks} />
+            
+            {/* Streaming Platform Links */}
+            <LinkSection />
           </div>
         </div>
       </div>
