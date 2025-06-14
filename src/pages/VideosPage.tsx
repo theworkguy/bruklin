@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Play, Eye, Calendar } from 'lucide-react';
+import { Play, Eye, Calendar, TrendingUp, Users, Clock, Filter, Grid, List } from 'lucide-react';
 import { FaYoutube } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 
 const VideosPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const videos = [
     {
@@ -98,12 +99,11 @@ const VideosPage: React.FC = () => {
   ];
 
   const categories = [
-    { id: 'all', name: 'All Videos' },
-    { id: 'music-video', name: 'Music Videos' },
-    { id: 'acoustic', name: 'Acoustic' },
-    { id: 'live', name: 'Live Performances' },
-    { id: 'behind-scenes', name: 'Behind the Scenes' },
-    { id: 'lyric-video', name: 'Lyric Videos' }
+    { id: 'all', name: 'All Videos', count: videos.length },
+    { id: 'music-video', name: 'Music Videos', count: videos.filter(v => v.category === 'music-video').length },
+    { id: 'acoustic', name: 'Acoustic', count: videos.filter(v => v.category === 'acoustic').length },
+    { id: 'live', name: 'Live Performances', count: 0 },
+    { id: 'behind-scenes', name: 'Behind the Scenes', count: 0 }
   ];
 
   const filteredVideos = selectedCategory === 'all' 
@@ -147,53 +147,98 @@ const VideosPage: React.FC = () => {
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Enhanced Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 
                           backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
                           hover:border-white/20 transition-all duration-300
-                          hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]">
-              <h3 className="text-3xl font-bold text-red-400 mb-2">17.3M+</h3>
-              <p className="text-white/80">Total Views</p>
+                          hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] transform hover:scale-105">
+              <h3 className="text-2xl md:text-3xl font-bold text-red-400 mb-2">17.3M+</h3>
+              <p className="text-white/80 text-sm">Total Views</p>
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 
                           backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
                           hover:border-white/20 transition-all duration-300
-                          hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]">
-              <h3 className="text-3xl font-bold text-purple-400 mb-2">16.8K+</h3>
-              <p className="text-white/80">Subscribers</p>
+                          hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transform hover:scale-105">
+              <h3 className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">16.8K+</h3>
+              <p className="text-white/80 text-sm">Subscribers</p>
             </div>
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 
                           backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
                           hover:border-white/20 transition-all duration-300
-                          hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-              <h3 className="text-3xl font-bold text-blue-400 mb-2">{videos.length}+</h3>
-              <p className="text-white/80">Videos</p>
+                          hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transform hover:scale-105">
+              <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-2">{videos.length}</h3>
+              <p className="text-white/80 text-sm">Videos</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 
+                          backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
+                          hover:border-white/20 transition-all duration-300
+                          hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transform hover:scale-105">
+              <h3 className="text-2xl md:text-3xl font-bold text-green-400 mb-2">4M+</h3>
+              <p className="text-white/80 text-sm">Top Video</p>
             </div>
           </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
+          {/* Enhanced Filter & View Controls */}
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-12">
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+              <div className="flex items-center gap-2 text-white/60 mr-4">
+                <Filter size={18} />
+                <span className="font-medium">Filter:</span>
+              </div>
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full font-medium transition-all duration-300 text-sm
+                             flex items-center gap-2
+                             ${selectedCategory === category.id
+                               ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white shadow-lg'
+                               : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                             }`}
+                >
+                  {category.name}
+                  <span className={`text-xs px-2 py-0.5 rounded-full
+                                  ${selectedCategory === category.id 
+                                    ? 'bg-white/20' 
+                                    : 'bg-white/10'}`}>
+                    {category.count}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* View Mode Toggle */}
+            <div className="flex items-center gap-2 bg-white/10 rounded-full p-1">
               <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300
-                           ${selectedCategory === category.id
-                             ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white'
-                             : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                           }`}
+                onClick={() => setViewMode('grid')}
+                className={`p-2 rounded-full transition-all duration-300
+                           ${viewMode === 'grid' 
+                             ? 'bg-red-600 text-white' 
+                             : 'text-white/60 hover:text-white'}`}
+                aria-label="Grid view"
               >
-                {category.name}
+                <Grid size={18} />
               </button>
-            ))}
+              <button
+                onClick={() => setViewMode('list')}
+                className={`p-2 rounded-full transition-all duration-300
+                           ${viewMode === 'list' 
+                             ? 'bg-red-600 text-white' 
+                             : 'text-white/60 hover:text-white'}`}
+                aria-label="List view"
+              >
+                <List size={18} />
+              </button>
+            </div>
           </div>
 
           {/* Featured Video */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
-              <FaYoutube size={24} className="text-red-500" />
-              <span className="text-red-400 font-semibold text-sm uppercase tracking-wide">
+              <TrendingUp size={24} className="text-red-500" />
+              <span className="text-red-400 font-semibold text-lg uppercase tracking-wide">
                 Latest Release
               </span>
             </div>
@@ -203,9 +248,9 @@ const VideosPage: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group block bg-gradient-to-br from-black/60 to-black/40 backdrop-blur-sm 
-                       rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 
-                       transition-all duration-300 transform hover:scale-[1.02]
-                       shadow-[0_0_50px_rgba(239,68,68,0.1)] hover:shadow-[0_0_80px_rgba(239,68,68,0.2)]"
+                       rounded-3xl overflow-hidden border border-white/10 hover:border-red-500/30 
+                       transition-all duration-500 transform hover:scale-[1.02]
+                       shadow-[0_0_50px_rgba(239,68,68,0.1)] hover:shadow-[0_0_80px_rgba(239,68,68,0.3)]"
             >
               <div className="lg:flex">
                 {/* Video Thumbnail */}
@@ -213,66 +258,86 @@ const VideosPage: React.FC = () => {
                   <img
                     src={videos[0].thumbnail}
                     alt={`${videos[0].title} - Bruklin`}
-                    className="w-full h-full object-cover transition-transform duration-300
+                    className="w-full h-full object-cover transition-transform duration-500
                              group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
-                                transition-all duration-300 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-red-600 group-hover:bg-red-500
-                                  flex items-center justify-center transition-all duration-300
-                                  transform group-hover:scale-110 shadow-2xl">
-                      <Play size={32} className="text-white ml-1" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent 
+                                group-hover:from-black/40 transition-all duration-500 
+                                flex items-center justify-center">
+                    <div className="w-24 h-24 rounded-full bg-red-600 group-hover:bg-red-500
+                                  flex items-center justify-center transition-all duration-500
+                                  transform group-hover:scale-125 shadow-2xl
+                                  border-4 border-white/20 group-hover:border-white/40">
+                      <Play size={36} className="text-white ml-1" />
                     </div>
                   </div>
                   
-                  {/* Duration Badge */}
-                  <div className="absolute bottom-4 right-4 bg-black/80 text-white text-sm 
-                                px-3 py-1 rounded-full font-medium">
-                    {videos[0].duration}
-                  </div>
-                  
-                  {/* Latest Badge */}
-                  <div className="absolute top-4 left-4">
+                  {/* Enhanced Badges */}
+                  <div className="absolute top-6 left-6 flex flex-col gap-3">
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white 
-                                   text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                      Latest
+                                   text-sm font-bold px-4 py-2 rounded-full uppercase tracking-wide
+                                   shadow-lg backdrop-blur-sm border border-white/20">
+                      🔥 Latest
                     </span>
-                  </div>
-                </div>
-
-                {/* Video Info */}
-                <div className="lg:w-1/3 p-8 flex flex-col justify-center">
-                  <div className="mb-4">
-                    <span className="text-red-400 text-sm font-medium uppercase tracking-wide">
+                    <span className="bg-black/80 backdrop-blur-sm text-white 
+                                   text-sm font-medium px-3 py-1 rounded-full border border-white/20">
                       Music Video
                     </span>
                   </div>
                   
-                  <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-red-400
+                  {/* Duration & Views */}
+                  <div className="absolute bottom-6 right-6 flex flex-col gap-2">
+                    <div className="bg-black/80 backdrop-blur-sm text-white text-sm 
+                                  px-3 py-1 rounded-full font-medium border border-white/20">
+                      {videos[0].duration}
+                    </div>
+                    <div className="bg-red-600/80 backdrop-blur-sm text-white text-sm 
+                                  px-3 py-1 rounded-full font-medium border border-white/20">
+                      {videos[0].views} views
+                    </div>
+                  </div>
+                </div>
+
+                {/* Enhanced Video Info */}
+                <div className="lg:w-1/3 p-8 lg:p-10 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <span className="text-red-400 text-sm font-semibold uppercase tracking-wider
+                                   bg-red-400/10 px-3 py-1 rounded-full border border-red-400/20">
+                      Music Video
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 group-hover:text-red-400
                                transition-colors duration-300 leading-tight">
                     {videos[0].title}
                   </h3>
                   
-                  <p className="text-white/80 mb-6 leading-relaxed">
+                  <p className="text-white/80 mb-8 leading-relaxed text-lg">
                     {videos[0].description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-4 mb-6 text-white/70">
-                    <div className="flex items-center gap-1">
-                      <Eye size={16} />
-                      <span>{videos[0].views} views</span>
+                  <div className="flex flex-wrap gap-6 mb-8 text-white/70">
+                    <div className="flex items-center gap-2">
+                      <Eye size={18} className="text-red-400" />
+                      <span className="font-medium">{videos[0].views} views</span>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar size={16} />
-                      <span>{videos[0].year}</span>
+                    <div className="flex items-center gap-2">
+                      <Calendar size={18} className="text-red-400" />
+                      <span className="font-medium">{videos[0].year}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock size={18} className="text-red-400" />
+                      <span className="font-medium">{videos[0].duration}</span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2 px-4 py-2 rounded-full
-                                 bg-red-600/20 border border-red-500/30">
-                      <FaYoutube size={16} className="text-red-400" />
-                      <span className="text-red-400 font-medium text-sm">Watch Now</span>
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3 px-6 py-3 rounded-full
+                                 bg-gradient-to-r from-red-600/30 to-pink-600/30 
+                                 border border-red-500/30 group-hover:border-red-400/50
+                                 transition-all duration-300">
+                      <FaYoutube size={20} className="text-red-400" />
+                      <span className="text-red-400 font-semibold">Watch Now</span>
                     </div>
                   </div>
                 </div>
@@ -280,108 +345,176 @@ const VideosPage: React.FC = () => {
             </a>
           </div>
 
-          {/* Videos Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {filteredVideos.map((video, index) => (
-              <a
-                key={index}
-                href={video.youtubeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
-                         border border-white/10 hover:border-white/20 
-                         transition-all duration-300 transform hover:scale-105
-                         hover:shadow-[0_0_30px_rgba(255,0,0,0.3)]"
-                aria-label={`Watch ${video.title} on YouTube`}
-              >
-                {/* Thumbnail */}
-                <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={video.thumbnail}
-                    alt={`${video.title} by Bruklin`}
-                    className="w-full h-full object-cover transition-transform duration-300
-                             group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
-                                transition-all duration-300 flex items-center justify-center
-                                opacity-0 group-hover:opacity-100">
-                    <div className="w-16 h-16 rounded-full bg-red-600 group-hover:bg-red-500
-                                  flex items-center justify-center transition-all duration-300
-                                  transform group-hover:scale-110">
-                      <Play size={24} className="text-white ml-1" />
+          {/* Videos Grid/List */}
+          <div className={`${viewMode === 'grid' 
+            ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8' 
+            : 'space-y-6'}`}>
+            {filteredVideos.slice(1).map((video, index) => (
+              viewMode === 'grid' ? (
+                // Grid View
+                <a
+                  key={index + 1}
+                  href={video.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
+                           border border-white/10 hover:border-red-500/30 
+                           transition-all duration-300 transform hover:scale-105
+                           hover:shadow-[0_0_30px_rgba(255,0,0,0.3)]"
+                  aria-label={`Watch ${video.title} on YouTube`}
+                >
+                  {/* Thumbnail */}
+                  <div className="relative aspect-video overflow-hidden">
+                    <img
+                      src={video.thumbnail}
+                      alt={`${video.title} by Bruklin`}
+                      className="w-full h-full object-cover transition-transform duration-300
+                               group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
+                                  transition-all duration-300 flex items-center justify-center
+                                  opacity-0 group-hover:opacity-100">
+                      <div className="w-16 h-16 rounded-full bg-red-600 group-hover:bg-red-500
+                                    flex items-center justify-center transition-all duration-300
+                                    transform group-hover:scale-110 shadow-lg">
+                        <Play size={24} className="text-white ml-1" />
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Duration */}
-                  <div className="absolute bottom-2 right-2 bg-black/80 text-white text-sm 
-                                px-2 py-1 rounded">
-                    {video.duration}
-                  </div>
+                    
+                    {/* Duration */}
+                    <div className="absolute bottom-3 right-3 bg-black/80 text-white text-sm 
+                                  px-2 py-1 rounded font-medium">
+                      {video.duration}
+                    </div>
 
-                  {/* Category Badge */}
-                  <div className="absolute top-2 left-2">
-                    <span className="bg-red-600/80 text-white text-xs font-medium 
-                                   px-2 py-1 rounded uppercase">
-                      {video.category === 'music-video' ? 'Music Video' : 
-                       video.category === 'acoustic' ? 'Acoustic' : 
-                       video.category}
-                    </span>
-                  </div>
-
-                  {/* Latest Badge */}
-                  {video.isLatest && (
-                    <div className="absolute top-2 right-2">
-                      <span className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white 
-                                     text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">
-                        Latest
+                    {/* Category Badge */}
+                    <div className="absolute top-3 left-3">
+                      <span className="bg-red-600/80 text-white text-xs font-medium 
+                                     px-2 py-1 rounded uppercase">
+                        {video.category === 'music-video' ? 'Music Video' : 
+                         video.category === 'acoustic' ? 'Acoustic' : 
+                         video.category}
                       </span>
                     </div>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2 text-sm text-white/60">
-                    <Calendar size={14} />
-                    <span>{video.year}</span>
-                    <span>•</span>
-                    <Eye size={14} />
-                    <span>{video.views} views</span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400
-                               transition-colors duration-300 line-clamp-2">
-                    {video.title}
-                  </h3>
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3 text-sm text-white/60">
+                      <Calendar size={14} />
+                      <span>{video.year}</span>
+                      <span>•</span>
+                      <Eye size={14} />
+                      <span>{video.views} views</span>
+                    </div>
 
-                  <p className="text-white/70 text-sm leading-relaxed line-clamp-3">
-                    {video.description}
-                  </p>
-                </div>
-              </a>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400
+                                 transition-colors duration-300 line-clamp-2 leading-tight">
+                      {video.title}
+                    </h3>
+
+                    <p className="text-white/70 text-sm leading-relaxed line-clamp-2">
+                      {video.description}
+                    </p>
+                  </div>
+                </a>
+              ) : (
+                // List View
+                <a
+                  key={index + 1}
+                  href={video.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
+                           border border-white/10 hover:border-red-500/30 
+                           transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,0,0,0.3)]"
+                >
+                  {/* Thumbnail */}
+                  <div className="w-48 h-32 relative overflow-hidden flex-shrink-0">
+                    <img
+                      src={video.thumbnail}
+                      alt={`${video.title} by Bruklin`}
+                      className="w-full h-full object-cover transition-transform duration-300
+                               group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
+                                  transition-all duration-300 flex items-center justify-center
+                                  opacity-0 group-hover:opacity-100">
+                      <div className="w-12 h-12 rounded-full bg-red-600 group-hover:bg-red-500
+                                    flex items-center justify-center transition-all duration-300">
+                        <Play size={16} className="text-white ml-0.5" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs 
+                                  px-2 py-1 rounded">
+                      {video.duration}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 p-6 flex flex-col justify-center">
+                    <div className="flex items-center gap-2 mb-2 text-sm text-white/60">
+                      <Calendar size={14} />
+                      <span>{video.year}</span>
+                      <span>•</span>
+                      <Eye size={14} />
+                      <span>{video.views} views</span>
+                      <span>•</span>
+                      <span className="text-red-400 font-medium">
+                        {video.category === 'music-video' ? 'Music Video' : 
+                         video.category === 'acoustic' ? 'Acoustic' : 
+                         video.category}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400
+                                 transition-colors duration-300">
+                      {video.title}
+                    </h3>
+
+                    <p className="text-white/70 text-sm leading-relaxed line-clamp-2">
+                      {video.description}
+                    </p>
+                  </div>
+                </a>
+              )
             ))}
           </div>
 
-          {/* Call to Action */}
+          {/* Enhanced Call to Action */}
           <div className="text-center mt-20">
             <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 
-                          backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-4">Subscribe for More</h2>
-              <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
-                Don't miss out on new music videos, live performances, and exclusive behind-the-scenes content.
+                          backdrop-blur-sm rounded-3xl p-10 border border-white/10
+                          hover:border-red-500/30 transition-all duration-300
+                          shadow-[0_0_50px_rgba(239,68,68,0.1)]">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <FaYoutube size={40} className="text-red-500" />
+                <h2 className="text-4xl font-bold text-white">Subscribe for More</h2>
+              </div>
+              <p className="text-white/80 text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                Don't miss out on new music videos, live performances, and exclusive behind-the-scenes content. 
+                Join the community of music lovers!
               </p>
-              <a
-                href="https://www.youtube.com/@BruklinOfficial?sub_confirmation=1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 
-                         text-white font-semibold py-3 px-6 rounded-xl 
-                         transition-all duration-300 transform hover:scale-105"
-              >
-                <FaYoutube size={20} />
-                Subscribe on YouTube
-              </a>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a
+                  href="https://www.youtube.com/@BruklinOfficial?sub_confirmation=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-4 bg-gradient-to-r from-red-600 to-red-700
+                           hover:from-red-700 hover:to-red-800 text-white font-bold 
+                           py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105
+                           shadow-lg hover:shadow-xl text-lg"
+                >
+                  <FaYoutube size={24} />
+                  Subscribe on YouTube
+                </a>
+                <div className="flex items-center gap-3 text-white/70">
+                  <Users size={20} />
+                  <span className="text-lg">Join 16.8K+ subscribers</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
