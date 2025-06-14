@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaTiktok, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaTiktok, FaFacebook } from 'react-icons/fa';
 import { Users, Heart, TrendingUp, Star } from 'lucide-react';
 
 const SocialMediaSection: React.FC = () => {
@@ -30,16 +30,7 @@ const SocialMediaSection: React.FC = () => {
       followers: '23.1K',
       description: 'Community & fan interactions',
       stats: 'Posts • Events • Live streams'
-    },
-    { 
-      icon: FaTwitter, 
-      url: 'https://twitter.com/bruklin', 
-      label: 'Twitter', 
-      color: 'from-blue-400 to-blue-600',
-      followers: '18.7K',
-      description: 'Real-time updates & thoughts',
-      stats: 'Tweets • Threads • Spaces'
-    },
+    }
   ];
 
   const totalFollowers = socialLinks.reduce((sum, social) => {
@@ -85,7 +76,7 @@ const SocialMediaSection: React.FC = () => {
               <div className="text-white/60 text-sm">Total Followers</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">4</div>
+              <div className="text-2xl font-bold text-purple-400">3</div>
               <div className="text-white/60 text-sm">Platforms</div>
             </div>
             <div className="text-center">
@@ -100,7 +91,7 @@ const SocialMediaSection: React.FC = () => {
         </div>
 
         {/* Social Media Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {socialLinks.map((social, index) => (
             <a
               key={index}
