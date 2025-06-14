@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaTiktok, FaFacebook } from 'react-icons/fa';
-import { Users, Heart, TrendingUp, Star } from 'lucide-react';
+import { Users, Heart, TrendingUp, Star, BadgeCheck } from 'lucide-react';
 
 const SocialMediaSection: React.FC = () => {
   const socialLinks = [
@@ -8,28 +8,34 @@ const SocialMediaSection: React.FC = () => {
       icon: FaInstagram, 
       url: 'https://www.instagram.com/bruklin', 
       label: 'Instagram', 
+      username: '@bruklin',
       color: 'from-purple-600 via-pink-600 to-yellow-500',
       followers: '45.2K',
       description: 'Daily updates & behind the scenes',
-      stats: 'Stories • Reels • Photos'
+      stats: 'Stories • Reels • Photos',
+      verified: true
     },
     { 
       icon: FaTiktok, 
       url: 'https://www.tiktok.com/@bruklin', 
       label: 'TikTok', 
+      username: '@bruklin',
       color: 'from-gray-900 to-gray-800',
       followers: '128K',
       description: 'Viral music content & trends',
-      stats: 'Videos • Challenges • Duets'
+      stats: 'Videos • Challenges • Duets',
+      verified: true
     },
     { 
       icon: FaFacebook, 
       url: 'https://www.facebook.com/bruklin', 
       label: 'Facebook', 
+      username: 'Bruklin',
       color: 'from-blue-600 to-blue-800',
       followers: '23.1K',
       description: 'Community & fan interactions',
-      stats: 'Posts • Events • Live streams'
+      stats: 'Posts • Events • Live streams',
+      verified: false
     }
   ];
 
@@ -128,14 +134,27 @@ const SocialMediaSection: React.FC = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 truncate">
-                        {social.label}
-                      </h3>
-                      <div className="flex items-center gap-1 sm:gap-2">
-                        <Users size={12} className="text-white/70 sm:w-4 sm:h-4" />
-                        <span className="text-white/90 font-semibold text-sm sm:text-base truncate">
-                          {social.followers} followers
+                      <div className="flex items-center gap-2 mb-1">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white truncate">
+                          {social.label}
+                        </h3>
+                        {social.verified && (
+                          <BadgeCheck 
+                            size={16} 
+                            className="text-blue-400 fill-blue-400 flex-shrink-0 sm:w-5 sm:h-5" 
+                          />
+                        )}
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <span className="text-white/70 text-xs sm:text-sm font-medium truncate">
+                          {social.username}
                         </span>
+                        <div className="flex items-center gap-1 sm:gap-2">
+                          <Users size={12} className="text-white/70 sm:w-4 sm:h-4" />
+                          <span className="text-white/90 font-semibold text-sm sm:text-base truncate">
+                            {social.followers} followers
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -210,7 +229,10 @@ const SocialMediaSection: React.FC = () => {
                              w-full sm:w-auto`}
                 >
                   <social.icon size={16} className="sm:w-5 sm:h-5" />
-                  Follow on {social.label}
+                  <span>Follow on {social.label}</span>
+                  {social.verified && (
+                    <BadgeCheck size={14} className="text-white/80 fill-white/20 sm:w-4 sm:h-4" />
+                  )}
                 </a>
               ))}
             </div>
