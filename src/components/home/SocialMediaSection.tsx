@@ -30,12 +30,12 @@ const SocialMediaSection: React.FC = () => {
       icon: FaFacebook, 
       url: 'https://www.facebook.com/bruklin', 
       label: 'Facebook', 
-      username: 'Bruklin',
+      username: '@bruklin',
       color: 'from-blue-600 to-blue-800',
       followers: '23.1K',
       description: 'Community & fan interactions',
       stats: 'Posts • Events • Live streams',
-      verified: false
+      verified: true
     }
   ];
 
@@ -134,10 +134,13 @@ const SocialMediaSection: React.FC = () => {
                       />
                     </div>
                     <div className="min-w-0 flex-1">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 truncate">
+                        {social.label}
+                      </h3>
                       <div className="flex items-center gap-2 mb-1">
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white truncate">
-                          {social.label}
-                        </h3>
+                        <span className="text-white/70 text-xs sm:text-sm font-medium truncate">
+                          {social.username}
+                        </span>
                         {social.verified && (
                           <BadgeCheck 
                             size={16} 
@@ -145,16 +148,11 @@ const SocialMediaSection: React.FC = () => {
                           />
                         )}
                       </div>
-                      <div className="flex flex-col gap-1">
-                        <span className="text-white/70 text-xs sm:text-sm font-medium truncate">
-                          {social.username}
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <Users size={12} className="text-white/70 sm:w-4 sm:h-4" />
+                        <span className="text-white/90 font-semibold text-sm sm:text-base truncate">
+                          {social.followers} followers
                         </span>
-                        <div className="flex items-center gap-1 sm:gap-2">
-                          <Users size={12} className="text-white/70 sm:w-4 sm:h-4" />
-                          <span className="text-white/90 font-semibold text-sm sm:text-base truncate">
-                            {social.followers} followers
-                          </span>
-                        </div>
                       </div>
                     </div>
                   </div>
