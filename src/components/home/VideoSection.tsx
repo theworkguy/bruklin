@@ -12,7 +12,7 @@ const VideoSection: React.FC = () => {
       thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
       views: "2.1M",
       duration: "3:00",
-      releaseDate: "2024",
+      releaseDate: "2025",
       isLatest: true,
       category: "Music Video"
     },
@@ -22,7 +22,7 @@ const VideoSection: React.FC = () => {
       thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
       views: "3.8M",
       duration: "2:36",
-      releaseDate: "2024",
+      releaseDate: "2025",
       isLatest: false,
       category: "Music Video"
     },
@@ -32,7 +32,7 @@ const VideoSection: React.FC = () => {
       thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
       views: "1.5M",
       duration: "2:32",
-      releaseDate: "2024",
+      releaseDate: "2025",
       isLatest: false,
       category: "Acoustic"
     },
@@ -42,7 +42,7 @@ const VideoSection: React.FC = () => {
       thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
       views: "950K",
       duration: "2:18",
-      releaseDate: "2023",
+      releaseDate: "2024",
       isLatest: false,
       category: "Music Video"
     },
@@ -52,7 +52,7 @@ const VideoSection: React.FC = () => {
       thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
       views: "780K",
       duration: "2:33",
-      releaseDate: "2023",
+      releaseDate: "2024",
       isLatest: false,
       category: "Music Video"
     },
@@ -61,8 +61,8 @@ const VideoSection: React.FC = () => {
       youtubeUrl: "https://www.youtube.com/watch?v=9TZJqvSS994", 
       thumbnail: "https://img.youtube.com/vi/9TZJqvSS994/0.jpg",
       views: "650K",
-      duration: "2:08",
-      releaseDate: "2023",
+      duration: "2:51",
+      releaseDate: "2024",
       isLatest: false,
       category: "Music Video"
     },
@@ -72,17 +72,17 @@ const VideoSection: React.FC = () => {
       thumbnail: "https://img.youtube.com/vi/FMmNnxsuets/0.jpg",
       views: "520K",
       duration: "2:40",
-      releaseDate: "2023",
+      releaseDate: "2024",
       isLatest: false,
       category: "Music Video"
     },
     { 
-      title: "Stay Friends", 
+      title: "STAY FRIENDS", 
       youtubeUrl: "https://www.youtube.com/watch?v=AC3r8rQfPX8", 
       thumbnail: "https://img.youtube.com/vi/AC3r8rQfPX8/0.jpg",
       views: "480K",
       duration: "2:40",
-      releaseDate: "2023",
+      releaseDate: "2024",
       isLatest: false,
       category: "Music Video"
     },
