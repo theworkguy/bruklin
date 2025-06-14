@@ -117,7 +117,7 @@ const VideoSection: React.FC = () => {
           {/* Stats Row */}
           <div className="flex justify-center gap-8 mb-8">
             <div className="text-center">
-              <div className="text-2xl font-bold text-red-400">{formatTotalViews(totalViews)}+</div>
+              <div className="text-2xl font-bold text-red-400">17.3M+</div>
               <div className="text-white/60 text-sm">Total Views</div>
             </div>
             <div className="text-center">
