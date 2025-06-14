@@ -9,6 +9,8 @@ import VideosPage from './pages/VideosPage';
 import BlogPage from './pages/BlogPage';
 import PhotosPage from './pages/PhotosPage';
 import ContactPage from './pages/ContactPage';
+import UnderYourSkinArticle from './pages/articles/UnderYourSkinArticle';
+import GoodGirlBadDreamsArticle from './pages/articles/GoodGirlBadDreamsArticle';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
             <Route path="/discography" element={<DiscographyPage />} />
             <Route path="/videos" element={<VideosPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/under-your-skin" element={<UnderYourSkinArticle />} />
+            <Route path="/blog/good-girl-bad-dreams" element={<GoodGirlBadDreamsArticle />} />
             <Route path="/photos" element={<PhotosPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
