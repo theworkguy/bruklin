@@ -9,8 +9,6 @@ interface LazyImageProps {
   fetchPriority?: 'high' | 'low' | 'auto';
   onLoad?: () => void;
   onError?: () => void;
-  sizes?: string;
-  srcSet?: string;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
@@ -21,18 +19,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
   loading = 'lazy',
   fetchPriority = 'auto',
   onLoad,
-  onError,
-  sizes,
-  srcSet
+  onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(loading === 'eager');
+  const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (loading === 'eager') return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,7 +34,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '100px' }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     if (imgRef.current) {
@@ -48,7 +42,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, [loading]);
+  }, []);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -64,27 +58,26 @@ const LazyImage: React.FC<LazyImageProps> = ({
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
       {!isLoaded && !hasError && (
-        <div
-          className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 animate-pulse"
+        <img
+          src={placeholder}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover blur-sm"
           aria-hidden="true"
         />
       )}
       
       {/* Main Image */}
-      {isInView && (
+      {(isInView || loading === 'eager') && (
         <img
           src={src}
-          srcSet={srcSet}
-          sizes={sizes}
           alt={alt}
           loading={loading}
           fetchPriority={fetchPriority}
           onLoad={handleLoad}
           onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-500 ${
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
-          decoding="async"
         />
       )}
       
