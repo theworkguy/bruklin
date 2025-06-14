@@ -1,7 +1,6 @@
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
 import { FaInstagram, FaTiktok } from 'react-icons/fa';
-import LazyImage from './LazyImage';
 
 interface ProfileProps {
   name: string;
@@ -27,7 +26,7 @@ const Profile: React.FC<ProfileProps> = ({ name, bio, imageUrl }) => {
                         shadow-[0_0_40px_rgba(59,130,246,0.3)] relative">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-400/20 
                           group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
-            <LazyImage
+            <img 
               src={imageUrl} 
               alt={`${name}'s profile`} 
               className="w-full h-full object-cover transform transition-all duration-700 

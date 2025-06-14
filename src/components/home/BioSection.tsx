@@ -1,13 +1,12 @@
 import React from 'react';
 import { Download, FileText } from 'lucide-react';
-import LazyImage from '../LazyImage';
 
 const BioSection: React.FC = () => {
   return (
     <section className="py-20 px-6 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <LazyImage
+        <img 
           src="/profilephoto.jpg" 
           alt="Bruklin" 
           className="w-full h-full object-cover object-center"

@@ -1,14 +1,12 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
-
-// Lazy load components for better performance
-const HeroSection = React.lazy(() => import('../components/home/HeroSection'));
-const TracklistSection = React.lazy(() => import('../components/home/TracklistSection'));
-const VideoSection = React.lazy(() => import('../components/home/VideoSection'));
-const BioSection = React.lazy(() => import('../components/home/BioSection'));
-const SocialMediaSection = React.lazy(() => import('../components/home/SocialMediaSection'));
-const StatsSection = React.lazy(() => import('../components/home/StatsSection'));
-const ContactFormSection = React.lazy(() => import('../components/home/ContactFormSection'));
+import HeroSection from '../components/home/HeroSection';
+import TracklistSection from '../components/home/TracklistSection';
+import VideoSection from '../components/home/VideoSection';
+import BioSection from '../components/home/BioSection';
+import SocialMediaSection from '../components/home/SocialMediaSection';
+import StatsSection from '../components/home/StatsSection';
+import ContactFormSection from '../components/home/ContactFormSection';
 
 const HomePage: React.FC = () => {
   return (
@@ -28,19 +26,13 @@ const HomePage: React.FC = () => {
         }}
       />
       <div className="w-full">
-        <React.Suspense fallback={
-          <div className="min-h-screen flex items-center justify-center">
-            <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-          </div>
-        }>
-          <HeroSection />
-          <TracklistSection />
-          <VideoSection />
-          <BioSection />
-          <SocialMediaSection />
-          <StatsSection />
-          <ContactFormSection />
-        </React.Suspense>
+        <HeroSection />
+        <TracklistSection />
+        <VideoSection />
+        <BioSection />
+        <SocialMediaSection />
+        <StatsSection />
+        <ContactFormSection />
       </div>
     </>
   );
