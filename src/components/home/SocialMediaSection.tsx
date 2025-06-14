@@ -10,7 +10,7 @@ const SocialMediaSection: React.FC = () => {
       label: 'Instagram', 
       username: '@bruklin',
       color: 'from-purple-600 via-pink-600 to-yellow-500',
-      followers: '45.2K',
+      followers: '52.9K',
       description: 'Daily updates & behind the scenes',
       stats: 'Stories • Reels • Photos',
       verified: true
@@ -21,7 +21,7 @@ const SocialMediaSection: React.FC = () => {
       label: 'TikTok', 
       username: '@bruklin',
       color: 'from-gray-900 to-gray-800',
-      followers: '128K',
+      followers: '17.8K',
       description: 'Viral music content & trends',
       stats: 'Videos • Challenges • Duets',
       verified: true
@@ -32,7 +32,7 @@ const SocialMediaSection: React.FC = () => {
       label: 'Facebook', 
       username: '@bruklin',
       color: 'from-blue-600 to-blue-800',
-      followers: '23.1K',
+      followers: '8.7K',
       description: 'Community & fan interactions',
       stats: 'Posts • Events • Live streams',
       verified: true
@@ -80,7 +80,7 @@ const SocialMediaSection: React.FC = () => {
           <div className="flex justify-center gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-pink-400">
-                {formatTotalFollowers(totalFollowers)}+
+                79.4K+
               </div>
               <div className="text-white/60 text-xs sm:text-sm">Total Followers</div>
             </div>
