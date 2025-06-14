@@ -81,19 +81,6 @@ const TracklistSection: React.FC = () => {
     }
   };
 
-  const totalStreams = tracks.reduce((sum, track) => {
-    const streamCount = parseFloat(track.streams.replace(/[KM]/g, ''));
-    const multiplier = track.streams.includes('M') ? 1000000 : 1000;
-    return sum + (streamCount * multiplier);
-  }, 0);
-
-  const formatTotalStreams = (total: number) => {
-    if (total >= 1000000) {
-      return `${(total / 1000000).toFixed(1)}M`;
-    }
-    return `${Math.round(total / 1000)}K`;
-  };
-
   return (
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black/20">
       <div className="max-w-4xl mx-auto">
@@ -112,7 +99,7 @@ const TracklistSection: React.FC = () => {
           <div className="flex justify-center gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-green-400">
-                {formatTotalStreams(totalStreams)}+
+                7.8M+
               </div>
               <div className="text-white/60 text-xs sm:text-sm">Total Streams</div>
             </div>
