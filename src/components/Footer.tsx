@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaSpotify, FaYoutube, FaFacebook } from 'react-icons/fa';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const socialLinks = [
@@ -36,11 +36,7 @@ const Footer: React.FC = () => {
     { name: 'Discography', path: '/discography' },
     { name: 'Videos', path: '/videos' },
     { name: 'Blog', path: '/blog' },
-  ];
-
-  const legalLinks = [
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms & Conditions', path: '/terms' },
+    { name: 'Photos', path: '/photos' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -64,7 +60,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="mb-8">
@@ -129,26 +125,8 @@ const Footer: React.FC = () => {
             {/* Quick Links */}
             <div>
               <h3 className="text-white font-bold text-lg mb-6">Quick Links</h3>
-              <ul className="space-y-3">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      to={link.path}
-                      className="text-white/70 hover:text-white transition-colors duration-300
-                               hover:translate-x-1 transform inline-block"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal & Support */}
-            <div>
-              <h3 className="text-white font-bold text-lg mb-6">Legal & Support</h3>
               <ul className="space-y-3 mb-8">
-                {legalLinks.map((link, index) => (
+                {quickLinks.map((link, index) => (
                   <li key={index}>
                     <Link
                       to={link.path}
