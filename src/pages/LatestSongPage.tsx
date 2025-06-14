@@ -13,6 +13,7 @@ const LatestSongPage: React.FC = () => {
         description="Listen to Bruklin's latest single 'Under Your Skin' - a haunting pop ballad exploring emotional vulnerability. Available on all streaming platforms."
         keywords="Under Your Skin, Bruklin latest song, new music 2025, pop ballad, emotional vulnerability, Spotify, Apple Music"
         url="/latest-song"
+        url="/new"
         type="website"
         musicData={{
           albumName: "Under Your Skin",
