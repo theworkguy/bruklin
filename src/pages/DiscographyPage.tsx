@@ -103,12 +103,12 @@ const DiscographyPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-green-600/20 to-blue-600/20 
                         backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-            <h3 className="text-3xl font-bold text-green-400 mb-2">6M+</h3>
+            <h3 className="text-3xl font-bold text-green-400 mb-2">7.8M+</h3>
             <p className="text-white/80">Spotify Streams</p>
           </div>
           <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 
                         backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-            <h3 className="text-3xl font-bold text-red-400 mb-2">14M+</h3>
+            <h3 className="text-3xl font-bold text-red-400 mb-2">17.3M+</h3>
             <p className="text-white/80">YouTube Views</p>
           </div>
           <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 

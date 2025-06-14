@@ -99,12 +99,12 @@ const VideosPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 
                         backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-            <h3 className="text-3xl font-bold text-red-400 mb-2">14M+</h3>
+            <h3 className="text-3xl font-bold text-red-400 mb-2">17.3M+</h3>
             <p className="text-white/80">Total Views</p>
           </div>
           <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 
                         backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
-            <h3 className="text-3xl font-bold text-purple-400 mb-2">250K+</h3>
+            <h3 className="text-3xl font-bold text-purple-400 mb-2">16.8K+</h3>
             <p className="text-white/80">Subscribers</p>
           </div>
           <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 
