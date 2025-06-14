@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import { Download, Eye, Calendar, Camera, Image as ImageIcon, Sparkles } from 'lucide-react';
+import { Download, Eye, Calendar, Camera, Image as ImageIcon } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const PhotosPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const photos = [
     {
       id: 1,
       src: "/1.jpg",
-      category: "portrait",
       title: "Blue Hour Portrait",
       date: "March 2025",
       description: "Golden hour portrait session showcasing natural beauty and confidence"
@@ -18,7 +16,6 @@ const PhotosPage: React.FC = () => {
     {
       id: 2,
       src: "/WhatsApp Image 2025-03-27 at 9.11.59 PM.jpeg",
-      category: "artistic",
       title: "Red Statement",
       date: "March 2025",
       description: "Bold artistic concept with dramatic red styling and creative direction"
@@ -26,7 +23,6 @@ const PhotosPage: React.FC = () => {
     {
       id: 3,
       src: "/WhatsApp Image 2025-03-27 at 9.12.15 PM.jpeg",
-      category: "glamour",
       title: "Metallic Dreams",
       date: "March 2025",
       description: "High-fashion glamour shoot with metallic elements and luxury styling"
@@ -34,7 +30,6 @@ const PhotosPage: React.FC = () => {
     {
       id: 4,
       src: "/WhatsApp Image 2025-03-27 at 9.13.39 PM.jpeg",
-      category: "lifestyle",
       title: "Yacht Life",
       date: "March 2025",
       description: "Lifestyle photography capturing summer vibes and luxury moments"
@@ -42,24 +37,18 @@ const PhotosPage: React.FC = () => {
     {
       id: 5,
       src: "/Bruklin.jpg",
-      category: "lifestyle",
       title: "Magic Show Vibes",
       date: "March 2025",
       description: "Relaxed lifestyle moment with a touch of magic and personality"
+    },
+    {
+      id: 6,
+      src: "/profilephoto copy.jpg",
+      title: "Blue Mood Portrait",
+      date: "March 2025",
+      description: "Stunning blue-toned portrait with dramatic lighting and artistic composition"
     }
   ];
-
-  const categories = [
-    { id: 'all', name: 'All Photos', icon: ImageIcon },
-    { id: 'portrait', name: 'Portraits', icon: Camera },
-    { id: 'artistic', name: 'Artistic', icon: Sparkles },
-    { id: 'glamour', name: 'Glamour', icon: Sparkles },
-    { id: 'lifestyle', name: 'Lifestyle', icon: Camera }
-  ];
-
-  const filteredPhotos = selectedCategory === 'all' 
-    ? photos 
-    : photos.filter(photo => photo.category === selectedCategory);
 
   return (
     <>
@@ -99,8 +88,8 @@ const PhotosPage: React.FC = () => {
                           backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/10
                           hover:border-white/20 transition-all duration-300 text-center
                           hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transform hover:scale-105">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-400 mb-1 sm:mb-2">4</h3>
-              <p className="text-white/80 text-xs sm:text-sm">Categories</p>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-400 mb-1 sm:mb-2">2025</h3>
+              <p className="text-white/80 text-xs sm:text-sm">Latest Collection</p>
             </div>
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 
                           backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/10
@@ -113,33 +102,14 @@ const PhotosPage: React.FC = () => {
                           backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/10
                           hover:border-white/20 transition-all duration-300 text-center
                           hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transform hover:scale-105">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-cyan-400 mb-1 sm:mb-2">2025</h3>
-              <p className="text-white/80 text-xs sm:text-sm">Latest</p>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-cyan-400 mb-1 sm:mb-2">Pro</h3>
+              <p className="text-white/80 text-xs sm:text-sm">Photography</p>
             </div>
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 sm:mb-16">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium 
-                           transition-all duration-300 text-sm sm:text-base
-                           ${selectedCategory === category.id
-                             ? 'bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-lg'
-                             : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                           }`}
-              >
-                <category.icon size={16} className="sm:w-4 sm:h-4" />
-                <span>{category.name}</span>
-              </button>
-            ))}
           </div>
 
           {/* Photo Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-            {filteredPhotos.map((photo) => (
+            {photos.map((photo) => (
               <div
                 key={photo.id}
                 className="group relative bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden
@@ -169,12 +139,12 @@ const PhotosPage: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Category Badge */}
+                  {/* Photo Number Badge */}
                   <div className="absolute top-4 left-4">
                     <span className="bg-gradient-to-r from-pink-600/80 to-purple-600/80 backdrop-blur-sm
                                    text-white text-xs font-semibold px-3 py-1.5 rounded-full
-                                   border border-white/20 capitalize">
-                      {photo.category}
+                                   border border-white/20">
+                      #{photo.id}
                     </span>
                   </div>
                 </div>
