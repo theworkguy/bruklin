@@ -2,7 +2,7 @@ import React from 'react';
 
 const StatsSection: React.FC = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 pb-8">
       <div className="max-w-7xl mx-auto">
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

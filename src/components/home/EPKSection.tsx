@@ -15,7 +15,7 @@ const EPKSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 px-6">
+    <section className="pt-8 pb-12 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* EPK Visual */}
