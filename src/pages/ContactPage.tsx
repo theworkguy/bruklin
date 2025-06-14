@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Send, Mail, Phone, MapPin, Clock, CheckCircle, AlertCircle, Globe, MessageSquare } from 'lucide-react';
 import { FaInstagram, FaTiktok, FaFacebook, FaTwitter, FaSpotify, FaYoutube } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
+import { submitContactForm, ContactFormData } from '../utils/emailService';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -26,23 +27,40 @@ const ContactPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const contactData: ContactFormData = {
+        ...formData,
+        source: 'contact-page'
+      };
+      
+      const success = await submitContactForm(contactData);
+      
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: '',
-        inquiryType: 'general'
-      });
+      
+      if (success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+          inquiryType: 'general'
+        });
+      } else {
+        setSubmitStatus('error');
+      }
       
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
-    }, 2000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setIsSubmitting(false);
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    }
   };
 
   const contactInfo = [
@@ -192,7 +210,18 @@ const ContactPage: React.FC = () => {
                   <CheckCircle size={18} className="text-green-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-green-400 font-medium text-sm sm:text-base">Message sent successfully!</p>
-                    <p className="text-green-300/80 text-xs sm:text-sm">I'll get back to you within 24-48 hours.</p>
+                    <p className="text-green-300/80 text-xs sm:text-sm">Your message has been sent to management@mbmusicgroup.us. I'll get back to you within 24-48 hours.</p>
+                  </div>
+                </div>
+              )}
+              
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-red-600/20 border border-red-500/30 flex items-start gap-3">
+                  <AlertCircle size={18} className="text-red-400 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-red-400 font-medium text-sm sm:text-base">Message could not be sent</p>
+                    <p className="text-red-300/80 text-xs sm:text-sm">Please try again or email directly to management@mbmusicgroup.us</p>
                   </div>
                 </div>
               )}
