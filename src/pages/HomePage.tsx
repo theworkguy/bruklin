@@ -2,7 +2,6 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import HeroSection from '../components/home/HeroSection';
 import StatsSection from '../components/home/StatsSection';
-import EPKSection from '../components/home/EPKSection';
 import TracklistSection from '../components/home/TracklistSection';
 import VideoSection from '../components/home/VideoSection';
 import BioSection from '../components/home/BioSection';
@@ -29,7 +28,6 @@ const HomePage: React.FC = () => {
       <div className="w-full">
         <HeroSection />
         <StatsSection />
-        <EPKSection />
         <TracklistSection />
         <VideoSection />
         <BioSection />
