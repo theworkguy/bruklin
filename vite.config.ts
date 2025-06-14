@@ -26,7 +26,11 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true
       }
-    }
+    },
+    // Enable gzip compression
+    reportCompressedSize: true,
+    // Optimize assets
+    assetsInlineLimit: 4096
   },
   server: {
     hmr: {

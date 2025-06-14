@@ -10,7 +10,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "Under Your Skin", 
       youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw", 
-      thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/maxresdefault.jpg",
       views: "2M",
       duration: "3:00",
       releaseDate: "2025",
@@ -20,7 +20,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "Good Girl Bad Dreams", 
       youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", 
-      thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/maxresdefault.jpg",
       views: "1.6M",
       duration: "2:36",
       releaseDate: "2025",
@@ -30,7 +30,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "Good Cry (Acoustic)", 
       youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", 
-      thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/maxresdefault.jpg",
       views: "316K",
       duration: "2:32",
       releaseDate: "2025",
@@ -40,7 +40,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "Good Cry", 
       youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", 
-      thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/maxresdefault.jpg",
       views: "1.8M",
       duration: "2:18",
       releaseDate: "2024",
@@ -50,7 +50,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "Daydreaming", 
       youtubeUrl: "https://www.youtube.com/watch?v=-Ss_hxlRUM4", 
-      thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/maxresdefault.jpg",
       views: "2.3M",
       duration: "2:33",
       releaseDate: "2024",
@@ -60,7 +60,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "No Contact", 
       youtubeUrl: "https://www.youtube.com/watch?v=9TZJqvSS994", 
-      thumbnail: "https://img.youtube.com/vi/9TZJqvSS994/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/9TZJqvSS994/maxresdefault.jpg",
       views: "1.6M",
       duration: "2:51",
       releaseDate: "2024",
@@ -70,7 +70,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "Magic Show", 
       youtubeUrl: "https://www.youtube.com/watch?v=FMmNnxsuets", 
-      thumbnail: "https://img.youtube.com/vi/FMmNnxsuets/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/FMmNnxsuets/maxresdefault.jpg",
       views: "4M",
       duration: "2:40",
       releaseDate: "2024",
@@ -80,7 +80,7 @@ const VideoSection: React.FC = () => {
     { 
       title: "STAY FRIENDS", 
       youtubeUrl: "https://www.youtube.com/watch?v=AC3r8rQfPX8", 
-      thumbnail: "https://img.youtube.com/vi/AC3r8rQfPX8/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/AC3r8rQfPX8/maxresdefault.jpg",
       views: "3.2M",
       duration: "2:40",
       releaseDate: "2024",
@@ -88,19 +88,6 @@ const VideoSection: React.FC = () => {
       category: "Music Video"
     },
   ];
-
-  const totalViews = videos.reduce((sum, video) => {
-    const viewCount = parseFloat(video.views.replace(/[KM]/g, ''));
-    const multiplier = video.views.includes('M') ? 1000000 : 1000;
-    return sum + (viewCount * multiplier);
-  }, 0);
-
-  const formatTotalViews = (total: number) => {
-    if (total >= 1000000) {
-      return `${(total / 1000000).toFixed(1)}M`;
-    }
-    return `${Math.round(total / 1000)}K`;
-  };
 
   return (
     <section className="py-20 px-6">
@@ -155,11 +142,13 @@ const VideoSection: React.FC = () => {
               <div className="md:w-2/3 relative aspect-video md:aspect-auto overflow-hidden">
                 <LazyImage
                   src={videos[0].thumbnail}
-                  alt={`${videos[0].title} - Bruklin`}
+                  alt={`${videos[0].title} - Bruklin music video`}
                   className="w-full h-full object-cover transition-transform duration-300
                            group-hover:scale-110"
                   loading="eager"
                   fetchPriority="high"
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                  srcSet={`${videos[0].thumbnail} 1280w`}
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
                               transition-all duration-300 flex items-center justify-center">
@@ -243,9 +232,11 @@ const VideoSection: React.FC = () => {
                 <div className="aspect-video relative overflow-hidden">
                   <LazyImage
                     src={video.thumbnail}
-                    alt={`${video.title} - Bruklin`}
+                    alt={`${video.title} - Bruklin music video`}
                     className="w-full h-full object-cover transition-transform duration-300
                              group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    srcSet={`${video.thumbnail} 640w`}
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
                                 transition-all duration-300 flex items-center justify-center

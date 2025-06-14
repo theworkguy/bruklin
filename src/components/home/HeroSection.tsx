@@ -16,10 +16,12 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <LazyImage
           src="/profilephoto.jpg" 
-          alt="Bruklin" 
+          alt="Bruklin - The Voice of a Generation" 
           className="w-full h-full object-cover object-center"
           loading="eager"
           fetchPriority="high"
+          sizes="100vw"
+          srcSet="/profilephoto.jpg 800w"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>

@@ -9,8 +9,10 @@ const BioSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <LazyImage
           src="/profilephoto.jpg" 
-          alt="Bruklin" 
+          alt="Bruklin performing" 
           className="w-full h-full object-cover object-center"
+          sizes="100vw"
+          srcSet="/profilephoto.jpg 800w"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
