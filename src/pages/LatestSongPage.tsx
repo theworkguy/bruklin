@@ -1,11 +1,17 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
-import { FaSpotify, FaApple, FaYoutube, FaAmazon } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 import Profile from '../components/Profile';
-import LinkSection from '../components/LinkSection';
+import MusicPlayer from '../components/MusicPlayer';
 
 const LatestSongPage: React.FC = () => {
+  // Define tracks for the music player
+  const tracks = [
+    {
+      title: "Under Your Skin",
+      url: "https://audio-previews.elements.envatousercontent.com/files/281404817/preview.mp3" // Preview audio URL
+    }
+  ];
+
   return (
     <>
       <SEOHead
@@ -37,8 +43,31 @@ const LatestSongPage: React.FC = () => {
             imageUrl="/profilephoto.jpg"
           />
           
-          {/* Link Section */}
-          <LinkSection />
+          {/* Music Player Section */}
+          <div className="w-full max-w-[700px] mx-auto px-6 pb-24">
+            <div className="relative bg-black
+                          backdrop-blur-sm rounded-2xl px-4 py-4 mb-8
+                          border-t border-white/10 shadow-[0_10px_50px_rgba(0,191,255,0.2)]
+                          overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-blue-600/20 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <h1 className="font-display text-2xl xs:text-3xl sm:text-4xl text-white
+                           tracking-wide animate-fade-in
+                           bg-gradient-to-r from-blue-300 via-cyan-400 to-blue-500 
+                           bg-clip-text text-transparent
+                           group-hover:tracking-wider transition-all duration-700
+                           [text-shadow:_2px_2px_20px_rgba(0,191,255,0.5)]
+                           group-hover:[text-shadow:_2px_2px_30px_rgba(0,191,255,0.8)]
+                           break-words text-center leading-tight">
+                Under Your Skin
+              </h1>
+              <div className="absolute bottom-0 left-0 w-full h-[2px] 
+                            bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+            </div>
+            
+            {/* Music Player */}
+            <MusicPlayer tracks={tracks} />
+          </div>
         </div>
       </div>
     </>
