@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: FaInstagram, url: 'https://www.instagram.com/bruklin', label: 'Instagram' },
     { icon: FaSpotify, url: 'https://open.spotify.com/artist/bruklin', label: 'Spotify' },
-    { icon: FaYoutube, url: 'https://www.youtube.com/@bruklin', label: 'YouTube' },
+    { icon: FaYoutube, url: 'https://www.youtube.com/@BruklinOfficial', label: 'YouTube' },
     { icon: FaFacebook, url: 'https://www.facebook.com/bruklin', label: 'Facebook' },
     { icon: FaTwitter, url: 'https://twitter.com/bruklin', label: 'Twitter' },
   ];

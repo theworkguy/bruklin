@@ -323,7 +323,7 @@ const VideoSection: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://www.youtube.com/@bruklin?sub_confirmation=1"
+                href="https://www.youtube.com/@BruklinOfficial?sub_confirmation=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 
