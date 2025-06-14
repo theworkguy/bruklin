@@ -17,6 +17,36 @@ const VideoSection: React.FC = () => {
       category: "Music Video"
     },
     { 
+      title: "Good Girl Bad Dreams", 
+      youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", 
+      thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
+      views: "3.8M",
+      duration: "2:36",
+      releaseDate: "2024",
+      isLatest: false,
+      category: "Music Video"
+    },
+    { 
+      title: "Good Cry (Acoustic)", 
+      youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", 
+      thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
+      views: "1.5M",
+      duration: "2:32",
+      releaseDate: "2024",
+      isLatest: false,
+      category: "Acoustic"
+    },
+    { 
+      title: "Good Cry", 
+      youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", 
+      thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
+      views: "950K",
+      duration: "2:18",
+      releaseDate: "2023",
+      isLatest: false,
+      category: "Music Video"
+    },
+    { 
       title: "Daydreaming", 
       youtubeUrl: "https://www.youtube.com/watch?v=-Ss_hxlRUM4", 
       thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
@@ -56,37 +86,6 @@ const VideoSection: React.FC = () => {
       isLatest: false,
       category: "Music Video"
     },
-    // Hidden videos - only shown when expanded
-    { 
-      title: "Good Girl Bad Dreams", 
-      youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", 
-      thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
-      views: "3.8M",
-      duration: "2:36",
-      releaseDate: "2024",
-      isLatest: false,
-      category: "Music Video"
-    },
-    { 
-      title: "Good Cry (Acoustic)", 
-      youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", 
-      thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
-      views: "1.5M",
-      duration: "2:32",
-      releaseDate: "2024",
-      isLatest: false,
-      category: "Acoustic"
-    },
-    { 
-      title: "Good Cry", 
-      youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", 
-      thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
-      views: "950K",
-      duration: "2:18",
-      releaseDate: "2023",
-      isLatest: false,
-      category: "Music Video"
-    },
   ];
 
   const totalViews = videos.reduce((sum, video) => {
@@ -101,9 +100,6 @@ const VideoSection: React.FC = () => {
     }
     return `${Math.round(total / 1000)}K`;
   };
-
-  // Show only first 5 videos initially (Under Your Skin + 4 others, excluding the 3 hidden ones)
-  const visibleVideos = showAllVideos ? videos : videos.slice(0, 5);
 
   return (
     <section className="py-20 px-6">
@@ -135,7 +131,7 @@ const VideoSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Featured Video */}
+        {/* Featured Video - Always Visible */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <TrendingUp size={20} className="text-red-400" />
@@ -226,95 +222,94 @@ const VideoSection: React.FC = () => {
           </a>
         </div>
 
-        {/* Video Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {/* Show videos based on expand state */}
-          {visibleVideos.slice(1).map((video, index) => (
-            <a
-              key={index + 1}
-              href={video.youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
-                       border border-white/10 hover:border-white/20 
-                       transition-all duration-300 transform hover:scale-105
-                       hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]"
-            >
-              {/* Thumbnail */}
-              <div className="aspect-video relative overflow-hidden">
-                <img
-                  src={video.thumbnail}
-                  alt={`${video.title} - Bruklin`}
-                  className="w-full h-full object-cover transition-transform duration-300
-                           group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
-                              transition-all duration-300 flex items-center justify-center
-                              opacity-0 group-hover:opacity-100">
-                  <div className="w-12 h-12 rounded-full bg-red-600 group-hover:bg-red-500
-                                flex items-center justify-center transition-all duration-300
-                                transform group-hover:scale-110">
-                    <Play size={16} className="text-white ml-0.5" />
+        {/* Hidden Videos Grid - Only Show When Expanded */}
+        {showAllVideos && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+            {videos.slice(1).map((video, index) => (
+              <a
+                key={index + 1}
+                href={video.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
+                         border border-white/10 hover:border-white/20 
+                         transition-all duration-300 transform hover:scale-105
+                         hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]"
+              >
+                {/* Thumbnail */}
+                <div className="aspect-video relative overflow-hidden">
+                  <img
+                    src={video.thumbnail}
+                    alt={`${video.title} - Bruklin`}
+                    className="w-full h-full object-cover transition-transform duration-300
+                             group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
+                                transition-all duration-300 flex items-center justify-center
+                                opacity-0 group-hover:opacity-100">
+                    <div className="w-12 h-12 rounded-full bg-red-600 group-hover:bg-red-500
+                                  flex items-center justify-center transition-all duration-300
+                                  transform group-hover:scale-110">
+                      <Play size={16} className="text-white ml-0.5" />
+                    </div>
+                  </div>
+                  
+                  {/* Duration */}
+                  <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs 
+                                px-2 py-1 rounded font-medium">
+                    {video.duration}
+                  </div>
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-2 left-2">
+                    <span className="bg-red-600/80 text-white text-xs font-medium 
+                                   px-2 py-1 rounded uppercase">
+                      {video.category}
+                    </span>
                   </div>
                 </div>
-                
-                {/* Duration */}
-                <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs 
-                              px-2 py-1 rounded font-medium">
-                  {video.duration}
-                </div>
-                
-                {/* Category Badge */}
-                <div className="absolute top-2 left-2">
-                  <span className="bg-red-600/80 text-white text-xs font-medium 
-                                 px-2 py-1 rounded uppercase">
-                    {video.category}
-                  </span>
-                </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-4">
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-red-400
-                             transition-colors duration-300 line-clamp-2 leading-tight">
-                  {video.title}
-                </h3>
-                
-                <div className="flex items-center justify-between text-white/60 text-sm">
-                  <div className="flex items-center gap-1">
-                    <Eye size={12} />
-                    <span>{video.views}</span>
+                {/* Content */}
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-red-400
+                               transition-colors duration-300 line-clamp-2 leading-tight">
+                    {video.title}
+                  </h3>
+                  
+                  <div className="flex items-center justify-between text-white/60 text-sm">
+                    <div className="flex items-center gap-1">
+                      <Eye size={12} />
+                      <span>{video.views}</span>
+                    </div>
+                    <span>{video.releaseDate}</span>
                   </div>
-                  <span>{video.releaseDate}</span>
                 </div>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {/* View All Button */}
-        {videos.length > 5 && (
-          <div className="text-center mt-12">
-            <button
-              onClick={() => setShowAllVideos(!showAllVideos)}
-              className="px-8 py-4 rounded-xl bg-gradient-to-r from-red-600/20 to-pink-600/20
-                       border border-white/10 hover:border-white/20 text-white
-                       flex items-center justify-center gap-3 mx-auto transition-all duration-300
-                       hover:bg-gradient-to-r hover:from-red-600/30 hover:to-pink-600/30
-                       hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] transform hover:scale-[1.02]
-                       group"
-            >
-              <Eye size={18} className="group-hover:scale-110 transition-transform duration-300" />
-              <span className="font-semibold">
-                {showAllVideos ? 'Show Less' : `View All ${videos.length} Videos`}
-              </span>
-            </button>
+              </a>
+            ))}
           </div>
         )}
 
+        {/* View All Button */}
+        <div className="text-center mb-16">
+          <button
+            onClick={() => setShowAllVideos(!showAllVideos)}
+            className="px-8 py-4 rounded-xl bg-gradient-to-r from-red-600/20 to-pink-600/20
+                     border border-white/10 hover:border-white/20 text-white
+                     flex items-center justify-center gap-3 mx-auto transition-all duration-300
+                     hover:bg-gradient-to-r hover:from-red-600/30 hover:to-pink-600/30
+                     hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] transform hover:scale-[1.02]
+                     group"
+          >
+            <Eye size={18} className="group-hover:scale-110 transition-transform duration-300" />
+            <span className="font-semibold">
+              {showAllVideos ? 'Show Less' : `View All ${videos.length} Videos`}
+            </span>
+          </button>
+        </div>
+
         {/* Subscribe CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center">
           <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 
                         backdrop-blur-sm rounded-3xl p-8 border border-white/10
                         hover:border-white/20 transition-all duration-300
