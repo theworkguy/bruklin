@@ -24,9 +24,11 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center justify-center mb-8">
-          <h2 className="text-3xl font-bold text-white mr-2">BRUKLIN</h2>
-          <Music className="text-blue-400" size={28} />
-          <Music className="text-cyan-400 ml-1" size={24} />
+          <h2 className="text-3xl font-bold mr-2">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">
+              BRUKLIN
+            </span>
+          </h2>
         </div>
 
         {/* Social Media Icons */}
