@@ -17,36 +17,6 @@ const VideoSection: React.FC = () => {
       category: "Music Video"
     },
     { 
-      title: "Good Girl Bad Dreams", 
-      youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", 
-      thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
-      views: "3.8M",
-      duration: "2:36",
-      releaseDate: "2024",
-      isLatest: false,
-      category: "Music Video"
-    },
-    { 
-      title: "Good Cry (Acoustic)", 
-      youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", 
-      thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
-      views: "1.5M",
-      duration: "2:32",
-      releaseDate: "2024",
-      isLatest: false,
-      category: "Acoustic"
-    },
-    { 
-      title: "Good Cry", 
-      youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", 
-      thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
-      views: "950K",
-      duration: "2:18",
-      releaseDate: "2023",
-      isLatest: false,
-      category: "Music Video"
-    },
-    { 
       title: "Daydreaming", 
       youtubeUrl: "https://www.youtube.com/watch?v=-Ss_hxlRUM4", 
       thumbnail: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
@@ -86,6 +56,37 @@ const VideoSection: React.FC = () => {
       isLatest: false,
       category: "Music Video"
     },
+    // Hidden videos - only shown when expanded
+    { 
+      title: "Good Girl Bad Dreams", 
+      youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", 
+      thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
+      views: "3.8M",
+      duration: "2:36",
+      releaseDate: "2024",
+      isLatest: false,
+      category: "Music Video"
+    },
+    { 
+      title: "Good Cry (Acoustic)", 
+      youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM", 
+      thumbnail: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
+      views: "1.5M",
+      duration: "2:32",
+      releaseDate: "2024",
+      isLatest: false,
+      category: "Acoustic"
+    },
+    { 
+      title: "Good Cry", 
+      youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk", 
+      thumbnail: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
+      views: "950K",
+      duration: "2:18",
+      releaseDate: "2023",
+      isLatest: false,
+      category: "Music Video"
+    },
   ];
 
   const totalViews = videos.reduce((sum, video) => {
@@ -100,6 +101,9 @@ const VideoSection: React.FC = () => {
     }
     return `${Math.round(total / 1000)}K`;
   };
+
+  // Show only first 5 videos initially (Under Your Skin + 4 others, excluding the 3 hidden ones)
+  const visibleVideos = showAllVideos ? videos : videos.slice(0, 5);
 
   return (
     <section className="py-20 px-6">
@@ -224,8 +228,8 @@ const VideoSection: React.FC = () => {
 
         {/* Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {/* Visible Videos */}
-          {videos.slice(1, showAllVideos ? videos.length : 4).map((video, index) => (
+          {/* Show videos based on expand state */}
+          {visibleVideos.slice(1).map((video, index) => (
             <a
               key={index + 1}
               href={video.youtubeUrl}
@@ -290,7 +294,7 @@ const VideoSection: React.FC = () => {
         </div>
 
         {/* View All Button */}
-        {videos.length > 4 && (
+        {videos.length > 5 && (
           <div className="text-center mt-12">
             <button
               onClick={() => setShowAllVideos(!showAllVideos)}
