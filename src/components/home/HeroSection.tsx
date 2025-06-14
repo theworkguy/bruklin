@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaYoutube, FaSpotify, FaApple, FaAmazon } from 'react-icons/fa';
+import LazyImage from '../LazyImage';
 
 const HeroSection: React.FC = () => {
   const socialLinks = [
@@ -13,10 +14,12 @@ const HeroSection: React.FC = () => {
     <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <LazyImage
           src="/profilephoto.jpg" 
           alt="Bruklin" 
           className="w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>
