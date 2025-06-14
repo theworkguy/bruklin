@@ -20,6 +20,18 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
   const [isLoading, setIsLoading] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // Updated track data with correct information
+  const trackData = [
+    { title: "Under Your Skin", duration: "3:00", streams: "186K", year: "2025" },
+    { title: "Good Girl Bad Dreams", duration: "2:36", streams: "434K", year: "2025" },
+    { title: "Good Cry (Acoustic)", duration: "2:32", streams: "48K", year: "2025" },
+    { title: "Good Cry", duration: "2:18", streams: "1.0M", year: "2024" },
+    { title: "Daydreaming", duration: "2:33", streams: "1.5M", year: "2024" },
+    { title: "Magic Show", duration: "2:40", streams: "1.8M", year: "2024" },
+    { title: "No Contact", duration: "2:51", streams: "878K", year: "2024" },
+    { title: "STAY FRIENDS", duration: "2:40", streams: "1.9M", year: "2024" },
+  ];
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -98,6 +110,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
     setIsPlaying(false);
   };
 
+  const currentTrackData = trackData[currentTrack] || trackData[0];
+
   return (
     <div className="w-full">
       <audio
@@ -116,11 +130,15 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           </div>
           <div className="flex-1">
             <h4 className="text-lg font-semibold text-white mb-1">
-              {tracks[currentTrack]?.title}
+              {currentTrackData.title}
             </h4>
             <div className="flex items-center gap-2 text-white/60 text-sm">
               <Clock size={14} />
               <span>Track {currentTrack + 1} of {tracks.length}</span>
+              <span>•</span>
+              <span>{currentTrackData.streams} streams</span>
+              <span>•</span>
+              <span>{currentTrackData.year}</span>
               {isLoading && <span>• Loading...</span>}
             </div>
           </div>
@@ -150,7 +168,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           </div>
           <div className="flex justify-between text-white/60 text-sm mt-2">
             <span>{formatTime(currentTime)}</span>
-            <span>{formatTime(duration)}</span>
+            <span>{currentTrackData.duration}</span>
           </div>
         </div>
 
@@ -236,7 +254,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
                              ${0 === currentTrack ? 'bg-gradient-to-r from-blue-500 to-cyan-400' : 'bg-white/20'}`}>
                 <span className="text-white text-sm font-medium">1</span>
               </div>
-              <span className="text-white font-medium">{tracks[0]?.title}</span>
+              <div>
+                <span className="text-white font-medium">{trackData[0]?.title}</span>
+                <div className="text-white/60 text-xs">
+                  {trackData[0]?.duration} • {trackData[0]?.streams} • {trackData[0]?.year}
+                </div>
+              </div>
             </div>
             <button
               onClick={() => handleTrackSelect(0)}
@@ -249,7 +272,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
 
         {/* Additional Tracks - Show When Expanded */}
         {showAllTracks && (
-          tracks.slice(1).map((track, index) => (
+          trackData.slice(1).map((track, index) => (
             <div
               key={index + 1}
               className={`p-4 rounded-lg transition-all duration-200 border cursor-pointer
@@ -265,7 +288,12 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
                                  ${index + 1 === currentTrack ? 'bg-gradient-to-r from-blue-500 to-cyan-400' : 'bg-white/20'}`}>
                     <span className="text-white text-sm font-medium">{index + 2}</span>
                   </div>
-                  <span className="text-white font-medium">{track.title}</span>
+                  <div>
+                    <span className="text-white font-medium">{track.title}</span>
+                    <div className="text-white/60 text-xs">
+                      {track.duration} • {track.streams} • {track.year}
+                    </div>
+                  </div>
                 </div>
                 <Play size={16} className="text-white/60 hover:text-blue-400 transition-colors duration-200" />
               </div>

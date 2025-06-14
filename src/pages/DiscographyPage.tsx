@@ -8,12 +8,13 @@ const DiscographyPage: React.FC = () => {
     {
       title: "Under Your Skin",
       type: "Single",
-      year: "2024",
+      year: "2025",
       duration: "3:00",
+      streams: "186,041",
       description: "A haunting pop ballad that explores the depths of emotional connection and vulnerability.",
       cover: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
-        spotify: "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j",
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/@BruklinOfficial"
       }
@@ -21,8 +22,9 @@ const DiscographyPage: React.FC = () => {
     {
       title: "Good Girl Bad Dreams",
       type: "Single",
-      year: "2024",
+      year: "2025",
       duration: "2:36",
+      streams: "433,747",
       description: "An empowering anthem about breaking free from expectations and embracing your true self.",
       cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
@@ -34,8 +36,9 @@ const DiscographyPage: React.FC = () => {
     {
       title: "Good Cry (Acoustic)",
       type: "Single",
-      year: "2024",
+      year: "2025",
       duration: "2:32",
+      streams: "47,835",
       description: "A stripped-down, emotional version of the original that showcases raw vocal talent.",
       cover: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
@@ -47,8 +50,9 @@ const DiscographyPage: React.FC = () => {
     {
       title: "Good Cry",
       type: "Single",
-      year: "2023",
+      year: "2024",
       duration: "2:18",
+      streams: "1,001,080",
       description: "A cathartic pop track about healing and finding strength through emotional release.",
       cover: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
@@ -60,8 +64,9 @@ const DiscographyPage: React.FC = () => {
     {
       title: "Daydreaming",
       type: "Single",
-      year: "2023",
+      year: "2024",
       duration: "2:33",
+      streams: "1,470,185",
       description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope.",
       cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
@@ -73,10 +78,39 @@ const DiscographyPage: React.FC = () => {
     {
       title: "No Contact",
       type: "Single",
-      year: "2023",
-      duration: "2:08",
+      year: "2024",
+      duration: "2:51",
+      streams: "878,484",
       description: "A bold statement about setting boundaries and prioritizing self-worth in relationships.",
       cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
+      }
+    },
+    {
+      title: "Magic Show",
+      type: "Single",
+      year: "2024",
+      duration: "2:40",
+      streams: "1,826,258",
+      description: "An enchanting track that blends pop sensibilities with mystical storytelling elements.",
+      cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
+      links: {
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
+      }
+    },
+    {
+      title: "STAY FRIENDS",
+      type: "Single",
+      year: "2024",
+      duration: "2:40",
+      streams: "1,938,575",
+      description: "A heartfelt exploration of complex relationships and the boundaries of friendship.",
+      cover: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
         spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
@@ -96,7 +130,7 @@ const DiscographyPage: React.FC = () => {
         musicData={{
           albumName: "Bruklin Singles Collection",
           artist: "Bruklin",
-          releaseDate: "2023-2024",
+          releaseDate: "2024-2025",
           genre: "Pop"
         }}
       />
@@ -171,10 +205,14 @@ const DiscographyPage: React.FC = () => {
                       <span className="text-white/60 text-sm">{release.duration}</span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400
                                  transition-colors duration-300">
                       {release.title}
                     </h3>
+
+                    <div className="text-green-400 font-semibold text-sm mb-3">
+                      {release.streams} streams
+                    </div>
 
                     <p className="text-white/70 mb-6 leading-relaxed">
                       {release.description}

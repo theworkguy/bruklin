@@ -10,66 +10,66 @@ const TracklistSection: React.FC = () => {
     { 
       title: "Under Your Skin", 
       duration: "3:00", 
-      streams: "2.1M",
+      streams: "186K",
       spotifyUrl: "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j",
-      isHit: true,
-      releaseDate: "2024"
+      isHit: false,
+      releaseDate: "2025"
     },
     { 
       title: "Good Girl Bad Dreams", 
       duration: "2:36", 
-      streams: "1.8M",
+      streams: "434K",
       spotifyUrl: "https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a",
-      isHit: true,
-      releaseDate: "2024"
+      isHit: false,
+      releaseDate: "2025"
     },
     { 
       title: "Good Cry (Acoustic)", 
       duration: "2:32", 
-      streams: "1.2M",
+      streams: "48K",
       spotifyUrl: "https://open.spotify.com/track/3c4d5e6f7g8h9i0j1a2b",
       isHit: false,
-      releaseDate: "2024"
+      releaseDate: "2025"
     },
     { 
       title: "Good Cry", 
       duration: "2:18", 
-      streams: "950K",
+      streams: "1.0M",
       spotifyUrl: "https://open.spotify.com/track/4d5e6f7g8h9i0j1a2b3c",
-      isHit: false,
-      releaseDate: "2023"
+      isHit: true,
+      releaseDate: "2024"
     },
     { 
       title: "Daydreaming", 
       duration: "2:33", 
-      streams: "780K",
+      streams: "1.5M",
       spotifyUrl: "https://open.spotify.com/track/5e6f7g8h9i0j1a2b3c4d",
-      isHit: false,
-      releaseDate: "2023"
+      isHit: true,
+      releaseDate: "2024"
     },
     { 
       title: "No Contact", 
-      duration: "2:08", 
-      streams: "650K",
+      duration: "2:51", 
+      streams: "878K",
       spotifyUrl: "https://open.spotify.com/track/6f7g8h9i0j1a2b3c4d5e",
       isHit: false,
-      releaseDate: "2023"
-    },
-    { 
-      title: "Stay Friends", 
-      duration: "2:40", 
-      streams: "520K",
-      spotifyUrl: "https://open.spotify.com/track/7g8h9i0j1a2b3c4d5e6f",
-      isHit: false,
-      releaseDate: "2023"
+      releaseDate: "2024"
     },
     { 
       title: "Magic Show", 
       duration: "2:40", 
-      streams: "480K",
+      streams: "1.8M",
       spotifyUrl: "https://open.spotify.com/track/8h9i0j1a2b3c4d5e6f7g",
-      isHit: false,
-      releaseDate: "2023"
+      isHit: true,
+      releaseDate: "2024"
+    },
+    { 
+      title: "STAY FRIENDS", 
+      duration: "2:40", 
+      streams: "1.9M",
+      spotifyUrl: "https://open.spotify.com/track/7g8h9i0j1a2b3c4d5e6f",
+      isHit: true,
+      releaseDate: "2024"
     },
   ];
 
@@ -121,7 +121,7 @@ const TracklistSection: React.FC = () => {
               <div className="text-white/60 text-xs sm:text-sm">Released Tracks</div>
             </div>
             <div className="text-center">
-              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-400">2</div>
+              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-400">4</div>
               <div className="text-white/60 text-xs sm:text-sm">Hit Singles</div>
             </div>
           </div>
@@ -136,7 +136,7 @@ const TracklistSection: React.FC = () => {
             <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
               <TrendingUp size={16} className="text-green-400 sm:w-5 sm:h-5" />
               <span className="text-green-400 font-semibold text-xs sm:text-sm uppercase tracking-wide">
-                Latest Hit
+                Latest Release
               </span>
             </div>
             
