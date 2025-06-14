@@ -49,26 +49,10 @@ const ContactPage: React.FC = () => {
     {
       icon: Mail,
       title: "General Inquiries",
-      details: "hello@bruklin.us",
-      description: "For general questions and fan mail",
-      link: 'mailto:hello@bruklin.us',
+      details: "management@mbmusicgroup.us",
+      description: "For all inquiries including fan mail, press, media, and business",
+      link: 'mailto:management@mbmusicgroup.us',
       color: 'from-blue-500 to-cyan-400'
-    },
-    {
-      icon: Mail,
-      title: "Press & Media",
-      details: "press@bruklin.us",
-      description: "For interviews and media requests",
-      link: 'mailto:press@bruklin.us',
-      color: 'from-purple-500 to-pink-400'
-    },
-    {
-      icon: Mail,
-      title: "Business & Booking",
-      details: "booking@bruklin.us",
-      description: "For performance and collaboration inquiries",
-      link: 'mailto:booking@bruklin.us',
-      color: 'from-green-500 to-emerald-400'
     },
     {
       icon: MapPin,
@@ -77,6 +61,14 @@ const ContactPage: React.FC = () => {
       description: "Based in the heart of the music scene",
       link: null,
       color: 'from-red-500 to-orange-400'
+    },
+    {
+      icon: Globe,
+      title: "Management",
+      details: "MB Music Group LLC",
+      description: "Professional representation and booking",
+      link: 'https://mbmusicgroup.us',
+      color: 'from-purple-500 to-pink-400'
     }
   ];
 
@@ -137,8 +129,8 @@ const ContactPage: React.FC = () => {
     <>
       <SEOHead
         title="Contact - Get in Touch with Bruklin"
-        description="Contact Bruklin for bookings, press inquiries, collaborations, or fan messages. Based in New York, NY. Multiple contact options available for different types of inquiries."
-        keywords="contact Bruklin, booking inquiries, press contact, fan mail, collaboration requests, New York artist contact, music booking"
+        description="Contact Bruklin for bookings, press inquiries, collaborations, or fan messages. Based in New York, NY. Managed by MB Music Group LLC."
+        keywords="contact Bruklin, booking inquiries, press contact, fan mail, collaboration requests, New York artist contact, music booking, MB Music Group"
         url="/contact"
         type="website"
       />
@@ -379,6 +371,8 @@ const ContactPage: React.FC = () => {
                           {info.link ? (
                             <a 
                               href={info.link}
+                              target={info.link.startsWith('http') ? '_blank' : undefined}
+                              rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                               className="text-blue-400 hover:text-cyan-300 font-medium mb-1 block
                                        transition-colors duration-300"
                             >
@@ -405,7 +399,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <p className="text-white/80 leading-relaxed">
                   I typically respond to messages within 24-48 hours. For urgent press or business inquiries, 
-                  please use the specific email addresses above for faster response.
+                  please mention "URGENT" in your subject line for faster response.
                 </p>
               </div>
 
@@ -461,7 +455,7 @@ const ContactPage: React.FC = () => {
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Do you do collaborations?</h3>
                 <p className="text-white/80 leading-relaxed">
                   I'm always open to creative collaborations with other artists, producers, and creators. 
-                  Please use the 'Booking & Business' email to discuss opportunities.
+                  Please reach out via email to discuss opportunities.
                 </p>
               </div>
               <div className="bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 border border-white/10
@@ -476,7 +470,7 @@ const ContactPage: React.FC = () => {
                             hover:border-white/20 transition-all duration-300">
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Can I use your music?</h3>
                 <p className="text-white/80 leading-relaxed">
-                  For licensing or usage rights, please contact the 'Business & Booking' email with details 
+                  For licensing or usage rights, please contact management with details 
                   of your project and intended use.
                 </p>
               </div>

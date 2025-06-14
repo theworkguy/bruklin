@@ -44,8 +44,8 @@ const Footer: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@bruklin.us',
-      link: 'mailto:hello@bruklin.us'
+      value: 'management@mbmusicgroup.us',
+      link: 'mailto:management@mbmusicgroup.us'
     },
     {
       icon: MapPin,

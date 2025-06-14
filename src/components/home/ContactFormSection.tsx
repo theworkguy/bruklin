@@ -40,7 +40,7 @@ const ContactFormSection: React.FC = () => {
             Get in Touch
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Ready to connect? Drop us a message and let's make something amazing together.
+            Ready to connect? Contact us at management@mbmusicgroup.us or use the form below.
           </p>
         </div>
 
