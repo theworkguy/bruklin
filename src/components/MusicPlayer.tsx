@@ -84,14 +84,6 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
     setCurrentTime(newTime);
   };
 
-  const blurTitle = (title: string) => {
-    return title.split('').map((char, index) => 
-      char === ' ' ? ' ' : '●'
-    ).join('');
-  };
-
-  const displayedTracks = showAllTracks ? tracks : tracks.slice(0, 2);
-
   return (
     <div className="w-full">
       <audio
@@ -179,41 +171,53 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         />
       </div>
 
-      {/* Track List Preview */}
+      {/* Track List */}
       <div className="space-y-2">
-        {displayedTracks.map((track, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentTrack(index)}
-            className={`w-full text-left p-3 rounded-lg transition-all duration-200
-                       ${index === currentTrack 
-                         ? 'bg-blue-600/30 text-white' 
-                         : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                       }`}
-          >
-            <span className="text-sm font-medium">
-              {showAllTracks || index < 2 ? track.title : blurTitle(track.title)}
-            </span>
-          </button>
-        ))}
+        {/* Latest Song - Always Visible */}
+        <button
+          onClick={() => setCurrentTrack(0)}
+          className={`w-full text-left p-3 rounded-lg transition-all duration-200
+                     ${0 === currentTrack 
+                       ? 'bg-blue-600/30 text-white' 
+                       : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+                     }`}
+        >
+          <span className="text-sm font-medium">{tracks[0]?.title}</span>
+        </button>
 
-        {/* Blurred tracks preview (when not showing all) */}
-        {!showAllTracks && tracks.length > 2 && (
+        {/* Show All Tracks or Blurred Preview */}
+        {showAllTracks ? (
+          // Show all remaining tracks when expanded
+          tracks.slice(1).map((track, index) => (
+            <button
+              key={index + 1}
+              onClick={() => setCurrentTrack(index + 1)}
+              className={`w-full text-left p-3 rounded-lg transition-all duration-200
+                         ${index + 1 === currentTrack 
+                           ? 'bg-blue-600/30 text-white' 
+                           : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+                         }`}
+            >
+              <span className="text-sm font-medium">{track.title}</span>
+            </button>
+          ))
+        ) : (
+          // Show blurred preview of remaining tracks
           <>
-            {tracks.slice(2, 4).map((track, index) => (
+            {tracks.slice(1, 4).map((track, index) => (
               <div
-                key={index + 2}
-                className="w-full text-left p-3 rounded-lg bg-white/5 text-white/40 cursor-not-allowed"
+                key={index + 1}
+                className="w-full text-left p-3 rounded-lg bg-white/5 text-white/30 cursor-not-allowed"
               >
-                <span className="text-sm font-medium blur-sm">
+                <span className="text-sm font-medium blur-sm select-none">
                   {track.title}
                 </span>
               </div>
             ))}
             
             {tracks.length > 4 && (
-              <div className="w-full text-left p-3 rounded-lg bg-white/5 text-white/40 cursor-not-allowed">
-                <span className="text-sm font-medium">
+              <div className="w-full text-left p-3 rounded-lg bg-white/5 text-white/30 cursor-not-allowed">
+                <span className="text-sm font-medium select-none">
                   +{tracks.length - 4} more tracks...
                 </span>
               </div>
@@ -221,17 +225,18 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           </>
         )}
 
-        {/* View All / Show Less Button */}
-        {tracks.length > 2 && (
+        {/* View All Button */}
+        {tracks.length > 1 && (
           <button
             onClick={() => setShowAllTracks(!showAllTracks)}
-            className="w-full mt-4 p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20
+            className="w-full mt-4 p-4 rounded-xl bg-gradient-to-r from-blue-600/20 to-purple-600/20
                      border border-white/10 hover:border-white/20 text-white
-                     flex items-center justify-center gap-2 transition-all duration-300
-                     hover:bg-gradient-to-r hover:from-blue-600/30 hover:to-purple-600/30"
+                     flex items-center justify-center gap-3 transition-all duration-300
+                     hover:bg-gradient-to-r hover:from-blue-600/30 hover:to-purple-600/30
+                     hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transform hover:scale-[1.02]"
           >
-            <Eye size={16} />
-            <span className="font-medium">
+            <Eye size={18} />
+            <span className="font-semibold">
               {showAllTracks ? 'Show Less' : `View All ${tracks.length} Tracks`}
             </span>
           </button>
