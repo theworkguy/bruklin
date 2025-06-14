@@ -92,9 +92,9 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         onLoadStart={() => setCurrentTime(0)}
       />
 
-      {/* Current Track Display */}
-      <div className="text-center mb-6">
-        <h4 className="text-lg font-semibold text-white mb-2">
+      {/* Enhanced Current Track Display */}
+      <div className="text-center mb-6 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-xl p-4 border border-white/10">
+        <h4 className="text-lg font-semibold text-white mb-2 animate-fade-in-up">
           {tracks[currentTrack]?.title}
         </h4>
         <p className="text-white/60 text-sm">
@@ -102,7 +102,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         </p>
       </div>
 
-      {/* Progress Bar */}
+      {/* Enhanced Progress Bar */}
       <div className="mb-6">
         <input
           type="range"
@@ -110,10 +110,13 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           max="100"
           value={duration ? (currentTime / duration) * 100 : 0}
           onChange={handleSeek}
-          className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer
-                   [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 
-                   [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full 
-                   [&::-webkit-slider-thumb]:bg-blue-500 [&::-webkit-slider-thumb]:cursor-pointer"
+          className="w-full h-3 bg-white/20 rounded-lg appearance-none cursor-pointer
+                   [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 
+                   [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:rounded-full 
+                   [&::-webkit-slider-thumb]:bg-gradient-to-r [&::-webkit-slider-thumb]:from-blue-500 
+                   [&::-webkit-slider-thumb]:to-cyan-500 [&::-webkit-slider-thumb]:cursor-pointer
+                   [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:hover:scale-110
+                   [&::-webkit-slider-thumb]:transition-transform"
         />
         <div className="flex justify-between text-white/60 text-sm mt-2">
           <span>{formatTime(currentTime)}</span>
@@ -121,12 +124,13 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         </div>
       </div>
 
-      {/* Controls */}
+      {/* Enhanced Controls */}
       <div className="flex items-center justify-center gap-4 mb-6">
         <button
           onClick={previousTrack}
           className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20
-                   flex items-center justify-center transition-all duration-200"
+                   flex items-center justify-center transition-all duration-300
+                   hover:scale-110 hover:shadow-lg"
         >
           <SkipBack size={20} className="text-white" />
         </button>
@@ -135,8 +139,9 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           onClick={togglePlay}
           className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500
                    hover:from-blue-700 hover:to-cyan-600
-                   flex items-center justify-center transition-all duration-200
-                   transform hover:scale-105 shadow-lg"
+                   flex items-center justify-center transition-all duration-300
+                   transform hover:scale-110 shadow-lg hover:shadow-xl
+                   animate-pulse-glow"
         >
           {isPlaying ? (
             <Pause size={24} className="text-white" />
@@ -148,13 +153,14 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
         <button
           onClick={nextTrack}
           className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20
-                   flex items-center justify-center transition-all duration-200"
+                   flex items-center justify-center transition-all duration-300
+                   hover:scale-110 hover:shadow-lg"
         >
           <SkipForward size={20} className="text-white" />
         </button>
       </div>
 
-      {/* Volume Control */}
+      {/* Enhanced Volume Control */}
       <div className="flex items-center gap-3 mb-8">
         <Volume2 size={20} className="text-white/70" />
         <input
@@ -165,21 +171,23 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
           value={volume}
           onChange={(e) => setVolume(parseFloat(e.target.value))}
           className="flex-1 h-2 bg-white/20 rounded-lg appearance-none cursor-pointer
-                   [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 
-                   [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full 
-                   [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:cursor-pointer"
+                   [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 
+                   [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full 
+                   [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:cursor-pointer
+                   [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:hover:scale-110
+                   [&::-webkit-slider-thumb]:transition-transform"
         />
       </div>
 
-      {/* Track List */}
+      {/* Enhanced Track List */}
       <div className="space-y-2">
         {/* Latest Song - Always Visible */}
         <button
           onClick={() => setCurrentTrack(0)}
-          className={`w-full text-left p-3 rounded-lg transition-all duration-200
+          className={`w-full text-left p-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02]
                      ${0 === currentTrack 
-                       ? 'bg-blue-600/30 text-white' 
-                       : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+                       ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 text-white border border-blue-500/30' 
+                       : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/10'
                      }`}
         >
           <span className="text-sm font-medium">{tracks[0]?.title}</span>
@@ -187,22 +195,24 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
 
         {/* Show All Tracks When Expanded */}
         {showAllTracks && (
-          tracks.slice(1).map((track, index) => (
-            <button
-              key={index + 1}
-              onClick={() => setCurrentTrack(index + 1)}
-              className={`w-full text-left p-3 rounded-lg transition-all duration-200
-                         ${index + 1 === currentTrack 
-                           ? 'bg-blue-600/30 text-white' 
-                           : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                         }`}
-            >
-              <span className="text-sm font-medium">{track.title}</span>
-            </button>
-          ))
+          <div className="space-y-2 animate-fade-in-up">
+            {tracks.slice(1).map((track, index) => (
+              <button
+                key={index + 1}
+                onClick={() => setCurrentTrack(index + 1)}
+                className={`w-full text-left p-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02]
+                           ${index + 1 === currentTrack 
+                             ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 text-white border border-blue-500/30' 
+                             : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/10'
+                           }`}
+              >
+                <span className="text-sm font-medium">{track.title}</span>
+              </button>
+            ))}
+          </div>
         )}
 
-        {/* View All Button */}
+        {/* Enhanced View All Button */}
         {tracks.length > 1 && (
           <button
             onClick={() => setShowAllTracks(!showAllTracks)}
@@ -210,7 +220,8 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ tracks }) => {
                      border border-white/10 hover:border-white/20 text-white
                      flex items-center justify-center gap-3 transition-all duration-300
                      hover:bg-gradient-to-r hover:from-blue-600/30 hover:to-purple-600/30
-                     hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transform hover:scale-[1.02]"
+                     hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transform hover:scale-[1.02]
+                     glass-effect hover-lift"
           >
             <Eye size={18} />
             <span className="font-semibold">
