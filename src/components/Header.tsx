@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Music } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
@@ -84,14 +84,13 @@ const Header: React.FC = () => {
   }, [location]);
 
   return (
-    <header className="fixed top-0 left-0 w-full h-[60px] bg-gradient-to-r from-black/90 via-black/70 to-black/90 backdrop-blur-md z-50 flex items-center px-4 shadow-lg border-b border-white/10">
+    <header className="fixed top-0 left-0 w-full h-[60px] bg-gradient-to-r from-black/80 via-black/60 to-black/80 backdrop-blur-md z-50 flex items-center px-4 shadow-lg">
       <div className="w-full max-w-7xl mx-auto flex justify-center items-center">
         <Link 
           to="/" 
           onClick={handleLogoClick}
-          className="text-white font-extrabold text-2xl tracking-tight flex items-center gap-2 group"
+          className="text-white font-extrabold text-2xl tracking-tight"
         >
-          <Music size={24} className="text-blue-400 group-hover:text-cyan-400 transition-colors duration-300" />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400">
             Bruklin
           </span>
@@ -100,7 +99,7 @@ const Header: React.FC = () => {
         <button
           ref={buttonRef}
           className="w-12 h-12 flex items-center justify-center text-white rounded-full 
-                   hover:bg-white/20 active:bg-white/30 transition-all duration-200 z-50 ml-auto
+                   hover:bg-white/10 active:bg-white/20 transition-all duration-200 z-50 ml-auto
                    touch-manipulation"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -139,7 +138,7 @@ const Header: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="fixed top-[60px] left-0 right-0 bg-gradient-to-b from-black to-gray-900 z-50 max-h-[calc(100vh-60px)] overflow-y-auto border-b border-white/10"
+              className="fixed top-[60px] left-0 right-0 bg-black z-50 max-h-[calc(100vh-60px)] overflow-y-auto"
             >
               <nav className="flex flex-col items-start pt-8 pb-12 px-6 space-y-4">
                 {navLinks.map((link, index) => (
@@ -157,7 +156,7 @@ const Header: React.FC = () => {
                         rel="noopener noreferrer"
                         onClick={handleNavClick}
                         className="text-white text-lg font-semibold tracking-wide 
-                                 hover:text-blue-400 hover:bg-white/5 transition-all duration-300
+                                 hover:text-blue-400 transition-colors duration-300
                                  w-full py-2 block"
                       >
                         {link.name}
@@ -167,7 +166,7 @@ const Header: React.FC = () => {
                         to={link.path!}
                         onClick={handleNavClick}
                         className={`text-white text-lg font-semibold tracking-wide 
-                                   hover:text-blue-400 hover:bg-white/5 transition-all duration-300
+                                   hover:text-blue-400 transition-colors duration-300
                                    w-full py-2 block ${
                                      location.pathname === link.path ? 'text-blue-400' : ''
                                    }`}

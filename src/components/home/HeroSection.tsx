@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaYoutube, FaSpotify, FaApple, FaAmazon } from 'react-icons/fa';
-import { ChevronDown } from 'lucide-react';
 import LazyImage from '../LazyImage';
 
 const HeroSection: React.FC = () => {
@@ -65,14 +64,6 @@ const HeroSection: React.FC = () => {
               />
             </a>
           ))}
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-white/70 text-sm font-medium">Scroll to explore</span>
-            <ChevronDown size={24} className="text-white/70" />
-          </div>
         </div>
       </div>
     </section>

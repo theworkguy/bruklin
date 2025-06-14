@@ -3,13 +3,11 @@ import SEOHead from '../components/SEOHead';
 
 // Lazy load components for better performance
 const HeroSection = React.lazy(() => import('../components/home/HeroSection'));
-const FeaturedSection = React.lazy(() => import('../components/home/FeaturedSection'));
 const TracklistSection = React.lazy(() => import('../components/home/TracklistSection'));
 const VideoSection = React.lazy(() => import('../components/home/VideoSection'));
 const BioSection = React.lazy(() => import('../components/home/BioSection'));
 const SocialMediaSection = React.lazy(() => import('../components/home/SocialMediaSection'));
 const StatsSection = React.lazy(() => import('../components/home/StatsSection'));
-const NewsletterSection = React.lazy(() => import('../components/home/NewsletterSection'));
 const ContactFormSection = React.lazy(() => import('../components/home/ContactFormSection'));
 
 const HomePage: React.FC = () => {
@@ -36,13 +34,11 @@ const HomePage: React.FC = () => {
           </div>
         }>
           <HeroSection />
-          <FeaturedSection />
           <TracklistSection />
           <VideoSection />
           <BioSection />
           <SocialMediaSection />
           <StatsSection />
-          <NewsletterSection />
           <ContactFormSection />
         </React.Suspense>
       </div>
