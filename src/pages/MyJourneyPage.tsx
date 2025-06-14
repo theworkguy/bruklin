@@ -126,7 +126,7 @@ const MyJourneyPage: React.FC = () => {
               </p>
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://open.spotify.com/artist/bruklin"
+                  href="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-600 hover:bg-green-700 text-white font-semibold 

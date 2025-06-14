@@ -49,7 +49,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://www.instagram.com/bruklin",
       "https://music.apple.com/us/artist/bruklin/1756535936",
       "https://www.tiktok.com/@bruklin",
-      "https://www.facebook.com/bruklin",
+      "https://www.facebook.com/profile.php?id=61565927709906",
       "https://twitter.com/bruklin"
     ],
     "jobTitle": "Singer-Songwriter",

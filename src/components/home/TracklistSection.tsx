@@ -310,7 +310,7 @@ const TracklistSection: React.FC = () => {
                 Follow me on Spotify to never miss a new release
               </p>
               <a
-                href="https://open.spotify.com/artist/bruklin?si=follow"
+                href="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO?si=follow"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 sm:gap-3 bg-green-600 hover:bg-green-700

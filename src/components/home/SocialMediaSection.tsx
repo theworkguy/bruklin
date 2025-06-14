@@ -28,7 +28,7 @@ const SocialMediaSection: React.FC = () => {
     },
     { 
       icon: FaFacebook, 
-      url: 'https://www.facebook.com/bruklin', 
+      url: 'https://www.facebook.com/profile.php?id=61565927709906', 
       label: 'Facebook', 
       username: '@bruklin',
       color: 'from-blue-600 to-blue-800',

@@ -14,8 +14,8 @@ const DiscographyPage: React.FC = () => {
       cover: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
         spotify: "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j",
-        apple: "https://music.apple.com/us/album/under-your-skin-single/1804158546",
-        youtube: "https://www.youtube.com/watch?v=1a2b3c4d5e6f"
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
       }
     },
     {
@@ -26,9 +26,9 @@ const DiscographyPage: React.FC = () => {
       description: "An empowering anthem about breaking free from expectations and embracing your true self.",
       cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
-        spotify: "https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a",
-        apple: "https://music.apple.com/us/album/good-girl-bad-dreams/1804158547",
-        youtube: "https://www.youtube.com/watch?v=2b3c4d5e6f7g"
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
       }
     },
     {
@@ -39,9 +39,9 @@ const DiscographyPage: React.FC = () => {
       description: "A stripped-down, emotional version of the original that showcases raw vocal talent.",
       cover: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
-        spotify: "https://open.spotify.com/track/3c4d5e6f7g8h9i0j1a2b",
-        apple: "https://music.apple.com/us/album/good-cry-acoustic/1804158548",
-        youtube: "https://www.youtube.com/watch?v=3c4d5e6f7g8h"
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
       }
     },
     {
@@ -52,9 +52,9 @@ const DiscographyPage: React.FC = () => {
       description: "A cathartic pop track about healing and finding strength through emotional release.",
       cover: "https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
-        spotify: "https://open.spotify.com/track/4d5e6f7g8h9i0j1a2b3c",
-        apple: "https://music.apple.com/us/album/good-cry/1804158549",
-        youtube: "https://www.youtube.com/watch?v=4d5e6f7g8h9i"
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
       }
     },
     {
@@ -65,9 +65,9 @@ const DiscographyPage: React.FC = () => {
       description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope.",
       cover: "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
-        spotify: "https://open.spotify.com/track/5e6f7g8h9i0j1a2b3c4d",
-        apple: "https://music.apple.com/us/album/daydreaming/1804158550",
-        youtube: "https://www.youtube.com/watch?v=5e6f7g8h9i0j"
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
       }
     },
     {
@@ -78,9 +78,9 @@ const DiscographyPage: React.FC = () => {
       description: "A bold statement about setting boundaries and prioritizing self-worth in relationships.",
       cover: "https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&w=400",
       links: {
-        spotify: "https://open.spotify.com/track/6f7g8h9i0j1a2b3c4d5e",
-        apple: "https://music.apple.com/us/album/no-contact/1804158551",
-        youtube: "https://www.youtube.com/watch?v=6f7g8h9i0j1a"
+        spotify: "https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/@BruklinOfficial"
       }
     }
   ];
@@ -236,7 +236,7 @@ const DiscographyPage: React.FC = () => {
                 Stay tuned for new releases and exclusive content. Follow me on your favorite platform to never miss a beat.
               </p>
               <a
-                href="https://open.spotify.com/artist/bruklin"
+                href="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 

@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
     { icon: FaYoutube, url: 'https://www.youtube.com/@BruklinOfficial', label: 'YouTube', color: 'hover:text-red-500' },
     { icon: FaSpotify, url: 'https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO', label: 'Spotify', color: 'hover:text-green-500' },
     { icon: FaApple, url: 'https://music.apple.com/us/artist/bruklin/1756535936', label: 'Apple Music', color: 'hover:text-gray-300' },
-    { icon: FaAmazon, url: 'https://music.amazon.com/artists/B0DPLCQGNH/bruklin' },
+    { icon: FaAmazon, url: 'https://music.amazon.com/artists/B0DPLCQGNH/bruklin', label: 'Amazon Music', color: 'hover:text-blue-400' },
   ];
 
   return (

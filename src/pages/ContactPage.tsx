@@ -64,7 +64,7 @@ const ContactPage: React.FC = () => {
   const socialLinks = [
     { icon: FaInstagram, url: 'https://www.instagram.com/bruklin', label: 'Instagram', color: 'from-purple-600 via-pink-600 to-yellow-500' },
     { icon: FaTiktok, url: 'https://www.tiktok.com/@bruklin', label: 'TikTok', color: 'from-gray-900 to-gray-800' },
-    { icon: FaFacebook, url: 'https://www.facebook.com/bruklin', label: 'Facebook', color: 'from-blue-600 to-blue-800' },
+    { icon: FaFacebook, url: 'https://www.facebook.com/profile.php?id=61565927709906', label: 'Facebook', color: 'from-blue-600 to-blue-800' },
     { icon: FaTwitter, url: 'https://twitter.com/bruklin', label: 'Twitter', color: 'from-blue-400 to-blue-600' },
   ];
 

@@ -6,9 +6,9 @@ import { Music } from 'lucide-react';
 const Footer: React.FC = () => {
   const socialLinks = [
     { icon: FaInstagram, url: 'https://www.instagram.com/bruklin', label: 'Instagram' },
-    { icon: FaSpotify, url: 'https://open.spotify.com/artist/bruklin', label: 'Spotify' },
+    { icon: FaSpotify, url: 'https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO', label: 'Spotify' },
     { icon: FaYoutube, url: 'https://www.youtube.com/@BruklinOfficial', label: 'YouTube' },
-    { icon: FaFacebook, url: 'https://www.facebook.com/bruklin', label: 'Facebook' },
+    { icon: FaFacebook, url: 'https://www.facebook.com/profile.php?id=61565927709906', label: 'Facebook' },
     { icon: FaTwitter, url: 'https://twitter.com/bruklin', label: 'Twitter' },
   ];
 
