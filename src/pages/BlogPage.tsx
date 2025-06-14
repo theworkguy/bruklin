@@ -175,7 +175,7 @@ const BlogPage: React.FC = () => {
       <SEOHead
         title="Blog - Behind the Music, Stories & Inspiration"
         description="Read Bruklin's personal blog featuring behind-the-scenes stories, songwriting insights, and inspiration from her musical journey. Get exclusive access to her creative process."
-        keywords="Bruklin blog, music stories, songwriting process, behind the scenes, music inspiration, teen artist blog, pop music insights"
+        keywords="Bruklin journey, pop star story, music career timeline, New York artist, teen musician, Oak Felder, Sebastian Cole, viral TikTok, authentic music"
         url="/blog"
         type="website"
       />
