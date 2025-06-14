@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaTiktok, FaFacebook } from 'react-icons/fa';
-import { Users, Heart, TrendingUp, Star, BadgeCheck } from 'lucide-react';
+import { Users, Heart, TrendingUp, Star } from 'lucide-react';
 
 const SocialMediaSection: React.FC = () => {
   const socialLinks = [
@@ -142,9 +142,10 @@ const SocialMediaSection: React.FC = () => {
                           {social.username}
                         </span>
                         {social.verified && (
-                          <BadgeCheck 
-                            size={16} 
-                            className="text-blue-400 fill-blue-400 flex-shrink-0 sm:w-5 sm:h-5" 
+                          <img 
+                            src="/download.png" 
+                            alt="Verified" 
+                            className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 object-contain" 
                           />
                         )}
                       </div>
@@ -229,7 +230,11 @@ const SocialMediaSection: React.FC = () => {
                   <social.icon size={16} className="sm:w-5 sm:h-5" />
                   <span>Follow on {social.label}</span>
                   {social.verified && (
-                    <BadgeCheck size={14} className="text-white/80 fill-white/20 sm:w-4 sm:h-4" />
+                    <img 
+                      src="/download.png" 
+                      alt="Verified" 
+                      className="w-3.5 h-3.5 sm:w-4 sm:h-4 object-contain" 
+                    />
                   )}
                 </a>
               ))}
