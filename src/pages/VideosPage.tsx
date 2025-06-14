@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Play, Eye, Calendar, TrendingUp, Users, Clock, Grid, List } from 'lucide-react';
+import { Play, Eye, Calendar, TrendingUp, Users, Clock } from 'lucide-react';
 import { FaYoutube } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
 
 const VideosPage: React.FC = () => {
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const videos = [
     {
       title: "Under Your Skin",
@@ -152,32 +150,6 @@ const VideosPage: React.FC = () => {
             </div>
           </div>
 
-          {/* View Mode Toggle Only */}
-          <div className="flex justify-center mb-12">
-            <div className="flex items-center gap-2 bg-white/10 rounded-full p-1">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-3 rounded-full transition-all duration-300
-                           ${viewMode === 'grid' 
-                             ? 'bg-red-600 text-white shadow-lg' 
-                             : 'text-white/60 hover:text-white hover:bg-white/10'}`}
-                aria-label="Grid view"
-              >
-                <Grid size={20} />
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-3 rounded-full transition-all duration-300
-                           ${viewMode === 'list' 
-                             ? 'bg-red-600 text-white shadow-lg' 
-                             : 'text-white/60 hover:text-white hover:bg-white/10'}`}
-                aria-label="List view"
-              >
-                <List size={20} />
-              </button>
-            </div>
-          </div>
-
           {/* Featured Video */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
@@ -289,141 +261,76 @@ const VideosPage: React.FC = () => {
             </a>
           </div>
 
-          {/* Videos Grid/List */}
-          <div className={`${viewMode === 'grid' 
-            ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8' 
-            : 'space-y-6'} mb-16`}>
+          {/* Videos Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
             {videos.slice(1).map((video, index) => (
-              viewMode === 'grid' ? (
-                // Grid View
-                <a
-                  key={index + 1}
-                  href={video.youtubeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
-                           border border-white/10 hover:border-red-500/30 
-                           transition-all duration-300 transform hover:scale-105
-                           hover:shadow-[0_0_30px_rgba(255,0,0,0.3)]"
-                  aria-label={`Watch ${video.title} on YouTube`}
-                >
-                  {/* Thumbnail */}
-                  <div className="relative aspect-video overflow-hidden">
-                    <img
-                      src={video.thumbnail}
-                      alt={`${video.title} by Bruklin`}
-                      className="w-full h-full object-cover transition-transform duration-300
-                               group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
-                                  transition-all duration-300 flex items-center justify-center
-                                  opacity-0 group-hover:opacity-100">
-                      <div className="w-16 h-16 rounded-full bg-red-600 group-hover:bg-red-500
-                                    flex items-center justify-center transition-all duration-300
-                                    transform group-hover:scale-110 shadow-lg">
-                        <Play size={24} className="text-white ml-1" />
-                      </div>
-                    </div>
-                    
-                    {/* Duration */}
-                    <div className="absolute bottom-3 right-3 bg-black/80 text-white text-sm 
-                                  px-2 py-1 rounded font-medium">
-                      {video.duration}
-                    </div>
-
-                    {/* Category Badge */}
-                    <div className="absolute top-3 left-3">
-                      <span className="bg-red-600/80 text-white text-xs font-medium 
-                                     px-2 py-1 rounded uppercase">
-                        {video.category === 'music-video' ? 'Music Video' : 
-                         video.category === 'acoustic' ? 'Acoustic' : 
-                         video.category}
-                      </span>
+              <a
+                key={index + 1}
+                href={video.youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
+                         border border-white/10 hover:border-red-500/30 
+                         transition-all duration-300 transform hover:scale-105
+                         hover:shadow-[0_0_30px_rgba(255,0,0,0.3)]"
+                aria-label={`Watch ${video.title} on YouTube`}
+              >
+                {/* Thumbnail */}
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={video.thumbnail}
+                    alt={`${video.title} by Bruklin`}
+                    className="w-full h-full object-cover transition-transform duration-300
+                             group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
+                                transition-all duration-300 flex items-center justify-center
+                                opacity-0 group-hover:opacity-100">
+                    <div className="w-16 h-16 rounded-full bg-red-600 group-hover:bg-red-500
+                                  flex items-center justify-center transition-all duration-300
+                                  transform group-hover:scale-110 shadow-lg">
+                      <Play size={24} className="text-white ml-1" />
                     </div>
                   </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3 text-sm text-white/60">
-                      <Calendar size={14} />
-                      <span>{video.year}</span>
-                      <span>•</span>
-                      <Eye size={14} />
-                      <span>{video.views} views</span>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400
-                                 transition-colors duration-300 line-clamp-2 leading-tight">
-                      {video.title}
-                    </h3>
-
-                    <p className="text-white/70 text-sm leading-relaxed line-clamp-2">
-                      {video.description}
-                    </p>
-                  </div>
-                </a>
-              ) : (
-                // List View
-                <a
-                  key={index + 1}
-                  href={video.youtubeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
-                           border border-white/10 hover:border-red-500/30 
-                           transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,0,0,0.3)]"
-                >
-                  {/* Thumbnail */}
-                  <div className="w-48 h-32 relative overflow-hidden flex-shrink-0">
-                    <img
-                      src={video.thumbnail}
-                      alt={`${video.title} by Bruklin`}
-                      className="w-full h-full object-cover transition-transform duration-300
-                               group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
-                                  transition-all duration-300 flex items-center justify-center
-                                  opacity-0 group-hover:opacity-100">
-                      <div className="w-12 h-12 rounded-full bg-red-600 group-hover:bg-red-500
-                                    flex items-center justify-center transition-all duration-300">
-                        <Play size={16} className="text-white ml-0.5" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs 
-                                  px-2 py-1 rounded">
-                      {video.duration}
-                    </div>
+                  
+                  {/* Duration */}
+                  <div className="absolute bottom-3 right-3 bg-black/80 text-white text-sm 
+                                px-2 py-1 rounded font-medium">
+                    {video.duration}
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-1 p-6 flex flex-col justify-center">
-                    <div className="flex items-center gap-2 mb-2 text-sm text-white/60">
-                      <Calendar size={14} />
-                      <span>{video.year}</span>
-                      <span>•</span>
-                      <Eye size={14} />
-                      <span>{video.views} views</span>
-                      <span>•</span>
-                      <span className="text-red-400 font-medium">
-                        {video.category === 'music-video' ? 'Music Video' : 
-                         video.category === 'acoustic' ? 'Acoustic' : 
-                         video.category}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400
-                                 transition-colors duration-300">
-                      {video.title}
-                    </h3>
-
-                    <p className="text-white/70 text-sm leading-relaxed line-clamp-2">
-                      {video.description}
-                    </p>
+                  {/* Category Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-red-600/80 text-white text-xs font-medium 
+                                   px-2 py-1 rounded uppercase">
+                      {video.category === 'music-video' ? 'Music Video' : 
+                       video.category === 'acoustic' ? 'Acoustic' : 
+                       video.category}
+                    </span>
                   </div>
-                </a>
-              )
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3 text-sm text-white/60">
+                    <Calendar size={14} />
+                    <span>{video.year}</span>
+                    <span>•</span>
+                    <Eye size={14} />
+                    <span>{video.views} views</span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400
+                               transition-colors duration-300 line-clamp-2 leading-tight">
+                    {video.title}
+                  </h3>
+
+                  <p className="text-white/70 text-sm leading-relaxed line-clamp-2">
+                    {video.description}
+                  </p>
+                </div>
+              </a>
             ))}
           </div>
 
