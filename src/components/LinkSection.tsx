@@ -1,6 +1,7 @@
 import React from 'react';
 import LinkItem from './LinkItem';
 import { FaSpotify, FaApple, FaYoutube } from 'react-icons/fa';
+import { SiAmazonmusic } from 'react-icons/si';
 
 const LinkSection: React.FC = () => {
   return (
@@ -28,7 +29,7 @@ const LinkSection: React.FC = () => {
       <div className="space-y-4">
         <LinkItem 
           title="Listen on Spotify" 
-          url="https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP" 
+          url="https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j" 
           icon={<FaSpotify size={28} />}
           className="animate-fade-in bg-gradient-to-r from-green-600/20 to-green-500/20 
                     hover:from-green-600/30 hover:to-green-500/30
@@ -36,7 +37,7 @@ const LinkSection: React.FC = () => {
         />
         <LinkItem 
           title="Listen on Apple Music" 
-          url="https://music.apple.com/us/album/under-your-skin-single/1804158546" 
+          url="https://music.apple.com/us/artist/bruklin/1756535936" 
           icon={<FaApple size={28} />}
           className="animate-fade-in-delay-1 bg-gradient-to-r from-pink-600/20 to-purple-500/20 
                     hover:from-pink-600/30 hover:to-purple-500/30
@@ -49,6 +50,14 @@ const LinkSection: React.FC = () => {
           className="animate-fade-in-delay-2 bg-gradient-to-r from-red-600/20 to-red-500/20 
                     hover:from-red-600/30 hover:to-red-500/30
                     hover:shadow-[0_0_30px_rgba(255,0,0,0.3)]"
+        />
+        <LinkItem 
+          title="Listen on Amazon Music" 
+          url="https://music.amazon.com/artists/B0DPLCQGNH/bruklin" 
+          icon={<SiAmazonmusic size={28} />}
+          className="animate-fade-in-delay-3 bg-gradient-to-r from-blue-600/20 to-blue-500/20 
+                    hover:from-blue-600/30 hover:to-blue-500/30
+                    hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]"
         />
       </div>
     </div>
