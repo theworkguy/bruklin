@@ -60,7 +60,7 @@ const BioSection: React.FC = () => {
             Teaming up with top producers like{' '}
             <span className="text-blue-400 font-semibold">Oak Felder</span> and{' '}
             <span className="text-cyan-400 font-semibold">Tommy Brown</span>, 
-            Bruklin's got the talent and hustle to stand out—she's not just here to play, 
+            Bruklin's got the talent and hustle to stand out—she\'s not just here to play, 
             she's rewriting the rules.
           </p>
         </div>
