@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, User, ArrowRight, Heart, MessageCircle } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
@@ -88,49 +89,134 @@ const BlogPage: React.FC = () => {
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
-    <div className="min-h-screen py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text 
-                       bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mb-6
-                       tracking-wider">
-            Blog
-          </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            My thoughts, stories, and behind-the-scenes moments from my musical journey
-          </p>
-        </div>
+    <>
+      <SEOHead
+        title="Blog - Behind the Music, Stories & Inspiration"
+        description="Read Bruklin's personal blog featuring behind-the-scenes stories, songwriting insights, and inspiration from her musical journey. Get exclusive access to her creative process."
+        keywords="Bruklin blog, music stories, songwriting process, behind the scenes, music inspiration, teen artist blog, pop music insights"
+        url="/blog"
+        type="website"
+      />
+      <div className="min-h-screen py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text 
+                         bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mb-6
+                         tracking-wider">
+              Blog
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              My thoughts, stories, and behind-the-scenes moments from my musical journey
+            </p>
+          </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300
-                         ${selectedCategory === category
-                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                           : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                         }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300
+                           ${selectedCategory === category
+                             ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                             : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                           }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
 
-        {/* Featured Posts */}
-        {selectedCategory === "All" && (
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-white mb-8">Featured Posts</h2>
-            <div className="grid lg:grid-cols-2 gap-8">
-              {featuredPosts.map((post, index) => (
+          {/* Featured Posts */}
+          {selectedCategory === "All" && (
+            <div className="mb-20">
+              <h2 className="text-3xl font-bold text-white mb-8">Featured Posts</h2>
+              <div className="grid lg:grid-cols-2 gap-8">
+                {featuredPosts.map((post, index) => (
+                  <article
+                    key={index}
+                    className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
+                             border border-white/10 hover:border-white/20 
+                             transition-all duration-300 transform hover:scale-[1.02]
+                             hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]"
+                  >
+                    <div className="aspect-video relative overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-300
+                                 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-purple-600 text-white text-xs font-semibold 
+                                       px-3 py-1 rounded-full">
+                          {post.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 mb-4 text-sm text-white/60">
+                        <div className="flex items-center gap-1">
+                          <Calendar size={14} />
+                          <time dateTime={post.date}>{post.date}</time>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <User size={14} />
+                          <span>{post.author}</span>
+                        </div>
+                        <span>{post.readTime}</span>
+                      </div>
+
+                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400
+                                   transition-colors duration-300 line-clamp-2">
+                        {post.title}
+                      </h3>
+
+                      <p className="text-white/70 mb-6 leading-relaxed line-clamp-3">
+                        {post.excerpt}
+                      </p>
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4 text-white/60">
+                          <div className="flex items-center gap-1">
+                            <Heart size={16} />
+                            <span>{post.likes}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <MessageCircle size={16} />
+                            <span>{post.comments}</span>
+                          </div>
+                        </div>
+
+                        <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300
+                                         font-medium transition-colors duration-300">
+                          Read More
+                          <ArrowRight size={16} />
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* All Posts */}
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-8">
+              {selectedCategory === "All" ? "Latest Posts" : `${selectedCategory} Posts`}
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {(selectedCategory === "All" ? regularPosts : filteredPosts).map((post, index) => (
                 <article
                   key={index}
                   className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
                            border border-white/10 hover:border-white/20 
                            transition-all duration-300 transform hover:scale-[1.02]
-                           hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]"
+                           hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
                 >
                   <div className="aspect-video relative overflow-hidden">
                     <img
@@ -138,6 +224,7 @@ const BlogPage: React.FC = () => {
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-300
                                group-hover:scale-110"
+                      loading="lazy"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="bg-purple-600 text-white text-xs font-semibold 
@@ -148,43 +235,38 @@ const BlogPage: React.FC = () => {
                   </div>
 
                   <div className="p-6">
-                    <div className="flex items-center gap-4 mb-4 text-sm text-white/60">
-                      <div className="flex items-center gap-1">
-                        <Calendar size={14} />
-                        <span>{post.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <User size={14} />
-                        <span>{post.author}</span>
-                      </div>
+                    <div className="flex items-center gap-2 mb-3 text-sm text-white/60">
+                      <Calendar size={14} />
+                      <time dateTime={post.date}>{post.date}</time>
+                      <span>•</span>
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400
                                  transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
 
-                    <p className="text-white/70 mb-6 leading-relaxed line-clamp-3">
+                    <p className="text-white/70 mb-4 leading-relaxed line-clamp-3 text-sm">
                       {post.excerpt}
                     </p>
 
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-white/60">
+                      <div className="flex items-center gap-3 text-white/60 text-sm">
                         <div className="flex items-center gap-1">
-                          <Heart size={16} />
+                          <Heart size={14} />
                           <span>{post.likes}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <MessageCircle size={16} />
+                          <MessageCircle size={14} />
                           <span>{post.comments}</span>
                         </div>
                       </div>
 
-                      <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300
-                                       font-medium transition-colors duration-300">
-                        Read More
-                        <ArrowRight size={16} />
+                      <button className="flex items-center gap-1 text-purple-400 hover:text-purple-300
+                                       font-medium transition-colors duration-300 text-sm">
+                        Read
+                        <ArrowRight size={14} />
                       </button>
                     </div>
                   </div>
@@ -192,105 +274,35 @@ const BlogPage: React.FC = () => {
               ))}
             </div>
           </div>
-        )}
 
-        {/* All Posts */}
-        <div>
-          <h2 className="text-3xl font-bold text-white mb-8">
-            {selectedCategory === "All" ? "Latest Posts" : `${selectedCategory} Posts`}
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(selectedCategory === "All" ? regularPosts : filteredPosts).map((post, index) => (
-              <article
-                key={index}
-                className="group bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden
-                         border border-white/10 hover:border-white/20 
-                         transition-all duration-300 transform hover:scale-[1.02]
-                         hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]"
-              >
-                <div className="aspect-video relative overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover transition-transform duration-300
-                             group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-purple-600 text-white text-xs font-semibold 
-                                   px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3 text-sm text-white/60">
-                    <Calendar size={14} />
-                    <span>{post.date}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400
-                               transition-colors duration-300 line-clamp-2">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-white/70 mb-4 leading-relaxed line-clamp-3 text-sm">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3 text-white/60 text-sm">
-                      <div className="flex items-center gap-1">
-                        <Heart size={14} />
-                        <span>{post.likes}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <MessageCircle size={14} />
-                        <span>{post.comments}</span>
-                      </div>
-                    </div>
-
-                    <button className="flex items-center gap-1 text-purple-400 hover:text-purple-300
-                                     font-medium transition-colors duration-300 text-sm">
-                      Read
-                      <ArrowRight size={14} />
-                    </button>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="text-center mt-20">
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 
-                        backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
-            <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
-              Subscribe to my newsletter for the latest blog posts, music updates, and exclusive behind-the-scenes content.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl
-                         text-white placeholder-white/50 focus:outline-none focus:border-purple-400
-                         transition-all duration-300"
-              />
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600
-                               hover:from-purple-700 hover:to-pink-700
-                               text-white font-semibold py-3 px-6 rounded-xl
-                               transition-all duration-300 transform hover:scale-105">
-                Subscribe
-              </button>
+          {/* Newsletter Signup */}
+          <div className="text-center mt-20">
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 
+                          backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+              <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
+                Subscribe to my newsletter for the latest blog posts, music updates, and exclusive behind-the-scenes content.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl
+                           text-white placeholder-white/50 focus:outline-none focus:border-purple-400
+                           transition-all duration-300"
+                />
+                <button className="bg-gradient-to-r from-purple-600 to-pink-600
+                                 hover:from-purple-700 hover:to-pink-700
+                                 text-white font-semibold py-3 px-6 rounded-xl
+                                 transition-all duration-300 transform hover:scale-105">
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
