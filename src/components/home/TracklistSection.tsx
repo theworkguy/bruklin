@@ -199,8 +199,8 @@ const TracklistSection: React.FC = () => {
           {/* Track List */}
           <div className="p-6">
             <div className="space-y-3">
-              {/* Visible Tracks */}
-              {tracks.slice(1, showAllTracks ? tracks.length : 3).map((track, index) => (
+              {/* Show tracks only when expanded */}
+              {showAllTracks && tracks.slice(1).map((track, index) => (
                 <div
                   key={index + 1}
                   className="flex items-center justify-between p-4 rounded-xl
@@ -280,22 +280,20 @@ const TracklistSection: React.FC = () => {
               ))}
 
               {/* View All Button */}
-              {tracks.length > 3 && (
-                <button
-                  onClick={() => setShowAllTracks(!showAllTracks)}
-                  className="w-full mt-6 p-4 rounded-xl bg-gradient-to-r from-green-600/20 to-blue-600/20
-                           border border-white/10 hover:border-white/20 text-white
-                           flex items-center justify-center gap-3 transition-all duration-300
-                           hover:bg-gradient-to-r hover:from-green-600/30 hover:to-blue-600/30
-                           hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transform hover:scale-[1.02]
-                           group"
-                >
-                  <Eye size={18} className="group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-semibold">
-                    {showAllTracks ? 'Show Less' : `View All ${tracks.length} Tracks`}
-                  </span>
-                </button>
-              )}
+              <button
+                onClick={() => setShowAllTracks(!showAllTracks)}
+                className="w-full mt-6 p-4 rounded-xl bg-gradient-to-r from-green-600/20 to-blue-600/20
+                         border border-white/10 hover:border-white/20 text-white
+                         flex items-center justify-center gap-3 transition-all duration-300
+                         hover:bg-gradient-to-r hover:from-green-600/30 hover:to-blue-600/30
+                         hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transform hover:scale-[1.02]
+                         group"
+              >
+                <Eye size={18} className="group-hover:scale-110 transition-transform duration-300" />
+                <span className="font-semibold">
+                  {showAllTracks ? 'Show Less' : `View All ${tracks.length} Tracks`}
+                </span>
+              </button>
             </div>
           </div>
 
