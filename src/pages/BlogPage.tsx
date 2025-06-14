@@ -21,7 +21,7 @@ const BlogPage: React.FC = () => {
         title: "Under Your Skin",
         duration: "3:00",
         streams: "186K",
-        spotifyUrl: "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j",
+        spotifyUrl: "https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP",
         youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw"
       }
     },
@@ -40,7 +40,7 @@ const BlogPage: React.FC = () => {
         title: "Good Girl Bad Dreams",
         duration: "2:36",
         streams: "434K",
-        spotifyUrl: "https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a",
+        spotifyUrl: "https://open.spotify.com/album/48R9mXpiOmqdLzdqTOOXM6",
         youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo"
       }
     },
@@ -59,7 +59,7 @@ const BlogPage: React.FC = () => {
         title: "Good Cry (Acoustic)",
         duration: "2:32",
         streams: "48K",
-        spotifyUrl: "https://open.spotify.com/track/3c4d5e6f7g8h9i0j1a2b",
+        spotifyUrl: "https://open.spotify.com/album/2m7RXCL6BuAsIJcnOsNhEs",
         youtubeUrl: "https://www.youtube.com/watch?v=GV8va3FTxIM"
       }
     },
@@ -78,7 +78,7 @@ const BlogPage: React.FC = () => {
         title: "Good Cry",
         duration: "2:18",
         streams: "1.0M",
-        spotifyUrl: "https://open.spotify.com/track/4d5e6f7g8h9i0j1a2b3c",
+        spotifyUrl: "https://open.spotify.com/album/4FAs7QXWGgHABNLoumHew6",
         youtubeUrl: "https://www.youtube.com/watch?v=FFwmasP0qRk"
       }
     },
@@ -97,7 +97,7 @@ const BlogPage: React.FC = () => {
         title: "Daydreaming",
         duration: "2:33",
         streams: "1.5M",
-        spotifyUrl: "https://open.spotify.com/track/5e6f7g8h9i0j1a2b3c4d",
+        spotifyUrl: "https://open.spotify.com/album/2s5mdldGq2eNpv5Ma9eUwu",
         youtubeUrl: "https://www.youtube.com/watch?v=-Ss_hxlRUM4"
       }
     },
@@ -116,7 +116,7 @@ const BlogPage: React.FC = () => {
         title: "No Contact",
         duration: "2:51",
         streams: "878K",
-        spotifyUrl: "https://open.spotify.com/track/6f7g8h9i0j1a2b3c4d5e",
+        spotifyUrl: "https://open.spotify.com/album/2Tkl20l0m39EmgCPYlw1gl",
         youtubeUrl: "https://www.youtube.com/watch?v=9TZJqvSS994"
       }
     },
@@ -135,7 +135,7 @@ const BlogPage: React.FC = () => {
         title: "Magic Show",
         duration: "2:40",
         streams: "1.8M",
-        spotifyUrl: "https://open.spotify.com/track/8h9i0j1a2b3c4d5e6f7g",
+        spotifyUrl: "https://open.spotify.com/album/6kgzBeRXBSCffM8zfm0lle",
         youtubeUrl: "https://www.youtube.com/watch?v=FMmNnxsuets"
       }
     },
@@ -154,7 +154,7 @@ const BlogPage: React.FC = () => {
         title: "STAY FRIENDS",
         duration: "2:40",
         streams: "1.9M",
-        spotifyUrl: "https://open.spotify.com/track/7g8h9i0j1a2b3c4d5e6f",
+        spotifyUrl: "https://open.spotify.com/album/6MtKE4duJODVSVd9AkrtTf",
         youtubeUrl: "https://www.youtube.com/watch?v=AC3r8rQfPX8"
       }
     }

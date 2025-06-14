@@ -18,7 +18,7 @@ const DiscographyPage: React.FC = () => {
       description: "A haunting pop ballad that explores the depths of emotional connection and vulnerability. This deeply personal track showcases Bruklin's evolved artistry and emotional maturity.",
       cover: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j",
+        spotify: "https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=3fMx4F9cYVw",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -39,7 +39,7 @@ const DiscographyPage: React.FC = () => {
       description: "An empowering anthem about breaking free from expectations and embracing your true self. A bold statement that resonates with young people worldwide.",
       cover: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a",
+        spotify: "https://open.spotify.com/album/48R9mXpiOmqdLzdqTOOXM6",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=G9hbM-tRnBo",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -60,7 +60,7 @@ const DiscographyPage: React.FC = () => {
       description: "A stripped-down, emotional version of the original that showcases raw vocal talent and intimate storytelling in its purest form.",
       cover: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/3c4d5e6f7g8h9i0j1a2b",
+        spotify: "https://open.spotify.com/album/2m7RXCL6BuAsIJcnOsNhEs",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=GV8va3FTxIM",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -81,7 +81,7 @@ const DiscographyPage: React.FC = () => {
       description: "A cathartic pop track about healing and finding strength through emotional release. This breakthrough single established Bruklin as a voice for her generation.",
       cover: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/4d5e6f7g8h9i0j1a2b3c",
+        spotify: "https://open.spotify.com/album/4FAs7QXWGgHABNLoumHew6",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=FFwmasP0qRk",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -101,7 +101,7 @@ const DiscographyPage: React.FC = () => {
       description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope. This fan-favorite showcases Bruklin's versatility and dreamy vocals.",
       cover: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/5e6f7g8h9i0j1a2b3c4d",
+        spotify: "https://open.spotify.com/album/2s5mdldGq2eNpv5Ma9eUwu",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=-Ss_hxlRUM4",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -121,7 +121,7 @@ const DiscographyPage: React.FC = () => {
       description: "A bold statement about setting boundaries and prioritizing self-worth in relationships. An anthem for anyone learning to put themselves first.",
       cover: "https://img.youtube.com/vi/9TZJqvSS994/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/6f7g8h9i0j1a2b3c4d5e",
+        spotify: "https://open.spotify.com/album/2Tkl20l0m39EmgCPYlw1gl",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=9TZJqvSS994",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -141,7 +141,7 @@ const DiscographyPage: React.FC = () => {
       description: "An enchanting track that blends pop sensibilities with mystical storytelling elements. This hit single showcases Bruklin's creative storytelling abilities.",
       cover: "https://img.youtube.com/vi/FMmNnxsuets/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/8h9i0j1a2b3c4d5e6f7g",
+        spotify: "https://open.spotify.com/album/6kgzBeRXBSCffM8zfm0lle",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=FMmNnxsuets",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
@@ -161,7 +161,7 @@ const DiscographyPage: React.FC = () => {
       description: "A heartfelt exploration of complex relationships and the boundaries of friendship. This emotional track became an instant fan favorite and streaming hit.",
       cover: "https://img.youtube.com/vi/AC3r8rQfPX8/0.jpg",
       links: {
-        spotify: "https://open.spotify.com/track/7g8h9i0j1a2b3c4d5e6f",
+        spotify: "https://open.spotify.com/album/6MtKE4duJODVSVd9AkrtTf",
         apple: "https://music.apple.com/us/artist/bruklin/1756535936",
         youtube: "https://www.youtube.com/watch?v=AC3r8rQfPX8",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"

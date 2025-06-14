@@ -57,7 +57,7 @@ const UnderYourSkinArticle: React.FC = () => {
                 
                 <div className="flex gap-3">
                   <a
-                    href="https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j"
+                    href="https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-full
@@ -192,7 +192,7 @@ const UnderYourSkinArticle: React.FC = () => {
 
             <div className="flex gap-3">
               <a
-                href="https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j"
+                href="https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 rounded-full

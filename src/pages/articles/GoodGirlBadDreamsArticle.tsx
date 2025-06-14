@@ -57,7 +57,7 @@ const GoodGirlBadDreamsArticle: React.FC = () => {
                 
                 <div className="flex gap-3">
                   <a
-                    href="https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a"
+                    href="https://open.spotify.com/album/48R9mXpiOmqdLzdqTOOXM6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-full
@@ -194,7 +194,7 @@ const GoodGirlBadDreamsArticle: React.FC = () => {
 
             <div className="flex gap-3">
               <a
-                href="https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a"
+                href="https://open.spotify.com/album/48R9mXpiOmqdLzdqTOOXM6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 rounded-full

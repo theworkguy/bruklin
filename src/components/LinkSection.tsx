@@ -29,7 +29,7 @@ const LinkSection: React.FC = () => {
       <div className="space-y-4">
         <LinkItem 
           title="Listen on Spotify" 
-          url="https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j" 
+          url="https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP" 
           icon={<FaSpotify size={28} />}
           className="animate-fade-in bg-gradient-to-r from-green-600/20 to-green-500/20 
                     hover:from-green-600/30 hover:to-green-500/30

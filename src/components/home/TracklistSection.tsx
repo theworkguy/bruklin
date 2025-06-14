@@ -12,7 +12,7 @@ const TracklistSection: React.FC = () => {
       title: "Under Your Skin", 
       duration: "3:00", 
       streams: "186K",
-      spotifyUrl: "https://open.spotify.com/track/1a2b3c4d5e6f7g8h9i0j",
+      spotifyUrl: "https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP",
       isHit: false,
       releaseDate: "2025"
     },
@@ -20,7 +20,7 @@ const TracklistSection: React.FC = () => {
       title: "Good Girl Bad Dreams", 
       duration: "2:36", 
       streams: "434K",
-      spotifyUrl: "https://open.spotify.com/track/2b3c4d5e6f7g8h9i0j1a",
+      spotifyUrl: "https://open.spotify.com/album/48R9mXpiOmqdLzdqTOOXM6",
       isHit: false,
       releaseDate: "2025"
     },
@@ -28,7 +28,7 @@ const TracklistSection: React.FC = () => {
       title: "Good Cry (Acoustic)", 
       duration: "2:32", 
       streams: "48K",
-      spotifyUrl: "https://open.spotify.com/track/3c4d5e6f7g8h9i0j1a2b",
+      spotifyUrl: "https://open.spotify.com/album/2m7RXCL6BuAsIJcnOsNhEs",
       isHit: false,
       releaseDate: "2025"
     },
@@ -36,7 +36,7 @@ const TracklistSection: React.FC = () => {
       title: "Good Cry", 
       duration: "2:18", 
       streams: "1.0M",
-      spotifyUrl: "https://open.spotify.com/track/4d5e6f7g8h9i0j1a2b3c",
+      spotifyUrl: "https://open.spotify.com/album/4FAs7QXWGgHABNLoumHew6",
       isHit: true,
       releaseDate: "2024"
     },
@@ -44,7 +44,7 @@ const TracklistSection: React.FC = () => {
       title: "Daydreaming", 
       duration: "2:33", 
       streams: "1.5M",
-      spotifyUrl: "https://open.spotify.com/track/5e6f7g8h9i0j1a2b3c4d",
+      spotifyUrl: "https://open.spotify.com/album/2s5mdldGq2eNpv5Ma9eUwu",
       isHit: true,
       releaseDate: "2024"
     },
@@ -52,7 +52,7 @@ const TracklistSection: React.FC = () => {
       title: "No Contact", 
       duration: "2:51", 
       streams: "878K",
-      spotifyUrl: "https://open.spotify.com/track/6f7g8h9i0j1a2b3c4d5e",
+      spotifyUrl: "https://open.spotify.com/album/2Tkl20l0m39EmgCPYlw1gl",
       isHit: false,
       releaseDate: "2024"
     },
@@ -60,7 +60,7 @@ const TracklistSection: React.FC = () => {
       title: "Magic Show", 
       duration: "2:40", 
       streams: "1.8M",
-      spotifyUrl: "https://open.spotify.com/track/8h9i0j1a2b3c4d5e6f7g",
+      spotifyUrl: "https://open.spotify.com/album/6kgzBeRXBSCffM8zfm0lle",
       isHit: true,
       releaseDate: "2024"
     },
@@ -68,7 +68,7 @@ const TracklistSection: React.FC = () => {
       title: "STAY FRIENDS", 
       duration: "2:40", 
       streams: "1.9M",
-      spotifyUrl: "https://open.spotify.com/track/7g8h9i0j1a2b3c4d5e6f",
+      spotifyUrl: "https://open.spotify.com/album/6MtKE4duJODVSVd9AkrtTf",
       isHit: true,
       releaseDate: "2024"
     },
