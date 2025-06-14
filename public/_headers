@@ -1,0 +1,69 @@
+# Cache static assets for 1 year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  Expires: Thu, 31 Dec 2025 23:59:59 GMT
+
+# Cache images for 1 month
+/*.jpg
+  Cache-Control: public, max-age=2592000
+  Expires: Sat, 31 Jan 2026 23:59:59 GMT
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+  Expires: Sat, 31 Jan 2026 23:59:59 GMT
+
+/*.png
+  Cache-Control: public, max-age=2592000
+  Expires: Sat, 31 Jan 2026 23:59:59 GMT
+
+/*.webp
+  Cache-Control: public, max-age=2592000
+  Expires: Sat, 31 Jan 2026 23:59:59 GMT
+
+/*.svg
+  Cache-Control: public, max-age=2592000
+  Expires: Sat, 31 Jan 2026 23:59:59 GMT
+
+# Cache fonts for 1 year
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  Expires: Thu, 31 Dec 2025 23:59:59 GMT
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  Expires: Thu, 31 Dec 2025 23:59:59 GMT
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+  Expires: Thu, 31 Dec 2025 23:59:59 GMT
+
+/*.otf
+  Cache-Control: public, max-age=31536000, immutable
+  Expires: Thu, 31 Dec 2025 23:59:59 GMT
+
+# Cache CSS and JS for 1 year (they have hashes in filenames)
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+  Expires: Thu, 31 Dec 2025 23:59:59 GMT
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Expires: Thu, 31 Dec 2025 23:59:59 GMT
+
+# Cache HTML files for 1 hour
+/*.html
+  Cache-Control: public, max-age=3600
+  Expires: Mon, 20 Jan 2025 01:00:00 GMT
+
+# Cache root HTML for 1 hour
+/
+  Cache-Control: public, max-age=3600
+  Expires: Mon, 20 Jan 2025 01:00:00 GMT
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
