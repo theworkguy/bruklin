@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaSpotify } from 'react-icons/fa';
 import { Play, Pause, Clock, Music, TrendingUp, Eye, Heart } from 'lucide-react';
+import LazyImage from '../LazyImage';
 
 const TracklistSection: React.FC = () => {
   const [showAllTracks, setShowAllTracks] = useState(false);

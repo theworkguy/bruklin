@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Download, Eye, Calendar, Camera, Image as ImageIcon } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import LazyImage from '../components/LazyImage';
 
 const PhotosPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -119,12 +120,11 @@ const PhotosPage: React.FC = () => {
                 onClick={() => setSelectedImage(photo.src)}
               >
                 <div className="aspect-[4/5] relative overflow-hidden">
-                  <img
+                  <LazyImage
                     src={photo.src}
                     alt={`${photo.title} - Bruklin`}
                     className="w-full h-full object-cover transition-transform duration-500
                              group-hover:scale-110"
-                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent 
                                 opacity-0 group-hover:opacity-100 transition-all duration-500" />

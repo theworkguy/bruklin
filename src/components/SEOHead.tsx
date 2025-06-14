@@ -126,6 +126,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+      {/* Performance hints */}
+      <link rel="preload" href="/profilephoto.jpg" as="image" fetchPriority="high" />
+      <link rel="prefetch" href="https://img.youtube.com" />
+      <link rel="prefetch" href="https://open.spotify.com" />
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
@@ -137,19 +142,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         </script>
       )}
 
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://images.pexels.com" />
-      <link rel="preconnect" href="https://img.youtube.com" />
-      <link rel="preconnect" href="https://open.spotify.com" />
-      <link rel="preconnect" href="https://music.apple.com" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//youtube.com" />
-      <link rel="dns-prefetch" href="//spotify.com" />
-      <link rel="dns-prefetch" href="//instagram.com" />
-      <link rel="dns-prefetch" href="//tiktok.com" />
     </Helmet>
   );
 };

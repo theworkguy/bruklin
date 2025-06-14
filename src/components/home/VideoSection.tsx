@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Play, Eye, Calendar, TrendingUp, Users, Clock } from 'lucide-react';
 import { FaYoutube } from 'react-icons/fa';
+import LazyImage from '../LazyImage';
 
 const VideoSection: React.FC = () => {
   const [showAllVideos, setShowAllVideos] = useState(false);
@@ -152,11 +153,13 @@ const VideoSection: React.FC = () => {
             <div className="md:flex">
               {/* Video Thumbnail */}
               <div className="md:w-2/3 relative aspect-video md:aspect-auto overflow-hidden">
-                <img
+                <LazyImage
                   src={videos[0].thumbnail}
                   alt={`${videos[0].title} - Bruklin`}
                   className="w-full h-full object-cover transition-transform duration-300
                            group-hover:scale-110"
+                  loading="eager"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
                               transition-all duration-300 flex items-center justify-center">
@@ -238,12 +241,11 @@ const VideoSection: React.FC = () => {
               >
                 {/* Thumbnail */}
                 <div className="aspect-video relative overflow-hidden">
-                  <img
+                  <LazyImage
                     src={video.thumbnail}
                     alt={`${video.title} - Bruklin`}
                     className="w-full h-full object-cover transition-transform duration-300
                              group-hover:scale-110"
-                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 
                                 transition-all duration-300 flex items-center justify-center

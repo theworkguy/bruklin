@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaTiktok, FaFacebook } from 'react-icons/fa';
 import { Users, Heart, TrendingUp, Star } from 'lucide-react';
+import LazyImage from '../LazyImage';
 
 const SocialMediaSection: React.FC = () => {
   const socialLinks = [
@@ -55,7 +56,7 @@ const SocialMediaSection: React.FC = () => {
     <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative overflow-hidden">
       {/* Background with Profile Photo */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <LazyImage
           src="/profilephoto.jpg" 
           alt="Bruklin" 
           className="w-full h-full object-cover object-center"
