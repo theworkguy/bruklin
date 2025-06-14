@@ -23,8 +23,17 @@ const EPKSection: React.FC = () => {
                         backdrop-blur-sm rounded-2xl p-6 border border-white/10
                         hover:border-white/20 transition-all duration-300
                         hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-            <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center mb-4 relative">
               <FileText size={60} className="text-blue-400" />
+              {/* Profile Picture Overlay */}
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full overflow-hidden 
+                            border-2 border-blue-400 bg-black">
+                <img 
+                  src="/profilephoto.jpg" 
+                  alt="Bruklin" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             <h3 className="text-xl font-bold text-white text-center mb-4">
               Electronic Press Kit
