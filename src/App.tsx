@@ -2,6 +2,11 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import ParticleBackground from './components/ParticleBackground';
+import NotificationToast from './components/NotificationToast';
+import LoadingScreen from './components/LoadingScreen';
+import { useToast } from './hooks/useToast';
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -16,8 +21,22 @@ const GoodGirlBadDreamsArticle = React.lazy(() => import('./pages/articles/GoodG
 const LatestSongPage = React.lazy(() => import('./pages/LatestSongPage'));
 
 function App() {
+  const [isLoading, setIsLoading] = React.useState(true);
+  const { toasts, removeToast } = useToast();
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={handleLoadingComplete} />;
+  }
+
   return (
     <div className="min-h-screen bg-black relative">
+      {/* Particle Background */}
+      <ParticleBackground />
+      
       {/* Background image with overlay */}
       <div className="fixed inset-0 bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-music-overlay"></div>
@@ -52,7 +71,11 @@ function App() {
         </main>
         
         <Footer />
+        <ScrollToTop />
       </div>
+      
+      {/* Toast Notifications */}
+      <NotificationToast toasts={toasts} onRemove={removeToast} />
     </div>
   );
 }
