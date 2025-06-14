@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Heart, MessageCircle, Music, Play } from 'lucide-react';
 import { FaSpotify, FaYoutube } from 'react-icons/fa';
 import SEOHead from '../components/SEOHead';
