@@ -3,18 +3,9 @@ import { FaSpotify, FaApple, FaYoutube } from 'react-icons/fa';
 import { SiAmazonmusic } from 'react-icons/si';
 import SEOHead from '../components/SEOHead';
 import Profile from '../components/Profile';
-import SimpleMusicPlayer from '../components/SimpleMusicPlayer';
 import LinkItem from '../components/LinkItem';
 
 const LatestSongPage: React.FC = () => {
-  // Define tracks for the music player
-  const tracks = [
-    {
-      title: "ECHO",
-      url: "/Echo.mp3" // Local MP3 file
-    }
-  ];
-
   return (
     <>
       <SEOHead
@@ -51,7 +42,7 @@ const LatestSongPage: React.FC = () => {
           {/* Content Section */}
           <div className="w-full max-w-[700px] mx-auto px-6 flex-1 flex flex-col justify-center">
             {/* Song Title Header */}
-            <div className="relative bg-black backdrop-blur-sm rounded-xl px-4 py-3 mb-4
+            <div className="relative bg-black backdrop-blur-sm rounded-xl px-4 py-3 mb-6
                           border-t border-white/10 shadow-[0_10px_50px_rgba(0,191,255,0.2)]
                           overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-blue-600/20 
@@ -82,11 +73,6 @@ const LatestSongPage: React.FC = () => {
               
               <div className="absolute bottom-0 left-0 w-full h-[2px] 
                             bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-            </div>
-            
-            {/* Simple Music Player */}
-            <div className="mb-4">
-              <SimpleMusicPlayer tracks={tracks} />
             </div>
             
             {/* Streaming Platform Links */}
