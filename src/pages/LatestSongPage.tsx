@@ -57,19 +57,6 @@ const LatestSongPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-blue-600/20 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               
-              {/* NEW SONG Badge */}
-              <div className="flex items-center justify-center mb-3">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 rounded-full blur-sm opacity-75 animate-pulse"></div>
-                  <span className="relative bg-gradient-to-r from-red-500 to-pink-500 text-white 
-                                 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider
-                                 shadow-lg border border-white/20 backdrop-blur-sm
-                                 animate-bounce">
-                    🔥 NEW SONG
-                  </span>
-                </div>
-              </div>
-              
               <h1 className="font-display text-xl xs:text-2xl sm:text-3xl text-white
                            tracking-wide animate-fade-in
                            bg-gradient-to-r from-blue-300 via-cyan-400 to-blue-500 
@@ -81,10 +68,15 @@ const LatestSongPage: React.FC = () => {
                 ECHO
               </h1>
               
-              {/* Release Date */}
-              <div className="text-center mt-2">
-                <span className="text-white/60 text-xs font-medium bg-white/10 px-3 py-1 rounded-full border border-white/20">
-                  Released 2025
+              {/* Compact NEW badge */}
+              <div className="flex items-center justify-center gap-2 mt-2">
+                <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white 
+                               text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wide
+                               shadow-sm border border-white/20 backdrop-blur-sm">
+                  NEW
+                </span>
+                <span className="text-white/60 text-xs font-medium">
+                  2025
                 </span>
               </div>
               
