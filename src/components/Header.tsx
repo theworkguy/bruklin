@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { name: 'Home', path: '/' },
+  { name: 'Home', path: '/home' },
   { name: 'Latest Song', path: '/new' },
   { name: 'My Journey', path: '/my-journey' },
   { name: 'Discography', path: '/discography' },
@@ -29,10 +29,32 @@ const Header: React.FC = () => {
   const handleLogoClick = () => {
     // Close menu if open
     setIsMenuOpen(false);
+    
+    // Check if we're on music subdomain
+    const isMusicSubdomain = window.location.hostname === 'music.bruklin.com';
+    
     // Scroll to top immediately
     window.scrollTo({ top: 0, behavior: 'instant' });
-    // Force page refresh if already on home page
-    if (location.pathname === '/') {
+    
+    // Navigate based on subdomain
+    if (isMusicSubdomain) {
+      // On music subdomain, logo goes to latest song
+      if (location.pathname === '/new') {
+        window.location.reload();
+      }
+    } else {
+      // On main domain, logo goes to home
+      if (location.pathname === '/' || location.pathname === '/home') {
+        window.location.reload();
+      }
+    }
+  };
+
+  // Determine logo destination based on subdomain
+  const getLogoDestination = () => {
+    const isMusicSubdomain = window.location.hostname === 'music.bruklin.com';
+    return isMusicSubdomain ? '/new' : '/home';
+  };
       window.location.reload();
     }
   };
@@ -87,7 +109,7 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 w-full h-[60px] bg-gradient-to-r from-black/80 via-black/60 to-black/80 backdrop-blur-md z-50 flex items-center px-4 shadow-lg">
       <div className="w-full max-w-7xl mx-auto flex justify-center items-center">
         <Link 
-          to="/" 
+          to={getLogoDestination()}
           onClick={handleLogoClick}
           className="text-white font-extrabold text-2xl tracking-tight"
         >
@@ -168,7 +190,8 @@ const Header: React.FC = () => {
                         className={`text-white text-lg font-semibold tracking-wide 
                                    hover:text-blue-400 transition-colors duration-300
                                    w-full py-2 block ${
-                                     location.pathname === link.path ? 'text-blue-400' : ''
+                                     (location.pathname === link.path || 
+                                      (link.path === '/home' && location.pathname === '/')) ? 'text-blue-400' : ''
                                    }`}
                       >
                         {link.name}

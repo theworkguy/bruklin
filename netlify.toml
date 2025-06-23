@@ -1,0 +1,45 @@
+# Netlify configuration for subdomain routing
+[[redirects]]
+  from = "https://music.bruklin.com/*"
+  to = "https://stellar-creponne-5f9aeb.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://bruklin.com/*"
+  to = "https://stellar-creponne-5f9aeb.netlify.app/:splat"
+  status = 200
+  force = true
+
+# Default redirect for main domain root to home
+[[redirects]]
+  from = "/"
+  to = "/home"
+  status = 200
+  conditions = {Domain = ["bruklin.com", "www.bruklin.com"]}
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers for better performance and security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.mp3"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    Content-Type = "audio/mpeg"
