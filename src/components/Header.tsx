@@ -55,9 +55,6 @@ const Header: React.FC = () => {
     const isMusicSubdomain = window.location.hostname === 'music.bruklin.com';
     return isMusicSubdomain ? '/new' : '/home';
   };
-      window.location.reload();
-    }
-  };
 
   const handleNavClick = () => {
     // Close menu
@@ -67,6 +64,7 @@ const Header: React.FC = () => {
       window.scrollTo({ top: 0, behavior: 'instant' });
     }, 0);
   };
+
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (
