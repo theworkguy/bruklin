@@ -11,7 +11,7 @@ const LatestSongPage: React.FC = () => {
   const tracks = [
     {
       title: "ECHO",
-      url: "/Under Your Skin KS MIX (mastered).mp3" // Local MP3 file (keeping same file for now)
+      url: "/Echo.mp3" // Local MP3 file
     }
   ];
 
