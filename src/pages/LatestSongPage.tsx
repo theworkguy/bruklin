@@ -10,8 +10,8 @@ const LatestSongPage: React.FC = () => {
   // Define tracks for the music player
   const tracks = [
     {
-      title: "Under Your Skin",
-      url: "/Under Your Skin KS MIX (mastered).mp3" // Local MP3 file
+      title: "ECHO",
+      url: "/Under Your Skin KS MIX (mastered).mp3" // Local MP3 file (keeping same file for now)
     }
   ];
 
@@ -19,12 +19,12 @@ const LatestSongPage: React.FC = () => {
     <>
       <SEOHead
         title="Bruklin - The Voice of a Generation | Official Website"
-        description="17-year-old pop sensation Bruklin from New York with 7.8M+ Spotify streams and 17.3M+ YouTube views. Listen to 'Under Your Skin' and 'Good Girl Bad Dreams' now."
-        keywords="Under Your Skin, Bruklin latest song, new music 2025, pop ballad, emotional vulnerability, Spotify, Apple Music"
+        description="17-year-old pop sensation Bruklin from New York with 7.8M+ Spotify streams and 17.3M+ YouTube views. Listen to 'ECHO' and 'Good Girl Bad Dreams' now."
+        keywords="ECHO, Bruklin latest song, new music 2025, pop ballad, emotional vulnerability, Spotify, Apple Music"
         url="/"
         type="website"
         musicData={{
-          albumName: "Under Your Skin",
+          albumName: "ECHO",
           artist: "Bruklin",
           releaseDate: "2025",
           genre: "Pop",
@@ -64,7 +64,7 @@ const LatestSongPage: React.FC = () => {
                            [text-shadow:_2px_2px_20px_rgba(0,191,255,0.5)]
                            group-hover:[text-shadow:_2px_2px_30px_rgba(0,191,255,0.8)]
                            break-words text-center leading-tight">
-                Under Your Skin
+                ECHO
               </h1>
               <div className="absolute bottom-0 left-0 w-full h-[2px] 
                             bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -80,7 +80,7 @@ const LatestSongPage: React.FC = () => {
               <div className="space-y-3">
                 <LinkItem 
                   title="Listen on Spotify" 
-                  url="https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP" 
+                  url="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO" 
                   icon={<FaSpotify size={24} />}
                   className="animate-fade-in bg-gradient-to-r from-green-600/20 to-green-500/20 
                             hover:from-green-600/30 hover:to-green-500/30
@@ -96,7 +96,7 @@ const LatestSongPage: React.FC = () => {
                 />
                 <LinkItem 
                   title="Watch on YouTube" 
-                  url="https://youtu.be/3fMx4F9cYVw" 
+                  url="https://www.youtube.com/@BruklinOfficial" 
                   icon={<FaYoutube size={24} />}
                   className="animate-fade-in-delay-2 bg-gradient-to-r from-red-600/20 to-red-500/20 
                             hover:from-red-600/30 hover:to-red-500/30
