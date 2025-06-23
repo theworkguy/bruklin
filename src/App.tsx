@@ -16,14 +16,6 @@ const GoodGirlBadDreamsArticle = React.lazy(() => import('./pages/articles/GoodG
 const LatestSongPage = React.lazy(() => import('./pages/LatestSongPage'));
 
 function App() {
-  const location = useLocation();
-  
-  // Check if we're on the music subdomain
-  const isMusicSubdomain = window.location.hostname === 'music.bruklin.com';
-  
-  // If on music subdomain and at root path, redirect to /new
-  const shouldRedirectToLatest = isMusicSubdomain && location.pathname === '/';
-
   return (
     <div className="min-h-screen bg-black relative">
       {/* Background image with overlay */}
@@ -45,12 +37,8 @@ function App() {
             </div>
           }>
             <Routes>
-              {/* Conditional routing based on subdomain */}
-              <Route 
-                path="/" 
-                element={shouldRedirectToLatest ? <Navigate to="/new" replace /> : <HomePage />} 
-              />
-              <Route path="/new" element={<LatestSongPage />} />
+              {/* Latest Song is now the default home page */}
+              <Route path="/" element={<LatestSongPage />} />
               <Route path="/home" element={<HomePage />} />
               <Route path="/my-journey" element={<MyJourneyPage />} />
               <Route path="/discography" element={<DiscographyPage />} />

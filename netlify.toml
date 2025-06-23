@@ -1,23 +1,4 @@
 # Netlify configuration for subdomain routing
-[[redirects]]
-  from = "https://music.bruklin.com/*"
-  to = "https://stellar-creponne-5f9aeb.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "https://bruklin.com/*"
-  to = "https://stellar-creponne-5f9aeb.netlify.app/:splat"
-  status = 200
-  force = true
-
-# Default redirect for main domain root to home
-[[redirects]]
-  from = "/"
-  to = "/home"
-  status = 200
-  conditions = {Domain = ["bruklin.com", "www.bruklin.com"]}
-
 # SPA fallback
 [[redirects]]
   from = "/*"

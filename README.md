@@ -14,14 +14,11 @@ A modern, responsive website for pop sensation Bruklin featuring music, videos, 
 
 ## Domain Configuration
 
-### Main Website (bruklin.com)
-- Default route: `/home` (HomePage)
-- Full website experience with all sections
-
-### Music Subdomain (music.bruklin.com)
-- Default route: `/new` (LatestSongPage)
-- Direct access to latest music releases
-- Simplified music-focused experience
+### Website Structure
+- **Default Home**: `/` (LatestSongPage) - Latest music releases
+- **Full Experience**: `/home` (HomePage) - Complete website with all sections
+- **Music Focus**: Latest song is the primary landing experience
+- **Secondary Access**: Full homepage available via menu navigation
 
 ## Tech Stack
 

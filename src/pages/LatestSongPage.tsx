@@ -18,10 +18,10 @@ const LatestSongPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Under Your Skin - Latest Song by Bruklin"
-        description="Listen to Bruklin's latest single 'Under Your Skin' - a haunting pop ballad exploring emotional vulnerability. Available on all streaming platforms."
+        title="Bruklin - The Voice of a Generation | Official Website"
+        description="17-year-old pop sensation Bruklin from New York with 7.8M+ Spotify streams and 17.3M+ YouTube views. Listen to 'Under Your Skin' and 'Good Girl Bad Dreams' now."
         keywords="Under Your Skin, Bruklin latest song, new music 2025, pop ballad, emotional vulnerability, Spotify, Apple Music"
-        url="/new"
+        url="/"
         type="website"
         musicData={{
           albumName: "Under Your Skin",
