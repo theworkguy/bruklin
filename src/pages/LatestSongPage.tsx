@@ -80,7 +80,7 @@ const LatestSongPage: React.FC = () => {
               <div className="space-y-3">
                 <LinkItem 
                   title="Listen on Spotify" 
-                  url="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO" 
+                  url="https://open.spotify.com/album/41WDnb9UzGRXDrIsw324UT" 
                   icon={<FaSpotify size={24} />}
                   className="animate-fade-in bg-gradient-to-r from-green-600/20 to-green-500/20 
                             hover:from-green-600/30 hover:to-green-500/30
@@ -88,7 +88,7 @@ const LatestSongPage: React.FC = () => {
                 />
                 <LinkItem 
                   title="Listen on Apple Music" 
-                  url="https://music.apple.com/us/artist/bruklin/1756535936" 
+                  url="https://music.apple.com/us/album/echo-single/1816116415" 
                   icon={<FaApple size={24} />}
                   className="animate-fade-in-delay-1 bg-gradient-to-r from-pink-600/20 to-purple-500/20 
                             hover:from-pink-600/30 hover:to-purple-500/30
@@ -96,7 +96,7 @@ const LatestSongPage: React.FC = () => {
                 />
                 <LinkItem 
                   title="Watch on YouTube" 
-                  url="https://www.youtube.com/@BruklinOfficial" 
+                  url="https://youtu.be/j43BFx9Ipdg" 
                   icon={<FaYoutube size={24} />}
                   className="animate-fade-in-delay-2 bg-gradient-to-r from-red-600/20 to-red-500/20 
                             hover:from-red-600/30 hover:to-red-500/30
@@ -104,7 +104,7 @@ const LatestSongPage: React.FC = () => {
                 />
                 <LinkItem 
                   title="Listen on Amazon Music" 
-                  url="https://music.amazon.com/artists/B0DPLCQGNH/bruklin" 
+                  url="https://music.amazon.com/albums/B0F9NCMD3X" 
                   icon={<SiAmazonmusic size={24} />}
                   className="animate-fade-in-delay-3 bg-gradient-to-r from-blue-600/20 to-blue-500/20 
                             hover:from-blue-600/30 hover:to-blue-500/30
