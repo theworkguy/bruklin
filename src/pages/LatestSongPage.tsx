@@ -79,7 +79,7 @@ Kinda Like
               <div className="space-y-3">
                 <LinkItem 
                   title="Listen on Spotify" 
-                  url="https://open.spotify.com/album/41WDnb9UzGRXDrIsw324UT" 
+                  url="https://open.spotify.com/album/5uwHcTv2yXjrzTcCaGRUx8" 
                   icon={<FaSpotify size={24} />}
                   className="animate-fade-in bg-gradient-to-r from-green-600/20 to-green-500/20 
                             hover:from-green-600/30 hover:to-green-500/30
@@ -87,7 +87,7 @@ Kinda Like
                 />
                 <LinkItem 
                   title="Listen on Apple Music" 
-                  url="https://music.apple.com/us/album/echo-single/1816116415" 
+                  url="https://music.apple.com/us/album/kinda-like-single/1817292593" 
                   icon={<FaApple size={24} />}
                   className="animate-fade-in-delay-1 bg-gradient-to-r from-pink-600/20 to-purple-500/20 
                             hover:from-pink-600/30 hover:to-purple-500/30
@@ -95,7 +95,7 @@ Kinda Like
                 />
                 <LinkItem 
                   title="Watch on YouTube" 
-                  url="https://youtu.be/j43BFx9Ipdg" 
+                  url="https://www.youtube.com/watch?v=CEwKFU3l1z0" 
                   icon={<FaYoutube size={24} />}
                   className="animate-fade-in-delay-2 bg-gradient-to-r from-red-600/20 to-red-500/20 
                             hover:from-red-600/30 hover:to-red-500/30
@@ -103,7 +103,7 @@ Kinda Like
                 />
                 <LinkItem 
                   title="Listen on Amazon Music" 
-                  url="https://music.amazon.com/albums/B0F9NCMD3X" 
+                  url="https://music.amazon.com/albums/B0FB4G1CY1?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_RebJq9dDgcn4ECDRDYL7ia3Nn" 
                   icon={<SiAmazonmusic size={24} />}
                   className="animate-fade-in-delay-3 bg-gradient-to-r from-blue-600/20 to-blue-500/20 
                             hover:from-blue-600/30 hover:to-blue-500/30
