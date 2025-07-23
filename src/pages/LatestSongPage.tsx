@@ -56,7 +56,8 @@ const LatestSongPage: React.FC = () => {
                            [text-shadow:_2px_2px_20px_rgba(0,191,255,0.5)]
                            group-hover:[text-shadow:_2px_2px_30px_rgba(0,191,255,0.8)]
                            break-words text-center leading-tight">
-                ECHO
+                
+Kinda Like
               </h1>
               
               {/* Compact NEW badge */}
