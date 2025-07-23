@@ -67,9 +67,7 @@ Kinda Like
                                shadow-sm border border-white/20 backdrop-blur-sm">
                   NEW
                 </span>
-                <span className="text-white/60 text-xs font-medium">
-                  2025
-                </span>
+            
               </div>
               
               <div className="absolute bottom-0 left-0 w-full h-[2px] 
