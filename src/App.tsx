@@ -27,12 +27,17 @@ function App() {
       <div className="relative min-h-screen flex flex-col">
         <Header />
         
-        <main className="flex-1 pt-[60px]">
+        <main className="flex-1 pt-[70px]">
           <React.Suspense fallback={
             <div className="min-h-screen flex items-center justify-center bg-black">
               <div className="text-center">
-                <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-                <p className="text-white/70 text-lg">Loading...</p>
+                <div className="w-20 h-20 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-6" />
+                <p className="text-white/70 text-xl font-medium">Loading amazing content...</p>
+                <div className="flex justify-center gap-2 mt-4">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-100"></div>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-200"></div>
+                </div>
               </div>
             </div>
           }>
