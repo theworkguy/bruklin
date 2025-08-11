@@ -26,7 +26,7 @@ const LatestSongPage: React.FC = () => {
       <div className="min-h-screen relative overflow-hidden">
         {/* Enhanced Background with Animated Particles */}
         <div className="fixed inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-blue-900/90 to-black"></div>
           <div className="absolute inset-0 opacity-40">
             <div className="absolute inset-0" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -35,41 +35,41 @@ const LatestSongPage: React.FC = () => {
           </div>
           
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
-          <div className="absolute top-40 right-20 w-1 h-1 bg-pink-400 rounded-full animate-ping opacity-40"></div>
-          <div className="absolute bottom-32 left-20 w-3 h-3 bg-blue-400 rounded-full animate-bounce opacity-30"></div>
-          <div className="absolute bottom-20 right-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-50"></div>
+          <div className="absolute top-16 left-4 sm:top-20 sm:left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
+          <div className="absolute top-32 right-8 sm:top-40 sm:right-20 w-1 h-1 bg-pink-400 rounded-full animate-ping opacity-40"></div>
+          <div className="absolute bottom-24 left-8 sm:bottom-32 sm:left-20 w-3 h-3 bg-blue-400 rounded-full animate-bounce opacity-30"></div>
+          <div className="absolute bottom-16 right-4 sm:bottom-20 sm:right-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-50"></div>
           
           {/* Gradient Orbs */}
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 sm:w-80 sm:h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         {/* Content container with improved layout */}
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Header Stats Bar */}
-          <div className="w-full bg-black/20 backdrop-blur-md border-b border-white/10 py-3 px-6">
-            <div className="max-w-4xl mx-auto flex justify-center items-center gap-8 text-xs sm:text-sm">
+          <div className="w-full bg-black/30 backdrop-blur-md border-b border-white/10 py-2 sm:py-3 px-4 sm:px-6">
+            <div className="max-w-4xl mx-auto flex justify-center items-center gap-4 sm:gap-8 text-xs">
               <div className="flex items-center gap-2 text-green-400">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="font-medium">9.1M+ Spotify Streams</span>
+                <span className="font-medium">9.1M+ Spotify</span>
               </div>
               <div className="flex items-center gap-2 text-red-400">
                 <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                <span className="font-medium">22.3M+ YouTube Views</span>
+                <span className="font-medium">22.3M+ YouTube</span>
               </div>
               <div className="flex items-center gap-2 text-purple-400">
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                <span className="font-medium">105K+ Followers</span>
+                <span className="font-medium">105K+ Social</span>
               </div>
             </div>
           </div>
 
           {/* Main Content */}
-          <div className="flex-1 flex flex-col justify-center px-4 py-8">
-            <div className="max-w-md mx-auto w-full">
+          <div className="flex-1 flex flex-col justify-center px-4 py-4 sm:py-8">
+            <div className="max-w-sm sm:max-w-md mx-auto w-full">
               {/* Enhanced Profile Section */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <Profile 
                   name="Bruklin"
                   bio="The Voice of a Generation"
@@ -78,9 +78,9 @@ const LatestSongPage: React.FC = () => {
               </div>
               
               {/* Enhanced Song Title Section */}
-              <div className="relative mb-8">
+              <div className="relative mb-6 sm:mb-8">
                 <div className="bg-gradient-to-r from-black/60 via-black/80 to-black/60 backdrop-blur-xl 
-                              rounded-2xl p-6 border border-white/20 shadow-2xl
+                              rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl
                               hover:border-cyan-400/50 transition-all duration-700 group
                               overflow-hidden">
                   
@@ -89,16 +89,16 @@ const LatestSongPage: React.FC = () => {
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   
                   {/* Sparkle Effects */}
-                  <div className="absolute top-4 right-4">
-                    <Sparkles size={20} className="text-cyan-400 animate-pulse" />
+                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
+                    <Sparkles size={16} className="text-cyan-400 animate-pulse sm:w-5 sm:h-5" />
                   </div>
-                  <div className="absolute bottom-4 left-4">
-                    <Star size={16} className="text-blue-400 animate-ping" />
+                  <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
+                    <Star size={14} className="text-blue-400 animate-ping sm:w-4 sm:h-4" />
                   </div>
                   
                   <div className="relative z-10">
-                    <div className="text-center mb-4">
-                      <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text 
+                    <div className="text-center mb-3 sm:mb-4">
+                      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text 
                                    bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400
                                    group-hover:from-cyan-200 group-hover:via-blue-300 group-hover:to-purple-300
                                    transition-all duration-700 leading-tight
@@ -108,15 +108,15 @@ const LatestSongPage: React.FC = () => {
                       </h1>
                       
                       {/* Enhanced badges */}
-                      <div className="flex items-center justify-center gap-3 mt-4">
+                      <div className="flex items-center justify-center gap-2 sm:gap-3 mt-3 sm:mt-4">
                         <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white 
-                                       text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide
+                                       text-xs font-bold px-2 py-1 sm:px-3 sm:py-1.5 rounded-full uppercase tracking-wide
                                        shadow-lg border border-white/20 backdrop-blur-sm
                                        animate-pulse">
                           🔥 NEW
                         </span>
                         <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white 
-                                       text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide
+                                       text-xs font-bold px-2 py-1 sm:px-3 sm:py-1.5 rounded-full uppercase tracking-wide
                                        shadow-lg border border-white/20 backdrop-blur-sm">
                           ✨ TRENDING
                         </span>
@@ -124,13 +124,13 @@ const LatestSongPage: React.FC = () => {
                     </div>
                     
                     {/* Song Info */}
-                    <div className="flex items-center justify-center gap-4 text-white/70 text-sm">
+                    <div className="flex items-center justify-center gap-3 sm:gap-4 text-white/70 text-xs sm:text-sm">
                       <div className="flex items-center gap-1">
-                        <Music size={14} className="text-cyan-400" />
+                        <Music size={12} className="text-cyan-400 sm:w-3.5 sm:h-3.5" />
                         <span>Pop Ballad</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Heart size={14} className="text-pink-400" />
+                        <Heart size={12} className="text-pink-400 sm:w-3.5 sm:h-3.5" />
                         <span>2025</span>
                       </div>
                     </div>
@@ -144,7 +144,7 @@ const LatestSongPage: React.FC = () => {
               </div>
               
               {/* Enhanced Streaming Links */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <LinkItem 
                   title="Listen on Spotify" 
                   url="https://open.spotify.com/album/5uwHcTv2yXjrzTcCaGRUx8" 
@@ -152,9 +152,9 @@ const LatestSongPage: React.FC = () => {
                   className="animate-fade-in bg-gradient-to-r from-green-600/30 to-emerald-500/30 
                             hover:from-green-500/50 hover:to-emerald-400/50
                             hover:shadow-[0_0_40px_rgba(34,197,94,0.4)] 
-                            border-2 border-green-500/30 hover:border-green-400/60
+                            border border-green-500/30 hover:border-green-400/60
                             transform hover:scale-[1.03] transition-all duration-500
-                            backdrop-blur-xl min-h-[70px] group"
+                            backdrop-blur-xl min-h-[60px] sm:min-h-[70px] group"
                 />
                 <LinkItem 
                   title="Listen on Apple Music" 
@@ -163,9 +163,9 @@ const LatestSongPage: React.FC = () => {
                   className="animate-fade-in-delay-1 bg-gradient-to-r from-gray-700/30 to-gray-600/30 
                             hover:from-gray-600/50 hover:to-gray-500/50
                             hover:shadow-[0_0_40px_rgba(156,163,175,0.4)]
-                            border-2 border-gray-500/30 hover:border-gray-400/60
+                            border border-gray-500/30 hover:border-gray-400/60
                             transform hover:scale-[1.03] transition-all duration-500
-                            backdrop-blur-xl min-h-[70px] group"
+                            backdrop-blur-xl min-h-[60px] sm:min-h-[70px] group"
                 />
                 <LinkItem 
                   title="Watch on YouTube" 
@@ -174,9 +174,9 @@ const LatestSongPage: React.FC = () => {
                   className="animate-fade-in-delay-2 bg-gradient-to-r from-red-600/30 to-red-500/30 
                             hover:from-red-500/50 hover:to-red-400/50
                             hover:shadow-[0_0_40px_rgba(239,68,68,0.4)]
-                            border-2 border-red-500/30 hover:border-red-400/60
+                            border border-red-500/30 hover:border-red-400/60
                             transform hover:scale-[1.03] transition-all duration-500
-                            backdrop-blur-xl min-h-[70px] group"
+                            backdrop-blur-xl min-h-[60px] sm:min-h-[70px] group"
                 />
                 <LinkItem 
                   title="Listen on Amazon Music" 
@@ -185,21 +185,21 @@ const LatestSongPage: React.FC = () => {
                   className="animate-fade-in-delay-3 bg-gradient-to-r from-blue-600/30 to-cyan-500/30 
                             hover:from-blue-500/50 hover:to-cyan-400/50
                             hover:shadow-[0_0_40px_rgba(59,130,246,0.4)]
-                            border-2 border-blue-500/30 hover:border-cyan-400/60
+                            border border-blue-500/30 hover:border-cyan-400/60
                             transform hover:scale-[1.03] transition-all duration-500
-                            backdrop-blur-xl min-h-[70px] group"
+                            backdrop-blur-xl min-h-[60px] sm:min-h-[70px] group"
                 />
               </div>
             </div>
           </div>
 
           {/* Enhanced Footer */}
-          <div className="w-full bg-black/20 backdrop-blur-md border-t border-white/10 py-4 px-6">
+          <div className="w-full bg-black/30 backdrop-blur-md border-t border-white/10 py-3 sm:py-4 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <p className="text-white/60 text-sm mb-2">
                 Follow the journey on social media
               </p>
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-3 sm:gap-4 text-sm">
                 <a href="https://instagram.com/bruklin" target="_blank" rel="noopener noreferrer"
                    className="text-white/60 hover:text-pink-400 transition-colors duration-300">
                   @bruklin
@@ -215,14 +215,14 @@ const LatestSongPage: React.FC = () => {
                   YouTube
                 </a>
               </div>
-              <div className="flex items-center justify-center gap-6 text-white/60 text-sm mt-3">
+              <div className="flex items-center justify-center gap-4 sm:gap-6 text-white/60 text-xs sm:text-sm mt-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                  <span>9.1M+ Spotify Streams</span>
+                  <span>9.1M+ Spotify</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-red-400 animate-pulse"></div>
-                  <span>22.3M+ YouTube Views</span>
+                  <span>22.3M+ YouTube</span>
                 </div>
               </div>
             </div>
