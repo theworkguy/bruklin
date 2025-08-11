@@ -2,32 +2,170 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Critical CSS for above-the-fold content */
+@layer base {
+  /* Preload critical fonts */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2') format('woff2');
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    font-display: swap;
   }
   
   body {
-    @apply text-base leading-relaxed antialiased bg-black text-white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    @apply text-base leading-relaxed font-sans antialiased bg-black;
+    touch-action: manipulation;
+    font-display: swap;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply leading-tight font-bold;
+    @apply leading-[1.2] font-semibold;
+    font-display: swap;
   }
 }
 
+/* Optimize animations for performance */
 @layer utilities {
-  .prose {
-    max-width: none;
+  /* Enhanced animations and effects */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.6);
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 }
 
-/* Accessibility */
+.title-glow {
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.5),
+               0 0 60px rgba(59, 130, 246, 0.3);
+}
+
+.profile-glow {
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+}
+
+.bg-music-overlay {
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optimized animations */
+@keyframes tilt {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+/* Use transform3d for better performance */
+.animate-tilt {
+  animation: tilt 10s infinite ease-in-out;
+  will-change: transform;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+  will-change: opacity, transform;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.4s forwards;
+  will-change: opacity, transform;
+}
+
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+  will-change: opacity, transform;
+}
+
+/* Reduce motion for accessibility and performance */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  .animate-fade-in,
+  .animate-fade-in-delay-1,
+  .animate-fade-in-delay-2,
+  .animate-fade-in-delay-3,
+  .animate-tilt {
     animation: none;
-    transition: none;
+    opacity: 1;
+    transform: none;
+    will-change: auto;
   }
 }
