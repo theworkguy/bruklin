@@ -145,7 +145,7 @@ const MyJourneyPage: React.FC = () => {
     <>
       <SEOHead
         title="My Journey - From Bedroom Songwriter to Rising Pop Star"
-        description="Discover Bruklin's musical journey from writing songs in her bedroom at 13 to becoming a rising pop star with millions of streams. Follow her authentic path from 2020 to 2025."
+        description="Discover Bruklin's musical journey from writing songs in her bedroom at 13 to becoming a rising pop star with 9.1M+ Spotify streams and 22.3M+ YouTube views. Follow her authentic path from 2020 to 2025."
         keywords="Bruklin journey, pop star story, music career timeline, New York artist, teen musician, Oak Felder, Tommy Brown, viral TikTok, authentic music"
         url="/my-journey"
         type="article"

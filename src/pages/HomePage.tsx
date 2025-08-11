@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
     <>
       <SEOHead
         title="Home - Bruklin's Complete Musical Journey"
-        description="Explore Bruklin's complete musical journey - from latest releases to behind-the-scenes content. 17-year-old pop sensation with 7.8M+ Spotify streams and 17.3M+ YouTube views."
+        description="Explore Bruklin's complete musical journey - from latest releases to behind-the-scenes content. 17-year-old pop sensation with 9.1M+ Spotify streams and 22.3M+ YouTube views."
         keywords="Bruklin, pop music, New York artist, Under Your Skin, Good Girl Bad Dreams, teen pop star, new music 2025, rising artist, pop sensation"
         url="/home"
         type="website"

@@ -121,7 +121,7 @@ const VideosPage: React.FC = () => {
     <>
       <SEOHead
         title="Videos - Music Videos, Live Performances & Behind the Scenes"
-        description="Watch Bruklin's latest music videos, live performances, and behind-the-scenes content. 17.3M+ YouTube views featuring hits like 'Under Your Skin' and 'Good Girl Bad Dreams'."
+        description="Watch Bruklin's latest music videos, live performances, and behind-the-scenes content. 22.3M+ YouTube views featuring hits like 'Under Your Skin' and 'Good Girl Bad Dreams'."
         keywords="Bruklin videos, music videos, Under Your Skin video, Good Girl Bad Dreams video, live performances, acoustic sessions, YouTube"
         url="/videos"
         type="website"

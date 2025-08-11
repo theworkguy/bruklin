@@ -248,7 +248,7 @@ const DiscographyPage: React.FC = () => {
     <>
       <SEOHead
         title="Discography - Complete Music Collection by Bruklin"
-        description="Explore Bruklin's complete discography including hit singles 'Under Your Skin', 'Good Girl Bad Dreams', and more. 7.8M+ Spotify streams and 17.3M+ YouTube views."
+        description="Explore Bruklin's complete discography including hit singles 'Under Your Skin', 'Good Girl Bad Dreams', and more. 9.1M+ Spotify streams and 22.3M+ YouTube views."
         keywords="Bruklin discography, Under Your Skin, Good Girl Bad Dreams, Good Cry, Daydreaming, No Contact, Magic Show, STAY FRIENDS, pop music, Spotify, Apple Music"
         url="/discography"
         type="website"
