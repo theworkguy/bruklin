@@ -40,7 +40,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "@type": "Person",
     "name": "Bruklin",
     "alternateName": "Bruklin Official",
-    "description": "17-year-old pop sensation from New York with 7.8M+ Spotify streams and 17.3M+ YouTube views",
+    "description": "17-year-old pop sensation from New York with 9.1M+ Spotify streams and 22.3M+ YouTube views",
     "url": "https://bruklin.us",
     "image": image,
     "sameAs": [

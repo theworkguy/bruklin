@@ -81,7 +81,7 @@ const SocialMediaSection: React.FC = () => {
           <div className="flex justify-center gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-pink-400">
-                105.3K+
+                105K+
               </div>
               <div className="text-white/60 text-xs sm:text-sm">Total Followers</div>
             </div>

@@ -70,8 +70,8 @@ const Footer: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-white/70 text-lg leading-relaxed max-w-md">
-                  The Voice of a Generation. 17-year-old pop sensation from New York with 7.8M+ Spotify streams 
-                  and 17.3M+ YouTube views.
+                  The Voice of a Generation. 17-year-old pop sensation from New York with 9.1M+ Spotify streams 
+                  and 22.3M+ YouTube views.
                 </p>
               </div>
 
