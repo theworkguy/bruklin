@@ -220,8 +220,6 @@ const LatestSongPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-  )
   );
 };
 
