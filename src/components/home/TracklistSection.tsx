@@ -163,7 +163,7 @@ const TracklistSection: React.FC = () => {
                     <Pause size={18} className="text-white sm:w-5 sm:h-5" />
                   ) : (
                     <Play size={18} className="text-white ml-0.5 sm:w-5 sm:h-5 sm:ml-1" />
-                    {showAllTracks ? 'Show Less' : `View All 10 Tracks`}
+                  )}
                 </button>
 
                 {/* Track Info */}
