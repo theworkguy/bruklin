@@ -10,11 +10,53 @@ const DiscographyPage: React.FC = () => {
 
   const releases = [
     {
+      title: "Kinda Like",
+      type: "Single",
+      year: "2025",
+      duration: "2:44",
+      streams: "111,536",
+      description: "An energetic, catchy pop track blending powerful vocals with a pulsing beat, \"Kinda Like\" captures the rush of unexpected attraction.",
+      cover: "https://img.youtube.com/vi/CEwKFU3l1z0/0.jpg",
+      links: {
+        spotify: "https://open.spotify.com/album/5uwHcTv2yXjrzTcCaGRUx8",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/watch?v=CEwKFU3l1z0",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isLatest: true,
+      isHit: false,
+      color: 'from-pink-600 to-red-500',
+      mood: 'Upbeat',
+      producers: ['Oak Felder', 'Sebastian Cole'],
+      lyrics: 'Energetic and catchy'
+    },
+    {
+      title: "Echo",
+      type: "Single",
+      year: "2025",
+      duration: "2:33",
+      streams: "317,023",
+      description: "An emotive and atmospheric track, \"Echo\" blends haunting melodies with heartfelt lyrics, echoing themes of love and loss.",
+      cover: "https://img.youtube.com/vi/j43BFx9Ipdg/0.jpg",
+      links: {
+        spotify: "https://open.spotify.com/album/41WDnb9UzGRXDrIsw324UT",
+        apple: "https://music.apple.com/us/artist/bruklin/1756535936",
+        youtube: "https://www.youtube.com/watch?v=j43BFx9Ipdg",
+        amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
+      },
+      isLatest: false,
+      isHit: true,
+      color: 'from-indigo-600 to-purple-500',
+      mood: 'Emotional',
+      producers: ['Oak Felder', 'Sebastian Cole'],
+      lyrics: 'Haunting and heartfelt'
+    },
+    {
       title: "Under Your Skin",
       type: "Single",
       year: "2025",
       duration: "3:00",
-      streams: "186,041",
+      streams: "466,410",
       description: "A haunting pop ballad that explores the depths of emotional connection and vulnerability. This deeply personal track showcases Bruklin's evolved artistry and emotional maturity.",
       cover: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
       links: {
@@ -23,8 +65,8 @@ const DiscographyPage: React.FC = () => {
         youtube: "https://www.youtube.com/watch?v=3fMx4F9cYVw",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
-      isLatest: true,
-      isHit: false,
+      isLatest: false,
+      isHit: true,
       color: 'from-blue-600 to-cyan-500',
       mood: 'Emotional',
       producers: ['Oak Felder', 'Sebastian Cole'],
@@ -35,7 +77,7 @@ const DiscographyPage: React.FC = () => {
       type: "Single",
       year: "2025",
       duration: "2:36",
-      streams: "433,747",
+      streams: "735,801",
       description: "An empowering anthem about breaking free from expectations and embracing your true self. A bold statement that resonates with young people worldwide.",
       cover: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
       links: {
@@ -56,7 +98,7 @@ const DiscographyPage: React.FC = () => {
       type: "Single",
       year: "2025",
       duration: "2:32",
-      streams: "47,835",
+      streams: "53,984",
       description: "A stripped-down, emotional version of the original that showcases raw vocal talent and intimate storytelling in its purest form.",
       cover: "https://img.youtube.com/vi/GV8va3FTxIM/0.jpg",
       links: {
@@ -77,7 +119,7 @@ const DiscographyPage: React.FC = () => {
       type: "Single",
       year: "2024",
       duration: "2:18",
-      streams: "1,001,080",
+      streams: "1,069,040",
       description: "A cathartic pop track about healing and finding strength through emotional release. This breakthrough single established Bruklin as a voice for her generation.",
       cover: "https://img.youtube.com/vi/FFwmasP0qRk/0.jpg",
       links: {
@@ -97,7 +139,7 @@ const DiscographyPage: React.FC = () => {
       type: "Single",
       year: "2024",
       duration: "2:33",
-      streams: "1,470,185",
+      streams: "1,661,488",
       description: "A dreamy, ethereal track that captures the essence of youthful imagination and hope. This fan-favorite showcases Bruklin's versatility and dreamy vocals.",
       cover: "https://img.youtube.com/vi/-Ss_hxlRUM4/0.jpg",
       links: {
@@ -117,7 +159,7 @@ const DiscographyPage: React.FC = () => {
       type: "Single",
       year: "2024",
       duration: "2:51",
-      streams: "878,484",
+      streams: "909,625",
       description: "A bold statement about setting boundaries and prioritizing self-worth in relationships. An anthem for anyone learning to put themselves first.",
       cover: "https://img.youtube.com/vi/9TZJqvSS994/0.jpg",
       links: {
@@ -137,7 +179,7 @@ const DiscographyPage: React.FC = () => {
       type: "Single",
       year: "2024",
       duration: "2:40",
-      streams: "1,826,258",
+      streams: "1,847,032",
       description: "An enchanting track that blends pop sensibilities with mystical storytelling elements. This hit single showcases Bruklin's creative storytelling abilities.",
       cover: "https://img.youtube.com/vi/FMmNnxsuets/0.jpg",
       links: {
@@ -157,7 +199,7 @@ const DiscographyPage: React.FC = () => {
       type: "Single",
       year: "2024",
       duration: "2:40",
-      streams: "1,938,575",
+      streams: "1,976,034",
       description: "A heartfelt exploration of complex relationships and the boundaries of friendship. This emotional track became an instant fan favorite and streaming hit.",
       cover: "https://img.youtube.com/vi/AC3r8rQfPX8/0.jpg",
       links: {
@@ -256,7 +298,7 @@ const DiscographyPage: React.FC = () => {
                           hover:border-white/20 transition-all duration-300 group
                           hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transform hover:scale-105">
               <TrendingUp size={24} className="text-green-400 mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-400 mb-1 sm:mb-2">{formatTotalStreams(totalStreams)}+</h3>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-400 mb-1 sm:mb-2">9.1M+</h3>
               <p className="text-white/80 text-xs sm:text-sm font-medium">Total Streams</p>
             </div>
             <div className="bg-gradient-to-br from-red-600/20 to-pink-600/20 
@@ -264,7 +306,7 @@ const DiscographyPage: React.FC = () => {
                           hover:border-white/20 transition-all duration-300 group
                           hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] transform hover:scale-105">
               <Eye size={24} className="text-red-400 mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-400 mb-1 sm:mb-2">17.3M+</h3>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-400 mb-1 sm:mb-2">22.3M+</h3>
               <p className="text-white/80 text-xs sm:text-sm font-medium">YouTube Views</p>
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 
@@ -272,7 +314,7 @@ const DiscographyPage: React.FC = () => {
                           hover:border-white/20 transition-all duration-300 group
                           hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transform hover:scale-105">
               <Music size={24} className="text-purple-400 mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-400 mb-1 sm:mb-2">{releases.length}</h3>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-purple-400 mb-1 sm:mb-2">10</h3>
               <p className="text-white/80 text-xs sm:text-sm font-medium">Released Tracks</p>
             </div>
             <div className="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 
@@ -280,7 +322,7 @@ const DiscographyPage: React.FC = () => {
                           hover:border-white/20 transition-all duration-300 group
                           hover:shadow-[0_0_30px_rgba(251,191,36,0.3)] transform hover:scale-105">
               <Award size={24} className="text-yellow-400 mx-auto mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400 mb-1 sm:mb-2">{hitSingles}</h3>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400 mb-1 sm:mb-2">6</h3>
               <p className="text-white/80 text-xs sm:text-sm font-medium">Hit Singles</p>
             </div>
           </div>
@@ -642,19 +684,19 @@ const DiscographyPage: React.FC = () => {
               <div className="border-t border-white/10 pt-6">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-green-400">{formatTotalStreams(totalStreams)}+</div>
+                    <div className="text-2xl font-bold text-green-400">9.1M+</div>
                     <div className="text-white/60 text-sm">Total Streams</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-red-400">17.3M+</div>
+                    <div className="text-2xl font-bold text-red-400">22.3M+</div>
                     <div className="text-white/60 text-sm">YouTube Views</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-purple-400">{releases.length}</div>
+                    <div className="text-2xl font-bold text-purple-400">10</div>
                     <div className="text-white/60 text-sm">Songs Released</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-yellow-400">{hitSingles}</div>
+                    <div className="text-2xl font-bold text-yellow-400">6</div>
                     <div className="text-white/60 text-sm">Hit Singles</div>
                   </div>
                 </div>

@@ -179,7 +179,7 @@ const ContactPage: React.FC = () => {
                           backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 lg:p-6 border border-white/10
                           hover:border-white/20 transition-all duration-300 text-center
                           hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transform hover:scale-105">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-400 mb-1">79K+</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-400 mb-1">105K+</h3>
               <p className="text-white/80 text-xs sm:text-sm">Social Followers</p>
             </div>
             <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 

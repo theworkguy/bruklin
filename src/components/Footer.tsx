@@ -173,19 +173,19 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer" 
                   className="text-white hover:text-blue-400 transition-colors duration-300 font-medium"
                 >
-                  MB Music Group LLC
-                </a>
+                The Voice of a Generation. 17-year-old pop sensation from New York with 9.1M+ Spotify streams 
+                and 22.3M+ YouTube views.
               </p>
             </div>
 
             <div className="flex items-center gap-6 text-white/60 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                <span>7.8M+ Spotify Streams</span>
+                <span>9.1M+ Spotify Streams</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-red-400 animate-pulse"></div>
-                <span>17.3M+ YouTube Views</span>
+                <span>22.3M+ YouTube Views</span>
               </div>
             </div>
           </div>

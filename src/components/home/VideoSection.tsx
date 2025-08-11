@@ -8,20 +8,40 @@ const VideoSection: React.FC = () => {
 
   const videos = [
     { 
+      title: "Kinda Like", 
+      youtubeUrl: "https://www.youtube.com/watch?v=CEwKFU3l1z0", 
+      thumbnail: "https://img.youtube.com/vi/CEwKFU3l1z0/0.jpg",
+      views: "750K",
+      duration: "2:44",
+      releaseDate: "2025",
+      isLatest: true,
+      category: "Music Video"
+    },
+    { 
+      title: "Echo", 
+      youtubeUrl: "https://www.youtube.com/watch?v=j43BFx9Ipdg", 
+      thumbnail: "https://img.youtube.com/vi/j43BFx9Ipdg/0.jpg",
+      views: "2.1M",
+      duration: "2:33",
+      releaseDate: "2025",
+      isLatest: false,
+      category: "Music Video"
+    },
+    { 
       title: "Under Your Skin", 
       youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw", 
       thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
-      views: "2M",
+      views: "2.1M",
       duration: "3:00",
       releaseDate: "2025",
-      isLatest: true,
+      isLatest: false,
       category: "Music Video"
     },
     { 
       title: "Good Girl Bad Dreams", 
       youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo", 
       thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
-      views: "1.6M",
+      views: "1.7M",
       duration: "2:36",
       releaseDate: "2025",
       isLatest: false,
@@ -118,15 +138,15 @@ const VideoSection: React.FC = () => {
           {/* Stats Row */}
           <div className="flex justify-center gap-8 mb-8">
             <div className="text-center">
-              <div className="text-2xl font-bold text-red-400">17.3M+</div>
+              <div className="text-2xl font-bold text-red-400">22.3M+</div>
               <div className="text-white/60 text-sm">Total Views</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-pink-400">{videos.length}</div>
+              <div className="text-2xl font-bold text-pink-400">12</div>
               <div className="text-white/60 text-sm">Music Videos</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">16.8K+</div>
+              <div className="text-2xl font-bold text-purple-400">17K+</div>
               <div className="text-white/60 text-sm">Subscribers</div>
             </div>
           </div>
@@ -180,7 +200,7 @@ const VideoSection: React.FC = () => {
                 <div className="absolute top-4 left-4">
                   <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white 
                                  text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    Latest
+                    {showAllVideos ? 'Show Less' : `View All 12 Videos`}
                   </span>
                 </div>
               </div>
@@ -218,7 +238,7 @@ const VideoSection: React.FC = () => {
                                bg-red-600/20 border border-red-500/30">
                     <FaYoutube size={16} className="text-red-400" />
                     <span className="text-red-400 font-medium text-sm">Watch Now</span>
-                  </div>
+                  <span className="text-sm">Join 17K+ subscribers</span>
                 </div>
               </div>
             </div>

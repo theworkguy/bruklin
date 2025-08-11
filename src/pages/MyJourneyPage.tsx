@@ -59,39 +59,39 @@ const MyJourneyPage: React.FC = () => {
     {
       year: '2025',
       title: 'Voice of a Generation',
-      description: 'Released "Under Your Skin" and "Good Girl Bad Dreams," cementing my place as a rising pop star with over 17M YouTube views.',
-      details: 'At 17, I\'m proud to be called "The Voice of a Generation." With songs that speak to young people\'s experiences and over 17.3M YouTube views, I\'m just getting started. My music is reaching people who need to hear that they\'re not alone in their struggles and dreams.',
+      description: 'Released "Kinda Like," "Echo," "Under Your Skin," and "Good Girl Bad Dreams," cementing my place as a rising pop star with over 22M YouTube views.',
+      details: 'At 17, I\'m proud to be called "The Voice of a Generation." With songs like "Kinda Like" and "Echo" that speak to young people\'s experiences and over 22.3M YouTube views, I\'m just getting started. My music is reaching people who need to hear that they\'re not alone in their struggles and dreams.',
       icon: Star,
       color: 'from-cyan-500 to-blue-400',
-      stats: '17.3M+ YouTube views',
+      stats: '22.3M+ YouTube views',
       achievement: 'Global recognition'
     }
   ];
 
   const achievements = [
     {
-      number: '7.8M+',
+      number: '9.1M+',
       label: 'Spotify Streams',
       icon: FaSpotify,
       color: 'text-green-400',
       description: 'Total streams across all platforms'
     },
     {
-      number: '17.3M+',
+      number: '22.3M+',
       label: 'YouTube Views',
       icon: FaYoutube,
       color: 'text-red-400',
       description: 'Music video views and counting'
     },
     {
-      number: '79K+',
+      number: '105K+',
       label: 'Social Followers',
       icon: FaInstagram,
       color: 'text-pink-400',
       description: 'Across all social platforms'
     },
     {
-      number: '8',
+      number: '10',
       label: 'Released Tracks',
       icon: Music,
       color: 'text-purple-400',
@@ -101,17 +101,33 @@ const MyJourneyPage: React.FC = () => {
 
   const currentProjects = [
     {
-      title: 'Under Your Skin',
-      description: 'My latest single exploring emotional vulnerability and deep connections',
-      streams: '186K streams',
+      title: 'Kinda Like',
+      description: 'My latest energetic pop track capturing the rush of unexpected attraction',
+      streams: '112K streams',
       year: '2025',
       status: 'Latest Release',
+      color: 'from-pink-600/30 to-red-600/30'
+    },
+    {
+      title: 'Echo',
+      description: 'An emotive and atmospheric track blending haunting melodies with heartfelt lyrics',
+      streams: '317K streams',
+      year: '2025',
+      status: 'Hit Single',
+      color: 'from-indigo-600/30 to-purple-600/30'
+    },
+    {
+      title: 'Under Your Skin',
+      description: 'My latest single exploring emotional vulnerability and deep connections',
+      streams: '466K streams',
+      year: '2025',
+      status: 'Hit Single',
       color: 'from-blue-600/30 to-cyan-600/30'
     },
     {
       title: 'Good Girl Bad Dreams',
       description: 'An empowering anthem about breaking free from societal expectations',
-      streams: '434K streams',
+      streams: '736K streams',
       year: '2025',
       status: 'Fan Favorite',
       color: 'from-purple-600/30 to-pink-600/30'

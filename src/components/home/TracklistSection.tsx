@@ -9,17 +9,33 @@ const TracklistSection: React.FC = () => {
 
   const tracks = [
     { 
+      title: "Kinda Like", 
+      duration: "2:44", 
+      streams: "112K",
+      spotifyUrl: "https://open.spotify.com/album/5uwHcTv2yXjrzTcCaGRUx8",
+      isHit: false,
+      releaseDate: "2025"
+    },
+    { 
+      title: "Echo", 
+      duration: "2:33", 
+      streams: "317K",
+      spotifyUrl: "https://open.spotify.com/album/41WDnb9UzGRXDrIsw324UT",
+      isHit: true,
+      releaseDate: "2025"
+    },
+    { 
       title: "Under Your Skin", 
       duration: "3:00", 
-      streams: "186K",
+      streams: "466K",
       spotifyUrl: "https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP",
-      isHit: false,
+      isHit: true,
       releaseDate: "2025"
     },
     { 
       title: "Good Girl Bad Dreams", 
       duration: "2:36", 
-      streams: "434K",
+      streams: "736K",
       spotifyUrl: "https://open.spotify.com/album/48R9mXpiOmqdLzdqTOOXM6",
       isHit: false,
       releaseDate: "2025"
@@ -27,7 +43,7 @@ const TracklistSection: React.FC = () => {
     { 
       title: "Good Cry (Acoustic)", 
       duration: "2:32", 
-      streams: "48K",
+      streams: "54K",
       spotifyUrl: "https://open.spotify.com/album/2m7RXCL6BuAsIJcnOsNhEs",
       isHit: false,
       releaseDate: "2025"
@@ -35,7 +51,7 @@ const TracklistSection: React.FC = () => {
     { 
       title: "Good Cry", 
       duration: "2:18", 
-      streams: "1.0M",
+      streams: "1.1M",
       spotifyUrl: "https://open.spotify.com/album/4FAs7QXWGgHABNLoumHew6",
       isHit: true,
       releaseDate: "2024"
@@ -43,7 +59,7 @@ const TracklistSection: React.FC = () => {
     { 
       title: "Daydreaming", 
       duration: "2:33", 
-      streams: "1.5M",
+      streams: "1.7M",
       spotifyUrl: "https://open.spotify.com/album/2s5mdldGq2eNpv5Ma9eUwu",
       isHit: true,
       releaseDate: "2024"
@@ -51,7 +67,7 @@ const TracklistSection: React.FC = () => {
     { 
       title: "No Contact", 
       duration: "2:51", 
-      streams: "878K",
+      streams: "910K",
       spotifyUrl: "https://open.spotify.com/album/2Tkl20l0m39EmgCPYlw1gl",
       isHit: false,
       releaseDate: "2024"
@@ -59,7 +75,7 @@ const TracklistSection: React.FC = () => {
     { 
       title: "Magic Show", 
       duration: "2:40", 
-      streams: "1.8M",
+      streams: "1.9M",
       spotifyUrl: "https://open.spotify.com/album/6kgzBeRXBSCffM8zfm0lle",
       isHit: true,
       releaseDate: "2024"
@@ -67,7 +83,7 @@ const TracklistSection: React.FC = () => {
     { 
       title: "STAY FRIENDS", 
       duration: "2:40", 
-      streams: "1.9M",
+      streams: "2.0M",
       spotifyUrl: "https://open.spotify.com/album/6MtKE4duJODVSVd9AkrtTf",
       isHit: true,
       releaseDate: "2024"
@@ -100,16 +116,16 @@ const TracklistSection: React.FC = () => {
           <div className="flex justify-center gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
             <div className="text-center">
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-green-400">
-                7.8M+
+                9.1M+
               </div>
               <div className="text-white/60 text-xs sm:text-sm">Total Streams</div>
             </div>
             <div className="text-center">
-              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-400">{tracks.length}</div>
+              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-400">10</div>
               <div className="text-white/60 text-xs sm:text-sm">Released Tracks</div>
             </div>
             <div className="text-center">
-              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-400">4</div>
+              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-400">6</div>
               <div className="text-white/60 text-xs sm:text-sm">Hit Singles</div>
             </div>
           </div>
@@ -147,7 +163,7 @@ const TracklistSection: React.FC = () => {
                     <Pause size={18} className="text-white sm:w-5 sm:h-5" />
                   ) : (
                     <Play size={18} className="text-white ml-0.5 sm:w-5 sm:h-5 sm:ml-1" />
-                  )}
+                    {showAllTracks ? 'Show Less' : `View All 10 Tracks`}
                 </button>
 
                 {/* Track Info */}

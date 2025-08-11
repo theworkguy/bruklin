@@ -6,21 +6,43 @@ import SEOHead from '../components/SEOHead';
 const VideosPage: React.FC = () => {
   const videos = [
     {
+      title: "Kinda Like",
+      category: "music-video",
+      year: "2025",
+      views: "750K",
+      duration: "2:44",
+      description: "An energetic, catchy pop track blending powerful vocals with a pulsing beat, \"Kinda Like\" captures the rush of unexpected attraction.",
+      thumbnail: "https://img.youtube.com/vi/CEwKFU3l1z0/0.jpg",
+      youtubeUrl: "https://www.youtube.com/watch?v=CEwKFU3l1z0",
+      isLatest: true
+    },
+    {
+      title: "Echo",
+      category: "music-video",
+      year: "2025",
+      views: "2.1M",
+      duration: "2:33",
+      description: "An emotive and atmospheric track, \"Echo\" blends haunting melodies with heartfelt lyrics, echoing themes of love and loss.",
+      thumbnail: "https://img.youtube.com/vi/j43BFx9Ipdg/0.jpg",
+      youtubeUrl: "https://www.youtube.com/watch?v=j43BFx9Ipdg",
+      isLatest: false
+    },
+    {
       title: "Under Your Skin",
       category: "music-video",
       year: "2025",
-      views: "2M",
+      views: "2.1M",
       duration: "3:00",
       description: "A haunting pop ballad that explores the depths of emotional connection and vulnerability.",
       thumbnail: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
       youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw",
-      isLatest: true
+      isLatest: false
     },
     {
       title: "Good Girl Bad Dreams",
       category: "music-video",
       year: "2025",
-      views: "1.6M",
+      views: "1.7M",
       duration: "2:36",
       description: "An empowering anthem about breaking free from expectations and embracing your true self.",
       thumbnail: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
@@ -124,21 +146,21 @@ const VideosPage: React.FC = () => {
                           backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
                           hover:border-white/20 transition-all duration-300
                           hover:shadow-[0_0_30px_rgba(239,68,68,0.3)] transform hover:scale-105">
-              <h3 className="text-2xl md:text-3xl font-bold text-red-400 mb-2">17.3M+</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-red-400 mb-2">22.3M+</h3>
               <p className="text-white/80 text-sm">Total Views</p>
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 
                           backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
                           hover:border-white/20 transition-all duration-300
                           hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transform hover:scale-105">
-              <h3 className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">16.8K+</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">17K+</h3>
               <p className="text-white/80 text-sm">Subscribers</p>
             </div>
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 
                           backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center
                           hover:border-white/20 transition-all duration-300
                           hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transform hover:scale-105">
-              <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-2">{videos.length}</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-2">12</h3>
               <p className="text-white/80 text-sm">Videos</p>
             </div>
             <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 
@@ -363,7 +385,7 @@ const VideosPage: React.FC = () => {
                 </a>
                 <div className="flex items-center gap-3 text-white/70">
                   <Users size={20} />
-                  <span className="text-lg">Join 16.8K+ subscribers</span>
+                  <span className="text-lg">Join 17K+ subscribers</span>
                 </div>
               </div>
             </div>

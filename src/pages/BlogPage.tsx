@@ -7,20 +7,58 @@ import SEOHead from '../components/SEOHead';
 const BlogPage: React.FC = () => {
   const songArticles = [
     {
+      title: "The Energy of 'Kinda Like': Capturing Unexpected Attraction",
+      excerpt: "Dive into my latest energetic pop track that captures the rush and excitement of unexpected attraction. From the pulsing beat to the powerful vocals, discover how this song came to life...",
+      date: "July 25, 2025",
+      author: "Bruklin",
+      category: "Song Stories",
+      readTime: "4 min read",
+      image: "https://img.youtube.com/vi/CEwKFU3l1z0/0.jpg",
+      likes: 89,
+      comments: 12,
+      featured: true,
+      songData: {
+        title: "Kinda Like",
+        duration: "2:44",
+        streams: "112K",
+        spotifyUrl: "https://open.spotify.com/album/5uwHcTv2yXjrzTcCaGRUx8",
+        youtubeUrl: "https://www.youtube.com/watch?v=CEwKFU3l1z0"
+      }
+    },
+    {
+      title: "Echoes of the Heart: The Making of 'Echo'",
+      excerpt: "An emotive journey into creating 'Echo' - a track that blends haunting melodies with heartfelt lyrics about love and loss. Discover the inspiration behind this atmospheric masterpiece...",
+      date: "June 27, 2025",
+      author: "Bruklin",
+      category: "Song Stories",
+      readTime: "5 min read",
+      image: "https://img.youtube.com/vi/j43BFx9Ipdg/0.jpg",
+      likes: 156,
+      comments: 23,
+      featured: true,
+      songData: {
+        title: "Echo",
+        duration: "2:33",
+        streams: "317K",
+        spotifyUrl: "https://open.spotify.com/album/41WDnb9UzGRXDrIsw324UT",
+        youtubeUrl: "https://www.youtube.com/watch?v=j43BFx9Ipdg"
+      }
+    },
+    {
       title: "The Story Behind 'Under Your Skin'",
       excerpt: "Dive deep into the creative process and emotional journey that led to my latest single. From late-night writing sessions to the final recording, discover how vulnerability became my greatest strength...",
-      date: "January 20, 2025",
+      date: "March 20, 2025",
       author: "Bruklin",
       category: "Song Stories",
       readTime: "5 min read",
       image: "https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg",
       likes: 234,
       comments: 18,
-      featured: true,
+      featured: false,
       songData: {
         title: "Under Your Skin",
         duration: "3:00",
-        streams: "186K",
+        streams: "466K",
         spotifyUrl: "https://open.spotify.com/album/1E0QjiMao6MMzZnExxv5NP",
         youtubeUrl: "https://www.youtube.com/watch?v=3fMx4F9cYVw"
       }
@@ -28,18 +66,18 @@ const BlogPage: React.FC = () => {
     {
       title: "Breaking Free: The Making of 'Good Girl Bad Dreams'",
       excerpt: "An empowering anthem about shattering expectations and embracing authenticity. Learn how this song became a rallying cry for self-acceptance and the courage to be different...",
-      date: "January 15, 2025",
+      date: "March 15, 2025",
       author: "Bruklin",
       category: "Song Stories",
       readTime: "6 min read",
       image: "https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg",
       likes: 189,
       comments: 25,
-      featured: true,
+      featured: false,
       songData: {
         title: "Good Girl Bad Dreams",
         duration: "2:36",
-        streams: "434K",
+        streams: "736K",
         spotifyUrl: "https://open.spotify.com/album/48R9mXpiOmqdLzdqTOOXM6",
         youtubeUrl: "https://www.youtube.com/watch?v=G9hbM-tRnBo"
       }
