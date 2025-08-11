@@ -200,7 +200,7 @@ const VideoSection: React.FC = () => {
                 <div className="absolute top-4 left-4">
                   <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white 
                                  text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    {showAllVideos ? 'Show Less' : `View All 12 Videos`}
+                    Latest
                   </span>
                 </div>
               </div>
@@ -238,6 +238,7 @@ const VideoSection: React.FC = () => {
                                bg-red-600/20 border border-red-500/30">
                     <FaYoutube size={16} className="text-red-400" />
                     <span className="text-red-400 font-medium text-sm">Watch Now</span>
+                  </div>
                   <span className="text-sm">Join 17K+ subscribers</span>
                 </div>
               </div>
