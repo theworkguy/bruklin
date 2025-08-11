@@ -1,17 +1,17 @@
 import React from 'react';
-import { FaYoutube, FaSpotify, FaApple, FaAmazon } from 'react-icons/fa';
+import { FaYoutube, FaSpotify, FaApple, FaInstagram } from 'react-icons/fa';
 import LazyImage from '../LazyImage';
 
 const HeroSection: React.FC = () => {
   const socialLinks = [
-    { icon: FaYoutube, url: 'https://www.youtube.com/@BruklinOfficial', label: 'YouTube', color: 'hover:text-red-500' },
-    { icon: FaSpotify, url: 'https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO', label: 'Spotify', color: 'hover:text-green-500' },
-    { icon: FaApple, url: 'https://music.apple.com/us/artist/bruklin/1756535936', label: 'Apple Music', color: 'hover:text-gray-300' },
-    { icon: FaAmazon, url: 'https://music.amazon.com/artists/B0DPLCQGNH/bruklin', label: 'Amazon Music', color: 'hover:text-blue-400' },
+    { icon: FaInstagram, url: 'https://www.instagram.com/bruklin', label: 'Instagram' },
+    { icon: FaSpotify, url: 'https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO', label: 'Spotify' },
+    { icon: FaYoutube, url: 'https://www.youtube.com/@BruklinOfficial', label: 'YouTube' },
+    { icon: FaApple, url: 'https://music.apple.com/us/artist/bruklin/1756535936', label: 'Apple Music' },
   ];
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <LazyImage
@@ -21,47 +21,49 @@ const HeroSection: React.FC = () => {
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Logo */}
-        <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text 
-                     bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 mb-6
-                     tracking-wider animate-fade-in
-                     [text-shadow:_0_0_50px_rgba(59,130,246,0.5)]">
+        {/* Main Title */}
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
           BRUKLIN
         </h1>
 
-        {/* Tagline */}
-        <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed
-                     max-w-3xl mx-auto animate-fade-in-delay-1
-                     font-light tracking-wide
-                     [text-shadow:_0_0_20px_rgba(0,0,0,0.8)]">
-          At age 17, Bruklin is turning New York's heartbeat into pop magic—touching souls worldwide...
+        {/* Subtitle */}
+        <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-2xl mx-auto">
+          17-year-old pop sensation from New York, touching souls worldwide with authentic music
         </p>
 
-        {/* Social Media Icons */}
-        <div className="flex justify-center gap-8 animate-fade-in-delay-2">
+        {/* Stats */}
+        <div className="flex flex-wrap justify-center gap-8 mb-12">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-green-400">7.8M+</div>
+            <div className="text-gray-400 text-sm">Spotify Streams</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-red-400">17.3M+</div>
+            <div className="text-gray-400 text-sm">YouTube Views</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-400">79K+</div>
+            <div className="text-gray-400 text-sm">Social Followers</div>
+          </div>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="flex justify-center gap-6">
           {socialLinks.map((social, index) => (
             <a
               key={index}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-16 h-16 rounded-full bg-black/30 backdrop-blur-sm border border-white/20
-                         flex items-center justify-center group
-                         transition-all duration-300 ease-out
-                         hover:scale-110 hover:bg-black/50 ${social.color}
-                         hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]
-                         hover:border-white/40`}
+              className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20
+                       flex items-center justify-center transition-all duration-200 hover:scale-110"
               aria-label={social.label}
             >
-              <social.icon 
-                size={28} 
-                className="text-white transition-colors duration-300" 
-              />
+              <social.icon size={20} className="text-white" />
             </a>
           ))}
         </div>
