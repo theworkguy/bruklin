@@ -52,15 +52,15 @@ const LatestSongPage: React.FC = () => {
             <div className="max-w-4xl mx-auto flex justify-center items-center gap-8 text-xs sm:text-sm">
               <div className="flex items-center gap-2 text-green-400">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="font-medium">7.8M+ Spotify Streams</span>
+                <span className="font-medium">9.1M+ Spotify Streams</span>
               </div>
               <div className="flex items-center gap-2 text-red-400">
                 <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                <span className="font-medium">17.3M+ YouTube Views</span>
+                <span className="font-medium">22.3M+ YouTube Views</span>
               </div>
               <div className="flex items-center gap-2 text-purple-400">
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                <span className="font-medium">79K+ Followers</span>
+                <span className="font-medium">105K+ Followers</span>
               </div>
             </div>
           </div>
