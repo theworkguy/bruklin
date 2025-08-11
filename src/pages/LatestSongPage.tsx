@@ -194,27 +194,7 @@ const LatestSongPage: React.FC = () => {
           </div>
 
           {/* Enhanced Footer */}
-          <div className="w-full bg-black/30 backdrop-blur-md border-t border-white/10 py-3 sm:py-4 px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-white/60 text-sm mb-2">
-                Follow the journey on social media
-              </p>
-              <div className="flex justify-center gap-3 sm:gap-4 text-sm">
-                <a href="https://instagram.com/bruklin" target="_blank" rel="noopener noreferrer"
-                   className="text-white/60 hover:text-pink-400 transition-colors duration-300">
-                  @bruklin
-                </a>
-                <span className="text-white/40">•</span>
-                <a href="https://tiktok.com/@bruklin" target="_blank" rel="noopener noreferrer"
-                   className="text-white/60 hover:text-white transition-colors duration-300">
-                  TikTok
-                </a>
-                <span className="text-white/40">•</span>
-                <a href="https://youtube.com/@BruklinOfficial" target="_blank" rel="noopener noreferrer"
-                   className="text-white/60 hover:text-red-400 transition-colors duration-300">
-                  YouTube
-                </a>
-              </div>
+          
             </div>
           </div>
         </div>
