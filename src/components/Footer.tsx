@@ -173,8 +173,8 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer" 
                   className="text-white hover:text-blue-400 transition-colors duration-300 font-medium"
                 >
-                The Voice of a Generation. 17-year-old pop sensation from New York with 9.1M+ Spotify streams 
-                and 22.3M+ YouTube views.
+                  MB Music Group
+                </a>
               </p>
             </div>
 
