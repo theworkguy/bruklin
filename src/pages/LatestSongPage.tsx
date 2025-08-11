@@ -195,6 +195,7 @@ const LatestSongPage: React.FC = () => {
 
           {/* Enhanced Footer */}
         </div>
+      </div>
     </>
   );
 };
