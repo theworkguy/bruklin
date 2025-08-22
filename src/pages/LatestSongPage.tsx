@@ -79,67 +79,100 @@ const LatestSongPage: React.FC = () => {
               
               {/* Enhanced Song Title Section */}
               <div className="relative mb-6 sm:mb-8">
-                <div className="bg-gradient-to-r from-black/60 via-black/80 to-black/60 backdrop-blur-xl 
-                              rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl
-                              hover:border-cyan-400/50 transition-all duration-700 group
-                              overflow-hidden">
+                <div className="relative bg-gradient-to-br from-black/80 via-gray-900/90 to-black/80 
+                              backdrop-blur-2xl rounded-3xl p-6 sm:p-8 border border-white/10
+                              hover:border-gradient-to-r hover:from-pink-500/50 hover:via-purple-500/50 hover:to-blue-500/50
+                              transition-all duration-500 group overflow-hidden
+                              shadow-[0_0_50px_rgba(0,0,0,0.8)] hover:shadow-[0_0_80px_rgba(168,85,247,0.4)]">
                   
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-cyan-600/10 to-blue-600/10 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  {/* Animated Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-600/5 via-purple-600/10 to-blue-600/5 
+                                opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
                   
-                  {/* Sparkle Effects */}
-                  <div className="absolute top-3 right-3 sm:top-4 sm:right-4">
-                    <Sparkles size={16} className="text-cyan-400 animate-pulse sm:w-5 sm:h-5" />
-                  </div>
-                  <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
-                    <Star size={14} className="text-blue-400 animate-ping sm:w-4 sm:h-4" />
+                  {/* Floating Particles */}
+                  <div className="absolute top-4 right-6 opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="flex items-center gap-2">
+                      <Sparkles size={18} className="text-pink-400 animate-pulse" />
+                      <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-100"></div>
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce delay-200"></div>
+                    </div>
                   </div>
                   
                   <div className="relative z-10">
-                    <div className="text-center mb-3 sm:mb-4">
-                      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text 
-                                   bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400
-                                   group-hover:from-cyan-200 group-hover:via-blue-300 group-hover:to-purple-300
-                                   transition-all duration-700 leading-tight
-                                   [text-shadow:_0_0_30px_rgba(0,191,255,0.5)]
-                                   group-hover:[text-shadow:_0_0_40px_rgba(0,191,255,0.8)]">
-                        Cry A Little Louder
-                      </h1>
+                    {/* Song Title */}
+                    <div className="text-center mb-6">
+                      <div className="mb-4">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text 
+                                     bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400
+                                     group-hover:from-pink-300 group-hover:via-purple-300 group-hover:to-blue-300
+                                     transition-all duration-700 leading-tight tracking-wide
+                                     drop-shadow-[0_0_30px_rgba(168,85,247,0.6)]
+                                     group-hover:drop-shadow-[0_0_50px_rgba(168,85,247,0.8)]">
+                          Cry A Little Louder
+                        </h1>
+                      </div>
                       
-                      {/* Enhanced badges */}
-                      <div className="flex items-center justify-center gap-2 sm:gap-3 mt-3 sm:mt-4">
-                        <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white 
-                                       text-xs font-bold px-2 py-1 sm:px-3 sm:py-1.5 rounded-full uppercase tracking-wide
-                                       shadow-lg border border-white/20 backdrop-blur-sm
-                                       animate-pulse">
-                          🔥 NEW
-                        </span>
-                        <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white 
-                                       text-xs font-bold px-2 py-1 sm:px-3 sm:py-1.5 rounded-full uppercase tracking-wide
-                                       shadow-lg border border-white/20 backdrop-blur-sm">
-                          ✨ TRENDING
-                        </span>
+                      {/* Status Badges */}
+                      <div className="flex items-center justify-center gap-3 mb-4">
+                        <div className="relative">
+                          <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white 
+                                         text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider
+                                         shadow-lg border border-white/20 backdrop-blur-sm
+                                         animate-pulse hover:animate-none transition-all duration-300
+                                         hover:scale-110 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)]">
+                            🔥 Latest Drop
+                          </span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 rounded-full 
+                                        blur-md opacity-30 animate-pulse"></div>
+                        </div>
+                        
+                        <div className="relative">
+                          <span className="bg-gradient-to-r from-emerald-500 to-green-500 text-white 
+                                         text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider
+                                         shadow-lg border border-white/20 backdrop-blur-sm
+                                         hover:scale-110 transition-all duration-300
+                                         hover:shadow-[0_0_20px_rgba(34,197,94,0.6)]">
+                            📈 Growing
+                          </span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full 
+                                        blur-md opacity-20"></div>
+                        </div>
                       </div>
                     </div>
                     
-                    {/* Song Info */}
-                    <div className="flex items-center justify-center gap-3 sm:gap-4 text-white/70 text-xs sm:text-sm">
-                      <div className="flex items-center gap-1">
-                        <Music size={12} className="text-cyan-400 sm:w-3.5 sm:h-3.5" />
-                        <span>Pop Ballad</span>
+                    {/* Song Details */}
+                    <div className="flex items-center justify-center gap-6 text-white/80">
+                      <div className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-full border border-white/10
+                                    hover:bg-white/10 transition-all duration-300">
+                        <Music size={14} className="text-pink-400" />
+                        <span className="text-sm font-medium">Breakup Anthem</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Heart size={12} className="text-pink-400 sm:w-3.5 sm:h-3.5" />
-                        <span>2025</span>
+                      
+                      <div className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-full border border-white/10
+                                    hover:bg-white/10 transition-all duration-300">
+                        <Heart size={14} className="text-purple-400" />
+                        <span className="text-sm font-medium">August 2025</span>
+                      </div>
+                      
+                      <div className="flex items-center gap-2 bg-white/5 px-3 py-2 rounded-full border border-white/10
+                                    hover:bg-white/10 transition-all duration-300">
+                        <Play size={14} className="text-blue-400" />
+                        <span className="text-sm font-medium">3:03</span>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Bottom glow line */}
-                  <div className="absolute bottom-0 left-0 w-full h-[2px] 
-                                bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent
-                                group-hover:via-cyan-400 transition-all duration-700"></div>
+                  {/* Bottom Accent Line */}
+                  <div className="absolute bottom-0 left-0 w-full h-1 
+                                bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500
+                                opacity-60 group-hover:opacity-100 transition-all duration-700
+                                group-hover:h-2"></div>
+                  
+                  {/* Corner Decorations */}
+                  <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-pink-500/10 to-transparent 
+                                rounded-br-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-blue-500/10 to-transparent 
+                                rounded-tl-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 </div>
               </div>
               
