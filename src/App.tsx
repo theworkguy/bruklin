@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Breadcrumbs from './components/Breadcrumbs';
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -32,9 +31,6 @@ function App() {
         <Header />
         
         <main className="flex-1 pt-[70px]">
-          {/* Render Breadcrumbs for non-home pages */}
-          <Breadcrumbs />
-          
           <React.Suspense fallback={
             <div className="min-h-screen flex items-center justify-center bg-black">
               <div className="text-center">
