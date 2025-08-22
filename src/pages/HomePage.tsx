@@ -364,10 +364,6 @@ const HomePage: React.FC = () => {
                   </a>
                 </div>
               </div>
-      </div>
-    </>
-  );
-};
 
               <div className="lg:order-first">
                 <div className="grid grid-cols-2 gap-4">
@@ -402,6 +398,20 @@ const HomePage: React.FC = () => {
                     </div>
                     
                     <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-white/10
+                                  hover:border-white/20 transition-all duration-300">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Award size={20} className="text-yellow-400" />
+                        <span className="text-white font-semibold">Tracks</span>
+                      </div>
+                      <p className="text-white/80">10 Released</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Press & Recognition Section */}
         <section className="py-20 px-6 bg-black/20">
           <div className="max-w-6xl mx-auto">
@@ -414,7 +424,7 @@ const HomePage: React.FC = () => {
                 What the industry is saying about Bruklin's rise to stardom
               </p>
             </div>
-                                  hover:border-white/20 transition-all duration-300">
+
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               {pressHighlights.map((press, index) => (
                 <div
@@ -441,7 +451,7 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
-                      <div className="flex items-center gap-3 mb-3">
+
             <div className="text-center">
               <a
                 href="https://bruklin.us/wp-content/uploads/2025/05/Electronic-Press-Kit-2025.pdf"
@@ -458,7 +468,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-                        <Award size={20} className="text-yellow-400" />
+
         {/* Social Media & Connect Section */}
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
@@ -471,7 +481,7 @@ const HomePage: React.FC = () => {
                 Follow my journey and get exclusive content across all platforms
               </p>
             </div>
-                        <span className="text-white font-semibold">Tracks</span>
+
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               <a
                 href="https://www.instagram.com/bruklin"
@@ -487,7 +497,7 @@ const HomePage: React.FC = () => {
                 <p className="text-white/90 text-sm mb-2">51.7K followers</p>
                 <p className="text-white/70 text-xs">Daily updates & stories</p>
               </a>
-                      </div>
+
               <a
                 href="https://www.tiktok.com/@bruklin"
                 target="_blank"
@@ -502,7 +512,7 @@ const HomePage: React.FC = () => {
                 <p className="text-white/90 text-sm mb-2">17.6K followers</p>
                 <p className="text-white/70 text-xs">Viral content & trends</p>
               </a>
-                      <p className="text-white/80">10 Released</p>
+
               <a
                 href="https://open.spotify.com/artist/4fjAtF6VmMxQHxKI5C3HPO"
                 target="_blank"
@@ -517,7 +527,7 @@ const HomePage: React.FC = () => {
                 <p className="text-white/90 text-sm mb-2">9.1M+ streams</p>
                 <p className="text-white/70 text-xs">Latest releases</p>
               </a>
-                    </div>
+
               <a
                 href="https://www.youtube.com/@BruklinOfficial"
                 target="_blank"
@@ -533,7 +543,7 @@ const HomePage: React.FC = () => {
                 <p className="text-white/70 text-xs">Music videos & more</p>
               </a>
             </div>
-                  </div>
+
             <div className="text-center">
               <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 
                             backdrop-blur-sm rounded-2xl p-8 border border-white/10
@@ -558,9 +568,9 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      </div>
+    </>
+  );
+};
+
 export default HomePage;
