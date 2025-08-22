@@ -10,13 +10,13 @@ const LatestSongPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="Bruklin - The Voice of a Generation | Official Website"
-        description="17-year-old pop sensation Bruklin from New York with 7.8M+ Spotify streams and 17.3M+ YouTube views. Listen to 'Kinda Like' and 'Good Girl Bad Dreams' now."
-        keywords="Kinda Like, Bruklin latest song, new music 2025, pop ballad, emotional vulnerability, Spotify, Apple Music"
+        title="Cry A Little Louder - Bruklin | Official Website"
+        description="17-year-old pop sensation Bruklin from New York with 9.1M+ Spotify streams and 22.3M+ YouTube views. Listen to 'Cry A Little Louder' - a fierce pop breakup anthem now."
+        keywords="Cry A Little Louder, Bruklin latest song, new music 2025, pop breakup anthem, empowerment, Spotify, Apple Music"
         url="/"
         type="website"
         musicData={{
-          albumName: "Kinda Like",
+          albumName: "Cry A Little Louder",
           artist: "Bruklin",
           releaseDate: "2025",
           genre: "Pop",
@@ -104,7 +104,7 @@ const LatestSongPage: React.FC = () => {
                                    transition-all duration-700 leading-tight
                                    [text-shadow:_0_0_30px_rgba(0,191,255,0.5)]
                                    group-hover:[text-shadow:_0_0_40px_rgba(0,191,255,0.8)]">
-                        Kinda Like
+                        Cry A Little Louder
                       </h1>
                       
                       {/* Enhanced badges */}
@@ -147,7 +147,7 @@ const LatestSongPage: React.FC = () => {
               <div className="space-y-3 sm:space-y-4">
                 <LinkItem 
                   title="Listen on Spotify" 
-                  url="https://open.spotify.com/album/5uwHcTv2yXjrzTcCaGRUx8" 
+                  url="https://open.spotify.com/album/6VueSIGMnzOCJtWg3a2IWO" 
                   icon={<FaSpotify size={28} />}
                   className="animate-fade-in bg-gradient-to-r from-green-600/30 to-emerald-500/30 
                             hover:from-green-500/50 hover:to-emerald-400/50
@@ -158,7 +158,7 @@ const LatestSongPage: React.FC = () => {
                 />
                 <LinkItem 
                   title="Listen on Apple Music" 
-                  url="https://music.apple.com/us/album/kinda-like-single/1817292593" 
+                  url="https://music.apple.com/us/album/cry-a-little-louder-single/1817292469" 
                   icon={<FaApple size={28} />}
                   className="animate-fade-in-delay-1 bg-gradient-to-r from-gray-700/30 to-gray-600/30 
                             hover:from-gray-600/50 hover:to-gray-500/50
@@ -169,7 +169,7 @@ const LatestSongPage: React.FC = () => {
                 />
                 <LinkItem 
                   title="Watch on YouTube" 
-                  url="https://www.youtube.com/watch?v=CEwKFU3l1z0" 
+                  url="http://youtube.com/watch?v=oYuoRJA4sPs" 
                   icon={<FaYoutube size={28} />}
                   className="animate-fade-in-delay-2 bg-gradient-to-r from-red-600/30 to-red-500/30 
                             hover:from-red-500/50 hover:to-red-400/50
@@ -180,7 +180,7 @@ const LatestSongPage: React.FC = () => {
                 />
                 <LinkItem 
                   title="Listen on Amazon Music" 
-                  url="https://music.amazon.com/albums/B0FB4G1CY1?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_RebJq9dDgcn4ECDRDYL7ia3Nn" 
+                  url="https://music.amazon.com/albums/B0FB51J7RP" 
                   icon={<SiAmazonmusic size={28} />}
                   className="animate-fade-in-delay-3 bg-gradient-to-r from-blue-600/30 to-cyan-500/30 
                             hover:from-blue-500/50 hover:to-cyan-400/50

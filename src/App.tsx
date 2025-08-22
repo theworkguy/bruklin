@@ -13,6 +13,7 @@ const PhotosPage = React.lazy(() => import('./pages/PhotosPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const UnderYourSkinArticle = React.lazy(() => import('./pages/articles/UnderYourSkinArticle'));
 const GoodGirlBadDreamsArticle = React.lazy(() => import('./pages/articles/GoodGirlBadDreamsArticle'));
+const CryALittleLouderArticle = React.lazy(() => import('./pages/articles/CryALittleLouderArticle'));
 const LatestSongPage = React.lazy(() => import('./pages/LatestSongPage'));
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/under-your-skin" element={<UnderYourSkinArticle />} />
               <Route path="/blog/good-girl-bad-dreams" element={<GoodGirlBadDreamsArticle />} />
+              <Route path="/blog/cry-a-little-louder" element={<CryALittleLouderArticle />} />
               <Route path="/photos" element={<PhotosPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>

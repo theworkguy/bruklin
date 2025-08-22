@@ -8,13 +8,23 @@ const VideoSection: React.FC = () => {
 
   const videos = [
     { 
+      title: "Cry A Little Louder", 
+      youtubeUrl: "http://youtube.com/watch?v=oYuoRJA4sPs", 
+      thumbnail: "https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg",
+      views: "New Release",
+      duration: "3:03",
+      releaseDate: "2025",
+      isLatest: true,
+      category: "Music Video"
+    },
+    { 
       title: "Kinda Like", 
       youtubeUrl: "https://www.youtube.com/watch?v=CEwKFU3l1z0", 
       thumbnail: "https://img.youtube.com/vi/CEwKFU3l1z0/0.jpg",
       views: "750K",
       duration: "2:44",
       releaseDate: "2025",
-      isLatest: true,
+      isLatest: false,
       category: "Music Video"
     },
     { 

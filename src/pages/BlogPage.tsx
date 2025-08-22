@@ -7,6 +7,25 @@ import SEOHead from '../components/SEOHead';
 const BlogPage: React.FC = () => {
   const songArticles = [
     {
+      title: "Fierce and Unapologetic: The Making of 'Cry A Little Louder'",
+      excerpt: "Dive into my latest fierce pop breakup anthem that turns heartbreak into empowerment. From the bold lyrics to the catchy production, discover how this song became all about moving on and glowing up...",
+      date: "August 15, 2025",
+      author: "Bruklin",
+      category: "Song Stories",
+      readTime: "4 min read",
+      image: "https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg",
+      likes: 45,
+      comments: 8,
+      featured: true,
+      songData: {
+        title: "Cry A Little Louder",
+        duration: "3:03",
+        streams: "New Release",
+        spotifyUrl: "https://open.spotify.com/album/6VueSIGMnzOCJtWg3a2IWO",
+        youtubeUrl: "http://youtube.com/watch?v=oYuoRJA4sPs"
+      }
+    },
+    {
       title: "The Energy of 'Kinda Like': Capturing Unexpected Attraction",
       excerpt: "Dive into my latest energetic pop track that captures the rush and excitement of unexpected attraction. From the pulsing beat to the powerful vocals, discover how this song came to life...",
       date: "July 25, 2025",
@@ -16,7 +35,7 @@ const BlogPage: React.FC = () => {
       image: "https://img.youtube.com/vi/CEwKFU3l1z0/0.jpg",
       likes: 89,
       comments: 12,
-      featured: true,
+      featured: false,
       songData: {
         title: "Kinda Like",
         duration: "2:44",

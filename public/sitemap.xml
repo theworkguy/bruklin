@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://bruklin.us/</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -19,7 +19,7 @@
   <!-- My Journey Page -->
   <url>
     <loc>https://bruklin.us/my-journey</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,7 +27,7 @@
   <!-- Discography Page -->
   <url>
     <loc>https://bruklin.us/discography</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -35,30 +35,38 @@
   <!-- Videos Page -->
   <url>
     <loc>https://bruklin.us/videos</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg</video:thumbnail_loc>
-      <video:title>Under Your Skin - Bruklin</video:title>
-      <video:description>Official music video for Under Your Skin by Bruklin</video:description>
-      <video:content_loc>https://www.youtube.com/watch?v=3fMx4F9cYVw</video:content_loc>
-      <video:duration>180</video:duration>
+      <video:thumbnail_loc>https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg</video:thumbnail_loc>
+      <video:title>Cry A Little Louder - Bruklin</video:title>
+      <video:description>Official music video for Cry A Little Louder by Bruklin</video:description>
+      <video:content_loc>http://youtube.com/watch?v=oYuoRJA4sPs</video:content_loc>
+      <video:duration>183</video:duration>
     </video:video>
   </url>
 
   <!-- Blog Page -->
   <url>
     <loc>https://bruklin.us/blog</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Cry A Little Louder Blog Article -->
+  <url>
+    <loc>https://bruklin.us/blog/cry-a-little-louder</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Photos Page -->
   <url>
     <loc>https://bruklin.us/photos</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -66,7 +74,7 @@
   <!-- Contact Page -->
   <url>
     <loc>https://bruklin.us/contact</loc>
-    <lastmod>2025-01-20</lastmod>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

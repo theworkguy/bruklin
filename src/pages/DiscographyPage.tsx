@@ -10,6 +10,27 @@ const DiscographyPage: React.FC = () => {
 
   const releases = [
     {
+      title: "Cry A Little Louder",
+      type: "Single",
+      year: "2025",
+      duration: "3:03",
+      streams: "New Release",
+      description: "\"Cry a Little Louder\" by Bruklin is a fierce pop breakup anthem that turns heartbreak into empowerment. Catchy, bold, and unapologetic, it's all about moving on, glowing up, and letting your ex watch you shine.",
+      cover: "https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg",
+      links: {
+        spotify: "https://open.spotify.com/album/6VueSIGMnzOCJtWg3a2IWO",
+        apple: "https://music.apple.com/us/album/cry-a-little-louder-single/1817292469",
+        youtube: "http://youtube.com/watch?v=oYuoRJA4sPs",
+        amazon: "https://music.amazon.com/albums/B0FB51J7RP"
+      },
+      isLatest: true,
+      isHit: false,
+      color: 'from-red-600 to-pink-500',
+      mood: 'Empowering',
+      producers: ['Oak Felder', 'Sebastian Cole'],
+      lyrics: 'Bold and unapologetic'
+    },
+    {
       title: "Kinda Like",
       type: "Single",
       year: "2025",
@@ -23,7 +44,7 @@ const DiscographyPage: React.FC = () => {
         youtube: "https://www.youtube.com/watch?v=CEwKFU3l1z0",
         amazon: "https://music.amazon.com/artists/B0DPLCQGNH/bruklin"
       },
-      isLatest: true,
+      isLatest: false,
       isHit: false,
       color: 'from-pink-600 to-red-500',
       mood: 'Upbeat',

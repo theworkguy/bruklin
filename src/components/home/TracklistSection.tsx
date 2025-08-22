@@ -9,6 +9,14 @@ const TracklistSection: React.FC = () => {
 
   const tracks = [
     { 
+      title: "Cry A Little Louder", 
+      duration: "3:03", 
+      streams: "New Release",
+      spotifyUrl: "https://open.spotify.com/album/6VueSIGMnzOCJtWg3a2IWO",
+      isHit: false,
+      releaseDate: "2025"
+    },
+    { 
       title: "Kinda Like", 
       duration: "2:44", 
       streams: "112K",

@@ -6,6 +6,17 @@ import SEOHead from '../components/SEOHead';
 const VideosPage: React.FC = () => {
   const videos = [
     {
+      title: "Cry A Little Louder",
+      category: "music-video",
+      year: "2025",
+      views: "New Release",
+      duration: "3:03",
+      description: "A fierce pop breakup anthem that turns heartbreak into empowerment. Catchy, bold, and unapologetic, it's all about moving on, glowing up, and letting your ex watch you shine.",
+      thumbnail: "https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg",
+      youtubeUrl: "http://youtube.com/watch?v=oYuoRJA4sPs",
+      isLatest: true
+    },
+    {
       title: "Kinda Like",
       category: "music-video",
       year: "2025",
@@ -14,7 +25,7 @@ const VideosPage: React.FC = () => {
       description: "An energetic, catchy pop track blending powerful vocals with a pulsing beat, \"Kinda Like\" captures the rush of unexpected attraction.",
       thumbnail: "https://img.youtube.com/vi/CEwKFU3l1z0/0.jpg",
       youtubeUrl: "https://www.youtube.com/watch?v=CEwKFU3l1z0",
-      isLatest: true
+      isLatest: false
     },
     {
       title: "Echo",

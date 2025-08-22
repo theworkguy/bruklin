@@ -101,11 +101,19 @@ const MyJourneyPage: React.FC = () => {
 
   const currentProjects = [
     {
+      title: 'Cry A Little Louder',
+      description: 'A fierce pop breakup anthem that turns heartbreak into empowerment, bold and unapologetic',
+      streams: 'New Release',
+      year: '2025',
+      status: 'Latest Release',
+      color: 'from-red-600/30 to-pink-600/30'
+    },
+    {
       title: 'Kinda Like',
       description: 'My latest energetic pop track capturing the rush of unexpected attraction',
       streams: '112K streams',
       year: '2025',
-      status: 'Latest Release',
+      status: 'Recent Single',
       color: 'from-pink-600/30 to-red-600/30'
     },
     {
