@@ -3,80 +3,204 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   
-  <!-- Homepage -->
+  <!-- Latest Song Landing Page (Root) -->
   <url>
     <loc>https://bruklin.us/</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://i.scdn.co/image/ab6761610000e5eb0c3f94a644b9a3a4557ce384</image:loc>
-      <image:title>Bruklin - The Voice of a Generation</image:title>
-      <image:caption>17-year-old pop sensation Bruklin from New York</image:caption>
+      <image:loc>https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg</image:loc>
+      <image:title>Cry A Little Louder - Bruklin</image:title>
+      <image:caption>Bruklin's latest fierce pop breakup anthem</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Full Homepage -->
+  <url>
+    <loc>https://bruklin.us/home</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://bruklin.us/profilephoto.jpg</image:loc>
+      <image:title>Bruklin - Official Homepage</image:title>
+      <image:caption>17-year-old pop sensation Bruklin from New York - Official Website</image:caption>
     </image:image>
   </url>
 
   <!-- My Journey Page -->
   <url>
     <loc>https://bruklin.us/my-journey</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bruklin.us/profilephoto.jpg</image:loc>
+      <image:title>Bruklin's Musical Journey</image:title>
+      <image:caption>From bedroom songwriter to rising pop star - Bruklin's complete journey</image:caption>
+    </image:image>
   </url>
 
   <!-- Discography Page -->
   <url>
     <loc>https://bruklin.us/discography</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg</image:loc>
+      <image:title>Bruklin Complete Discography</image:title>
+      <image:caption>All of Bruklin's released tracks and singles</image:caption>
+    </image:image>
   </url>
 
   <!-- Videos Page -->
   <url>
     <loc>https://bruklin.us/videos</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg</video:thumbnail_loc>
-      <video:title>Cry A Little Louder - Bruklin</video:title>
-      <video:description>Official music video for Cry A Little Louder by Bruklin</video:description>
-      <video:content_loc>http://youtube.com/watch?v=oYuoRJA4sPs</video:content_loc>
+      <video:title>Cry A Little Louder - Bruklin (Official Music Video)</video:title>
+      <video:description>Bruklin's latest fierce pop breakup anthem - Official Music Video</video:description>
+      <video:content_loc>https://youtube.com/watch?v=oYuoRJA4sPs</video:content_loc>
       <video:duration>183</video:duration>
+      <video:publication_date>2025-01-15T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg</video:thumbnail_loc>
+      <video:title>Under Your Skin - Bruklin (Official Music Video)</video:title>
+      <video:description>Official music video for Under Your Skin by Bruklin</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=3fMx4F9cYVw</video:content_loc>
+      <video:duration>180</video:duration>
+      <video:publication_date>2025-01-10T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg</video:thumbnail_loc>
+      <video:title>Good Girl Bad Dreams - Bruklin (Official Music Video)</video:title>
+      <video:description>Official music video for Good Girl Bad Dreams by Bruklin</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=G9hbM-tRnBo</video:content_loc>
+      <video:duration>156</video:duration>
+      <video:publication_date>2025-01-05T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
 
   <!-- Blog Page -->
   <url>
     <loc>https://bruklin.us/blog</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://bruklin.us/profilephoto.jpg</image:loc>
+      <image:title>Bruklin's Blog - Behind the Music</image:title>
+      <image:caption>Stories, inspiration and insights from Bruklin's musical journey</image:caption>
+    </image:image>
   </url>
 
-  <!-- Cry A Little Louder Blog Article -->
+  <!-- Blog Articles -->
   <url>
     <loc>https://bruklin.us/blog/cry-a-little-louder</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg</image:loc>
+      <image:title>The Making of Cry A Little Louder</image:title>
+      <image:caption>Behind the scenes of Bruklin's fierce pop breakup anthem</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://bruklin.us/blog/under-your-skin</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg</image:loc>
+      <image:title>The Story Behind Under Your Skin</image:title>
+      <image:caption>Dive deep into the creative process behind Bruklin's emotional ballad</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://bruklin.us/blog/good-girl-bad-dreams</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg</image:loc>
+      <image:title>Breaking Free: The Making of Good Girl Bad Dreams</image:title>
+      <image:caption>An empowering anthem about shattering expectations and embracing authenticity</image:caption>
+    </image:image>
   </url>
 
   <!-- Photos Page -->
   <url>
     <loc>https://bruklin.us/photos</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://bruklin.us/1.jpg</image:loc>
+      <image:title>Bruklin Professional Photos</image:title>
+      <image:caption>Professional portraits and lifestyle photos of pop star Bruklin</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bruklin.us/Bruklin.jpg</image:loc>
+      <image:title>Bruklin Lifestyle Photography</image:title>
+      <image:caption>Candid and lifestyle moments from Bruklin's journey</image:caption>
+    </image:image>
   </url>
 
   <!-- Contact Page -->
   <url>
     <loc>https://bruklin.us/contact</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Individual Song Pages (if you plan to create them) -->
+  <url>
+    <loc>https://bruklin.us/songs/cry-a-little-louder</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://img.youtube.com/vi/oYuoRJA4sPs/0.jpg</image:loc>
+      <image:title>Cry A Little Louder - Bruklin</image:title>
+      <image:caption>Stream and download Cry A Little Louder by Bruklin</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://bruklin.us/songs/under-your-skin</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://img.youtube.com/vi/3fMx4F9cYVw/0.jpg</image:loc>
+      <image:title>Under Your Skin - Bruklin</image:title>
+      <image:caption>Stream and download Under Your Skin by Bruklin</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://bruklin.us/songs/good-girl-bad-dreams</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://img.youtube.com/vi/G9hbM-tRnBo/0.jpg</image:loc>
+      <image:title>Good Girl Bad Dreams - Bruklin</image:title>
+      <image:caption>Stream and download Good Girl Bad Dreams by Bruklin</image:caption>
+    </image:image>
   </url>
 
 </urlset>
