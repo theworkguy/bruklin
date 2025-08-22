@@ -118,7 +118,7 @@ const LatestSongPage: React.FC = () => {
                         <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white 
                                        text-xs font-bold px-2 py-1 sm:px-3 sm:py-1.5 rounded-full uppercase tracking-wide
                                        shadow-lg border border-white/20 backdrop-blur-sm">
-                          ✨ TRENDING
+                          ✨ GROWING
                         </span>
                       </div>
                     </div>
@@ -127,7 +127,7 @@ const LatestSongPage: React.FC = () => {
                     <div className="flex items-center justify-center gap-3 sm:gap-4 text-white/70 text-xs sm:text-sm">
                       <div className="flex items-center gap-1">
                         <Music size={12} className="text-cyan-400 sm:w-3.5 sm:h-3.5" />
-                        <span>Pop Ballad</span>
+                        <span>POP</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Heart size={12} className="text-pink-400 sm:w-3.5 sm:h-3.5" />
